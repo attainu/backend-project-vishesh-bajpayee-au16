@@ -1,0 +1,26 @@
+{
+  "name": "planner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vishesh-bajpayee-au16/ProjectApp.git"
+  },
+  "author": "Vishesh Bajpayee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vishesh-bajpayee-au16/ProjectApp/issues"
+  },
+  "homepage": "https://github.com/vishesh-bajpayee-au16/ProjectApp#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bcrypt": "^5.0.1",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.2",
+    "express-sessions": "^1.0.6"
+  }
+}
