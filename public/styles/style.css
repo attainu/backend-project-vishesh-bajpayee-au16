@@ -7,8 +7,7 @@
 }
 
 body {
-  background-image: -webkit-gradient(linear, right bottom, left top, from(white), to(#b4c8d1));
-  background-image: linear-gradient(to top left, white, #b4c8d1);
+  background-image: url("../images/banner.png");
 }
 
 .landingPage header {
@@ -40,6 +39,11 @@ body {
 }
 
 .landingPage header ul li a:hover {
+  font-weight: 500;
+}
+
+.landingPage header ul li #active {
+  color: #166a72;
   font-weight: 500;
 }
 
@@ -122,6 +126,7 @@ body {
 .landingPage section .login-section #login-btn:hover {
   background-color: #38b5c0;
   font-weight: 500;
+  color: white;
 }
 
 .landingPage section .login-section a {
@@ -137,5 +142,27 @@ body {
 .landingPage section .login-section a:hover {
   color: white;
   font-weight: 400;
+}
+
+.landingPage aside {
+  position: absolute;
+  left: 30vw;
+  font-size: 50px;
+}
+
+.landingPage aside h1 {
+  font-size: 100px;
+  margin-top: 25vh;
+}
+
+.landingPage aside h1 span {
+  color: #38b5c0;
+  font-size: 150px;
+}
+
+.landingPage aside p {
+  font-size: 16px;
+  position: absolute;
+  left: 2vw;
 }
 /*# sourceMappingURL=style.css.map */

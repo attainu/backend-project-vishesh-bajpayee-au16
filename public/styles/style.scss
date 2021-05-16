@@ -8,7 +8,7 @@
 $primary: #38b5c0;
 
 body {
-  background-image: linear-gradient(to top left, white, rgb(180, 200, 209));
+  background-image: url("../images/banner.png");
 }
 // LANDING PAGE
 .landingPage {
@@ -35,6 +35,11 @@ body {
           &:hover {
             font-weight: 500;
           }
+        }
+
+        #active {
+          color: #166a72;
+          font-weight: 500;
         }
       }
     }
@@ -115,6 +120,7 @@ body {
         &:hover {
           background-color: $primary;
           font-weight: 500;
+          color: white;
         }
       }
 
@@ -130,6 +136,27 @@ body {
           font-weight: 400;
         }
       }
+    }
+  }
+
+  aside {
+    position: absolute;
+    left: 30vw;
+    font-size: 50px;
+
+    h1 {
+      font-size: 100px;
+      margin-top: 25vh;
+      span {
+        color: $primary;
+        font-size: 150px;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      position: absolute;
+      left: 2vw;
     }
   }
 }
