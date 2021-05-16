@@ -2,8 +2,14 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 }
 
+$primary: #38b5c0;
+
+body {
+  background-image: linear-gradient(to top left, white, rgb(180, 200, 209));
+}
 // LANDING PAGE
 .landingPage {
   //   header
@@ -25,6 +31,10 @@
           color: black;
           font-size: 20px;
           text-decoration: none;
+
+          &:hover {
+            font-weight: 500;
+          }
         }
       }
     }
@@ -37,5 +47,89 @@
     z-index: 1;
     position: absolute;
     top: -0vh;
+
+    #logo {
+      width: 400px;
+      position: absolute;
+      top: -90px;
+    }
+
+    .login-section {
+      h1 {
+        color: white;
+        position: absolute;
+        font-size: 50px;
+        top: 25vh;
+        left: 2vw;
+      }
+      h2 {
+        color: $primary;
+        position: absolute;
+        z-index: 2;
+        top: 33vh;
+        left: 2.5vw;
+        font-weight: 300;
+      }
+
+      #username {
+        background-color: white;
+        position: absolute;
+        top: 37.5vh;
+        left: 2vw;
+        padding: 14px;
+        text-align: left;
+        border-radius: 20px;
+        border: none;
+        outline: none;
+        width: 20vw;
+      }
+
+      #password {
+        top: 43vh;
+      }
+
+      #password-inp {
+        background-color: white;
+        position: absolute;
+        top: 47.7vh;
+        left: 2vw;
+        padding: 14px;
+        text-align: left;
+        border-radius: 20px;
+        border: none;
+        outline: none;
+        width: 20vw;
+      }
+
+      #login-btn {
+        position: absolute;
+        top: 55vh;
+        padding: 15px;
+        border: none;
+        outline: none;
+        border-radius: 20px;
+        font-size: 16px;
+        left: 2vw;
+        cursor: pointer;
+        transition: all ease 0.2s;
+        &:hover {
+          background-color: $primary;
+          font-weight: 500;
+        }
+      }
+
+      a {
+        position: absolute;
+        color: #38b5c0;
+        top: 58vh;
+        left: 6.5vw;
+        text-decoration: none;
+        transition: all ease 0.2s;
+        &:hover {
+          color: white;
+          font-weight: 400;
+        }
+      }
+    }
   }
 }

@@ -11,7 +11,7 @@ app.set("view engine", ".hbs");
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
-  res.render("landingpage");
+  res.render("home");
 });
 
 app.listen(5000, () => console.log("Server Started"));
