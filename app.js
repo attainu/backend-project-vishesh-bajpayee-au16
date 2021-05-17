@@ -16,6 +16,6 @@ app.use(express.static("public"));
 
 // ROUTES
 app.use("/", homeRouter);
-app.use("/", signupRouter);
+app.use("/user", signupRouter);
 
-app.listen(5002, () => console.log("Server Started"));
+app.listen(5001, () => console.log("Server Started"));

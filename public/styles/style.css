@@ -165,4 +165,155 @@ body {
   position: absolute;
   left: 2vw;
 }
+
+.signupPage .container {
+  width: 30vw;
+  height: 70vh;
+  background-color: black;
+  position: absolute;
+  left: 35vw;
+  top: 18vh;
+  padding: 30px;
+  border: none;
+  border-radius: 30px;
+}
+
+.signupPage .container img {
+  width: 200px;
+  position: absolute;
+  top: 1px;
+  left: 10vw;
+}
+
+.signupPage .container .content h1 {
+  position: absolute;
+  color: white;
+  font-size: 50px;
+  top: 15vh;
+  left: 2.5vw;
+}
+
+.signupPage .container .content #username-text {
+  position: absolute;
+  color: white;
+  font-size: 20px;
+  top: 22vh;
+  left: 2.5vw;
+}
+
+.signupPage .container .content #username-inp {
+  background-color: white;
+  position: absolute;
+  top: 25.5vh;
+  left: 2vw;
+  padding: 14px;
+  text-align: left;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  width: 20vw;
+}
+
+.signupPage .container .content #email-text {
+  position: absolute;
+  color: white;
+  font-size: 20px;
+  top: 31vh;
+  left: 2.5vw;
+}
+
+.signupPage .container .content #email-inp {
+  background-color: white;
+  position: absolute;
+  top: 34.5vh;
+  left: 2vw;
+  padding: 14px;
+  text-align: left;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  width: 20vw;
+}
+
+.signupPage .container .content #password-text {
+  position: absolute;
+  color: white;
+  font-size: 20px;
+  top: 40vh;
+  left: 2.5vw;
+}
+
+.signupPage .container .content #password-inp {
+  background-color: white;
+  position: absolute;
+  top: 43.8vh;
+  left: 2vw;
+  padding: 14px;
+  text-align: left;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  width: 20vw;
+}
+
+.signupPage .container .content #confirmpassword-text {
+  position: absolute;
+  color: white;
+  font-size: 20px;
+  top: 49.5vh;
+  left: 2.5vw;
+}
+
+.signupPage .container .content #confirmpassword-inp {
+  background-color: white;
+  position: absolute;
+  top: 53vh;
+  left: 2vw;
+  padding: 14px;
+  text-align: left;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  width: 20vw;
+}
+
+.signupPage .container .content #signup-btn {
+  font-size: 18px;
+  padding: 15px;
+  width: 5vw;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  position: absolute;
+  top: 62vh;
+  left: 2vw;
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+  cursor: pointer;
+}
+
+.signupPage .container .content #signup-btn:hover {
+  background-color: #38b5c0;
+  font-weight: 500;
+}
+
+.signupPage .container #goback-btn {
+  font-size: 18px;
+  padding: 15px;
+  width: 6vw;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  position: absolute;
+  top: 62vh;
+  left: 8vw;
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+  cursor: pointer;
+}
+
+.signupPage .container #goback-btn:hover {
+  background-color: #38b5c0;
+  font-weight: 500;
+}
 /*# sourceMappingURL=style.css.map */

@@ -160,3 +160,153 @@ body {
     }
   }
 }
+
+.signupPage {
+  .container {
+    width: 30vw;
+    height: 70vh;
+    background-color: black;
+    position: absolute;
+    left: 35vw;
+    top: 18vh;
+    padding: 30px;
+    border: none;
+    border-radius: 30px;
+
+    img {
+      width: 200px;
+      position: absolute;
+      top: 1px;
+      left: 10vw;
+    }
+
+    .content {
+      h1 {
+        position: absolute;
+        color: white;
+        font-size: 50px;
+        top: 15vh;
+        left: 2.5vw;
+      }
+
+      #username-text {
+        position: absolute;
+        color: white;
+        font-size: 20px;
+        top: 22vh;
+        left: 2.5vw;
+      }
+
+      #username-inp {
+        background-color: white;
+        position: absolute;
+        top: 25.5vh;
+        left: 2vw;
+        padding: 14px;
+        text-align: left;
+        border-radius: 20px;
+        border: none;
+        outline: none;
+        width: 20vw;
+      }
+
+      #email-text {
+        position: absolute;
+        color: white;
+        font-size: 20px;
+        top: 31vh;
+        left: 2.5vw;
+      }
+
+      #email-inp {
+        background-color: white;
+        position: absolute;
+        top: 34.5vh;
+        left: 2vw;
+        padding: 14px;
+        text-align: left;
+        border-radius: 20px;
+        border: none;
+        outline: none;
+        width: 20vw;
+      }
+
+      #password-text {
+        position: absolute;
+        color: white;
+        font-size: 20px;
+        top: 40vh;
+        left: 2.5vw;
+      }
+
+      #password-inp {
+        background-color: white;
+        position: absolute;
+        top: 43.8vh;
+        left: 2vw;
+        padding: 14px;
+        text-align: left;
+        border-radius: 20px;
+        border: none;
+        outline: none;
+        width: 20vw;
+      }
+
+      #confirmpassword-text {
+        position: absolute;
+        color: white;
+        font-size: 20px;
+        top: 49.5vh;
+        left: 2.5vw;
+      }
+
+      #confirmpassword-inp {
+        background-color: white;
+        position: absolute;
+        top: 53vh;
+        left: 2vw;
+        padding: 14px;
+        text-align: left;
+        border-radius: 20px;
+        border: none;
+        outline: none;
+        width: 20vw;
+      }
+
+      #signup-btn {
+        font-size: 18px;
+        padding: 15px;
+        width: 5vw;
+        border-radius: 20px;
+        border: none;
+        outline: none;
+        position: absolute;
+        top: 62vh;
+        left: 2vw;
+        transition: all ease 0.2s;
+        cursor: pointer;
+        &:hover {
+          background-color: $primary;
+          font-weight: 500;
+        }
+      }
+    }
+    #goback-btn {
+      font-size: 18px;
+      padding: 15px;
+      width: 6vw;
+      border-radius: 20px;
+      border: none;
+      outline: none;
+      position: absolute;
+      top: 62vh;
+      left: 8vw;
+      transition: all ease 0.2s;
+      cursor: pointer;
+      &:hover {
+        background-color: $primary;
+        font-weight: 500;
+      }
+    }
+  }
+}
