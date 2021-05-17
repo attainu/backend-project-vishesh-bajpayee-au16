@@ -9,16 +9,17 @@
         <h1>Signup</h1>
 
         <h3 id="username-text">username</h3>
-        <input type="text" name="username" id="username-inp" />
+        <input required type="text" name="username" id="username-inp" />
 
         <h3 id="email-text">email</h3>
-        <input type="email" name="email" id="email-inp" />
+        <input required type="email" name="email" id="email-inp" />
 
         <h3 id="password-text">password</h3>
-        <input type="password" name="password" id="password-inp" />
+        <input required type="password" name="password" id="password-inp" />
 
         <h3 id="confirmpassword-text">confirm password</h3>
         <input
+          required
           type="password"
           name="confirm-password"
           id="confirmpassword-inp"
@@ -29,7 +30,7 @@
       </div>
     </form>
 
-    <form action="/goback">
+    <form action="/">
       <button type="submit" id="goback-btn">go back</button></form>
 
   </div>
