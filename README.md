@@ -33,13 +33,46 @@ With **Code Planner** you can acheive your optimal workflow with a single login 
 
 ## Technologies Used 
 
-###Coding 
+**Coding**
 
 - Javascript
 - Anime.js
 - Nodejs
+- Express
+- Mongoose
+- Mongodb
 - Handlebars
+- Node Package Manager
 - SCSS
 - CSS3
 - HTML5
+
+
+
+**Non-coding**
+
+- Figma
+- Adobe Illustrator 
+- Adobe Photoshop
+- Miro 
+- Color Pallate Generator 
+
+
+###
+
+## Start init 
+
+To start working on project you first need to install all the npm packages 
+
+``npm i``
+
+Run the server 
+
+``node run dev``
+
+
+
+
+
+
 
