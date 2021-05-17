@@ -18,3 +18,4 @@ On the basis of our research in the domains of productivity and efficiency pract
 With **Code Planner** you can acheive your optimal workflow with a single login on our app which will provide you with plathora of options to choose from to enhance your productive time. 
 
 
+![Productivity](https://hbr.org/resources/images/article_assets/2017/09/oct17-04-623455200.png)
