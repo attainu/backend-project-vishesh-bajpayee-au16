@@ -28,3 +28,18 @@ With **Code Planner** you can acheive your optimal workflow with a single login 
 - Notes 
 - Login Session 
 - Many more miscellaneous features 
+
+### 
+
+## Technologies Used 
+
+###Coding 
+
+- Javascript
+- Anime.js
+- Nodejs
+- Handlebars
+- SCSS
+- CSS3
+- HTML5
+
