@@ -8,7 +8,7 @@
 
 ## Introduction
 
-The most important task for any programmer is to organise her workflow in a way to attain maximum efficiency and productivity. By Doing so, An individual requires varies sources and apps to acheive the optimum workflow for productivity. Our WebApp - **CodeBlanner** eases this process by providing all the necessary tools and practicies integrated in one web application for your hastlefree productivity experience as a programmer. 
+The most important task for any programmer is to organise her workflow in a way to attain maximum efficiency and productivity. By Doing so, An individual requires various sources and apps to acheive the optimum workflow for productivity. Our WebApp - **CodePlanner** eases this process by providing all the necessary tools and practicies integrated in one web application for your hastlefree productivity experience as a programmer. 
 
 ###
 
