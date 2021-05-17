@@ -2,7 +2,6 @@
 
 ### 
 
-By- Vishesh Bajpayee
 
 
 ![Productivity](https://hbr.org/resources/images/article_assets/2017/09/oct17-04-623455200.png)
