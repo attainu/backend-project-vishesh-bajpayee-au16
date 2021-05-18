@@ -316,4 +316,10 @@ body {
   background-color: #38b5c0;
   font-weight: 500;
 }
+
+.dashboard section {
+  width: 25vw;
+  height: 100vh;
+  background-color: black;
+}
 /*# sourceMappingURL=style.css.map */
