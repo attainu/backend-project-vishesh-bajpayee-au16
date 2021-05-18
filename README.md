@@ -22,7 +22,7 @@ With **Code Planner** you can acheive your optimal workflow with a single login 
 
 ## Overview 
 
-![Flow Chart](https://github.com/vishesh-bajpayee-au16/ProjectApp/blob/master/readme-files/flowchart.jpg)
+
 
 ###
 
