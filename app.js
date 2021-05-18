@@ -8,6 +8,7 @@ const Mongoose = require("mongoose");
 const homeRouter = require("./routes/home");
 const signupRouter = require("./routes/signup");
 const gobackRouter = require("./routes/gobacktohome");
+const loginRouter = require("./routes/login");
 const app = express();
 
 // MONGO DATABASE CONNECTION
@@ -38,6 +39,7 @@ app.use(express.urlencoded({ extended: false }));
 // ROUTES
 app.use("/", homeRouter);
 app.use("/", signupRouter);
+app.use("/", loginRouter);
 app.use("/", gobackRouter);
 
 app.listen(5001, () => console.log("Server Started"));
