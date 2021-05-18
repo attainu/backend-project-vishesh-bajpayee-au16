@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const signupQuery = new mongoose.Schema({
+const SignupSchema = new mongoose.Schema({
   username: {
     type: String,
     required: true,
@@ -23,6 +23,6 @@ const signupQuery = new mongoose.Schema({
   },
 });
 
-const signupModel = mongoose.model("userData", signupQuery);
+const SignupModel = mongoose.model("userData", SignupSchema);
 
-module.exports = signupModel;
+module.exports = SignupModel;
