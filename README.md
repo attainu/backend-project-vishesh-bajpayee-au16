@@ -20,11 +20,7 @@ With **Code Planner** you can acheive your optimal workflow with a single login 
 
 ###
 
-## Overview 
 
-
-
-###
 
 ## Features 
 
