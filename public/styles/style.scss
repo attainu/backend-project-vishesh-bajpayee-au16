@@ -318,6 +318,61 @@ body {
     width: 25vw;
     height: 100vh;
     background-color: black;
+
+    img {
+      width: 400px;
+      position: absolute;
+      top: -90px;
+      cursor: pointer;
+    }
+
+    .dashboard-btns {
+      position: absolute;
+      top: 20vh;
+      left: 4vw;
+
+      button {
+        padding: 15px;
+        border: none;
+        outline: none;
+        border-radius: 20px;
+        font-size: 16px;
+        margin: 0px 20px 0px 20px;
+        cursor: pointer;
+        transition: all ease 0.2s;
+
+        &:hover {
+          background-color: $primary;
+        }
+      }
+    }
+
+    .wrapper {
+      position: absolute;
+      top: 30vh;
+      left: 0px;
+      .content {
+        position: relative;
+        width: 36vh;
+        height: 10vh;
+        background-color: white;
+        margin: 50px;
+        padding: 10px;
+        border-radius: 30px;
+        .sub-content {
+          padding: 10px;
+          display: flex;
+          flex-direction: column;
+          align-items: left;
+        }
+      }
+    }
+  }
+
+  aside {
+    top: 0px;
+    position: absolute;
+    left: 26vw;
   }
 }
 
