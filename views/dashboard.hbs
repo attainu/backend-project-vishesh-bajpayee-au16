@@ -1,4 +1,5 @@
 <div class="dashboard">
+  {{! SECTION }}
   <section id="section">
     <img src="/images/logo.png" alt="" />
     <div class="dashboard-btns">
@@ -40,24 +41,24 @@
     </div>
 
   </section>
+  {{! ASIDE }}
   <aside>
     <div class="search-bar">
       <input placeholder="Search" type="text" name="search" id="search" />
       <i class="fas fa-search"></i>
 
     </div>
-
+    {{! CARDS CONTAINER }}
     <div class="card-main">
       <h1> <span>Welcome</span> {{username}}!</h1>
       <h4>Few steps to get started.</h4>
 
       <div class="step-icons">
-        <a href="https://github.com/" target="_blank">
-          <div class="item">
-            <i class="fas fa-code-branch"></i>
-            <h6>Add repository</h6>
-          </div>
-        </a>
+
+        <div id="add-repository" class="item">
+          <i class="fas fa-code-branch"></i>
+          <h6>Add repository</h6>
+        </div>
 
         <a
           href="https://www.youtube.com/channel/UCLJKg2C6Sk9xe3Qd11dMkaw"
@@ -80,6 +81,16 @@
         </a>
 
       </div>
+    </div>
+
+    {{! HIDDEN CONTENT }}
+
+    <div class="repo-container">
+      <h1>Add repository address</h1>
+      <form action="/dashboard/get-repo" method="POST">
+        <input type="text" name="userRepo" id="userrepo" />
+        <button>add repository</button>
+      </form>
     </div>
 
   </aside>

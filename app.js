@@ -10,6 +10,7 @@ const signupRouter = require("./routes/signup");
 const gobackRouter = require("./routes/gobacktohome");
 const loginRouter = require("./routes/login");
 const dashboardRouter = require("./routes/dashboard");
+const getRepoRouter = require("./routes/get-repo");
 const app = express();
 
 // MONGO DATABASE CONNECTION
@@ -43,5 +44,6 @@ app.use("/", signupRouter);
 app.use("/", loginRouter);
 app.use("/", gobackRouter);
 app.use("/", dashboardRouter);
+app.use("/", getRepoRouter);
 
 app.listen(5000, () => console.log("Server Started"));
