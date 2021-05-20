@@ -416,14 +416,13 @@ body {
 
 .dashboard aside .search-bar #search {
   line-height: 5vh;
-  background-color: green;
   border: none;
   outline: none;
   position: absolute;
   left: 50px;
   width: 55vw;
   background-color: transparent;
-  color: white;
+  color: #38b5c0;
   font-size: 24px;
 }
 
@@ -433,5 +432,101 @@ body {
   font-size: 25px;
   position: absolute;
   right: 20px;
+}
+
+.dashboard aside .card-main {
+  width: 500px;
+  height: 500px;
+  background-color: black;
+  position: absolute;
+  top: 20vh;
+  border-radius: 40px;
+  left: 10vh;
+  -webkit-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
+}
+
+.dashboard aside .card-main:hover {
+  -webkit-box-shadow: 0px 0px 5px 5px #38b5c0;
+          box-shadow: 0px 0px 5px 5px #38b5c0;
+}
+
+.dashboard aside .card-main h1 {
+  padding: 20px;
+  color: white;
+  font-size: 70px;
+  font-weight: 100;
+}
+
+.dashboard aside .card-main h1 span {
+  font-weight: 400;
+  color: #38b5c0;
+}
+
+.dashboard aside .card-main h4 {
+  color: white;
+  position: absolute;
+  left: 2vh;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.dashboard aside .card-main .step-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-top: 50px;
+}
+
+.dashboard aside .card-main .step-icons a {
+  text-decoration: none;
+  color: transparent;
+}
+
+.dashboard aside .card-main .step-icons .item {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  background-color: #1b1b1b;
+  margin: 10px 30px 10px 30px;
+  border-radius: 20px;
+  -webkit-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
+  cursor: pointer;
+}
+
+.dashboard aside .card-main .step-icons .item:hover {
+  -webkit-box-shadow: 0px 0px 5px 2px #38b5c0;
+          box-shadow: 0px 0px 5px 2px #38b5c0;
+}
+
+.dashboard aside .card-main .step-icons .item i {
+  line-height: 70px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 30px;
+  color: #38b5c0;
+  -webkit-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
+}
+
+.dashboard aside .card-main .step-icons .item i:hover {
+  font-size: 35px;
+}
+
+.dashboard aside .card-main .step-icons .item h6 {
+  position: absolute;
+  color: #38b5c0;
+  width: 90px;
+  top: 80px;
+  left: -6px;
 }
 /*# sourceMappingURL=style.css.map */

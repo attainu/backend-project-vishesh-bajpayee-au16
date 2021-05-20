@@ -402,14 +402,14 @@ body {
 
       #search {
         line-height: 5vh;
-        background-color: green;
+
         border: none;
         outline: none;
         position: absolute;
         left: 50px;
         width: 55vw;
         background-color: transparent;
-        color: white;
+        color: $primary;
         font-size: 24px;
       }
       i {
@@ -418,6 +418,86 @@ body {
         font-size: 25px;
         position: absolute;
         right: 20px;
+      }
+    }
+
+    .card-main {
+      width: 500px;
+      height: 500px;
+      background-color: black;
+      position: absolute;
+      top: 20vh;
+      border-radius: 40px;
+      left: 10vh;
+      transition: all ease-in-out 0.2s;
+
+      &:hover {
+        box-shadow: 0px 0px 5px 5px $primary;
+      }
+
+      h1 {
+        padding: 20px;
+        color: white;
+        font-size: 70px;
+        font-weight: 100;
+        span {
+          font-weight: 400;
+          color: $primary;
+        }
+      }
+
+      h4 {
+        color: white;
+        position: absolute;
+        left: 2vh;
+        font-weight: 200;
+        font-style: italic;
+      }
+
+      .step-icons {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 50px;
+
+        a {
+          text-decoration: none;
+          color: transparent;
+        }
+        .item {
+          position: relative;
+          width: 70px;
+          height: 70px;
+          background-color: rgb(27, 27, 27);
+          margin: 10px 30px 10px 30px;
+          border-radius: 20px;
+          transition: all ease-in-out 0.2s;
+          cursor: pointer;
+          &:hover {
+            box-shadow: 0px 0px 5px 2px $primary;
+          }
+
+          i {
+            line-height: 70px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            font-size: 30px;
+            color: $primary;
+            transition: all ease-in-out 0.2s;
+
+            &:hover {
+              font-size: 35px;
+            }
+          }
+
+          h6 {
+            position: absolute;
+            color: $primary;
+            width: 90px;
+            top: 80px;
+            left: -6px;
+          }
+        }
       }
     }
   }
