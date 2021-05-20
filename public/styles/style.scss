@@ -1,0 +1,324 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+$primary: #38b5c0;
+
+body {
+  background-image: url("../images/banner.png");
+}
+// LANDING PAGE
+.landingPage {
+  //   header
+  header {
+    width: 100vw;
+    height: 7vh;
+    ul {
+      position: absolute;
+      right: 40px;
+      display: flex;
+      justify-content: flex-end;
+
+      li {
+        list-style-type: none;
+        line-height: 7vh;
+        padding-left: 40px;
+
+        a {
+          color: black;
+          font-size: 20px;
+          text-decoration: none;
+
+          &:hover {
+            font-weight: 500;
+          }
+        }
+
+        #active {
+          color: #166a72;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  // section
+  section {
+    width: 25vw;
+    background-color: black;
+    height: 100vh;
+    z-index: 1;
+    position: absolute;
+    top: -0vh;
+
+    #logo {
+      width: 400px;
+      position: absolute;
+      top: -90px;
+    }
+
+    .login-section {
+      h1 {
+        color: white;
+        position: absolute;
+        font-size: 50px;
+        top: 25vh;
+        left: 2vw;
+      }
+      h2 {
+        color: $primary;
+        position: absolute;
+        z-index: 2;
+        top: 33vh;
+        left: 2.5vw;
+        font-weight: 300;
+      }
+
+      #username {
+        background-color: white;
+        position: absolute;
+        top: 37.5vh;
+        left: 2vw;
+        padding: 14px;
+        text-align: left;
+        border-radius: 20px;
+        border: none;
+        outline: none;
+        width: 20vw;
+      }
+
+      #password {
+        top: 43vh;
+      }
+
+      #password-inp {
+        background-color: white;
+        position: absolute;
+        top: 47.7vh;
+        left: 2vw;
+        padding: 14px;
+        text-align: left;
+        border-radius: 20px;
+        border: none;
+        outline: none;
+        width: 20vw;
+      }
+
+      #login-btn {
+        position: absolute;
+        top: 55vh;
+        padding: 15px;
+        border: none;
+        outline: none;
+        border-radius: 20px;
+        font-size: 16px;
+        left: 2vw;
+        cursor: pointer;
+        transition: all ease 0.2s;
+        &:hover {
+          background-color: $primary;
+          font-weight: 500;
+          color: white;
+        }
+      }
+
+      a {
+        position: absolute;
+        color: #38b5c0;
+        top: 58vh;
+        left: 6.5vw;
+        text-decoration: none;
+        transition: all ease 0.2s;
+        &:hover {
+          color: white;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  aside {
+    position: absolute;
+    left: 30vw;
+    font-size: 50px;
+
+    h1 {
+      font-size: 100px;
+      margin-top: 25vh;
+      span {
+        color: $primary;
+        font-size: 150px;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      position: absolute;
+      left: 2vw;
+    }
+  }
+}
+
+// SIGNUP PAGE
+.signupPage {
+  .container {
+    width: 30vw;
+    height: 70vh;
+    background-color: black;
+    position: absolute;
+    left: 35vw;
+    top: 18vh;
+    padding: 30px;
+    border: none;
+    border-radius: 30px;
+
+    img {
+      width: 200px;
+      position: absolute;
+      top: 1px;
+      left: 10vw;
+    }
+
+    .content {
+      h1 {
+        position: absolute;
+        color: white;
+        font-size: 50px;
+        top: 15vh;
+        left: 2.5vw;
+      }
+
+      #username-text {
+        position: absolute;
+        color: white;
+        font-size: 20px;
+        top: 22vh;
+        left: 2.5vw;
+      }
+
+      #username-inp {
+        background-color: white;
+        position: absolute;
+        top: 25.5vh;
+        left: 2vw;
+        padding: 14px;
+        text-align: left;
+        border-radius: 20px;
+        border: none;
+        outline: none;
+        width: 20vw;
+      }
+
+      #email-text {
+        position: absolute;
+        color: white;
+        font-size: 20px;
+        top: 31vh;
+        left: 2.5vw;
+      }
+
+      #email-inp {
+        background-color: white;
+        position: absolute;
+        top: 34.5vh;
+        left: 2vw;
+        padding: 14px;
+        text-align: left;
+        border-radius: 20px;
+        border: none;
+        outline: none;
+        width: 20vw;
+      }
+
+      #password-text {
+        position: absolute;
+        color: white;
+        font-size: 20px;
+        top: 40vh;
+        left: 2.5vw;
+      }
+
+      #password-inp {
+        background-color: white;
+        position: absolute;
+        top: 43.8vh;
+        left: 2vw;
+        padding: 14px;
+        text-align: left;
+        border-radius: 20px;
+        border: none;
+        outline: none;
+        width: 20vw;
+      }
+
+      #confirmpassword-text {
+        position: absolute;
+        color: white;
+        font-size: 20px;
+        top: 49.5vh;
+        left: 2.5vw;
+      }
+
+      #confirmpassword-inp {
+        background-color: white;
+        position: absolute;
+        top: 53vh;
+        left: 2vw;
+        padding: 14px;
+        text-align: left;
+        border-radius: 20px;
+        border: none;
+        outline: none;
+        width: 20vw;
+      }
+
+      #signup-btn {
+        font-size: 18px;
+        padding: 15px;
+        width: 5vw;
+        border-radius: 20px;
+        border: none;
+        outline: none;
+        position: absolute;
+        top: 62vh;
+        left: 2vw;
+        transition: all ease 0.2s;
+        cursor: pointer;
+        &:hover {
+          background-color: $primary;
+          font-weight: 500;
+        }
+      }
+    }
+    #goback-btn {
+      font-size: 18px;
+      padding: 15px;
+      width: 6vw;
+      border-radius: 20px;
+      border: none;
+      outline: none;
+      position: absolute;
+      top: 62vh;
+      left: 8vw;
+      transition: all ease 0.2s;
+      cursor: pointer;
+      &:hover {
+        background-color: $primary;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+// DASHBOARD PAGE
+.dashboard {
+  section {
+    width: 25vw;
+    height: 100vh;
+    background-color: black;
+  }
+}
+
+// .......
