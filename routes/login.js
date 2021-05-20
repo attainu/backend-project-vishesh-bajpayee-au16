@@ -11,7 +11,7 @@ router.use(
     resave: false,
     saveUninitialized: false,
     cookie: {
-      maxAge: 60000,
+      maxAge: 1000000,
     },
   })
 );
