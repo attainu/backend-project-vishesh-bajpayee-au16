@@ -366,6 +366,9 @@ body {
   margin: 50px;
   padding: 10px;
   border-radius: 30px;
+  -webkit-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
+  cursor: pointer;
 }
 
 .dashboard section .wrapper .content .sub-content {
@@ -380,6 +383,19 @@ body {
   -webkit-box-align: left;
       -ms-flex-align: left;
           align-items: left;
+  margin-left: 50px;
+}
+
+.dashboard section .wrapper .content:hover {
+  background-color: #38b5c0;
+  color: white;
+}
+
+.dashboard section .wrapper .content i {
+  position: absolute;
+  font-size: 45px;
+  left: 1.5vh;
+  top: 2.2vh;
 }
 
 .dashboard aside {

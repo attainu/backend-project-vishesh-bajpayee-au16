@@ -359,11 +359,27 @@ body {
         margin: 50px;
         padding: 10px;
         border-radius: 30px;
+        transition: all ease-in-out 0.2s;
+        cursor: pointer;
+
         .sub-content {
           padding: 10px;
           display: flex;
           flex-direction: column;
           align-items: left;
+          margin-left: 50px;
+        }
+
+        &:hover {
+          background-color: $primary;
+          color: white;
+        }
+
+        i {
+          position: absolute;
+          font-size: 45px;
+          left: 1.5vh;
+          top: 2.2vh;
         }
       }
     }
