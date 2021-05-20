@@ -389,6 +389,37 @@ body {
     top: 0px;
     position: absolute;
     left: 26vw;
+
+    .search-bar {
+      position: absolute;
+      width: 60vw;
+      height: 5vh;
+      top: 5vh;
+      left: 11vh;
+      border-radius: 30px;
+
+      background-color: black;
+
+      #search {
+        line-height: 5vh;
+        background-color: green;
+        border: none;
+        outline: none;
+        position: absolute;
+        left: 50px;
+        width: 55vw;
+        background-color: transparent;
+        color: white;
+        font-size: 24px;
+      }
+      i {
+        color: white;
+        line-height: 5vh;
+        font-size: 25px;
+        position: absolute;
+        right: 20px;
+      }
+    }
   }
 }
 
