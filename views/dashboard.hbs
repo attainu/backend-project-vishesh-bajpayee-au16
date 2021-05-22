@@ -1,31 +1,43 @@
 <div class="dashboard">
+  {{! SECTION }}
   <section id="section">
     <img src="/images/logo.png" alt="" />
     <div class="dashboard-btns">
-      <button>Profile</button>
-      <button>Log out</button>
+      <form action="/logout" method="POST">
+        <button>Log out</button>
+      </form>
+      <form action="/profile" method="POST">
+        <button id="profile-btn">Profile</button>
+      </form>
+
     </div>
 
     <div class="wrapper">
       <div class="content">
+
+        <i class="fab fa-github"></i>
         <div class="sub-content">
-          <h1>Notes</h1>
-          <p>Every point is worth noting</p>
+          <h1>Commit count</h1>
+          <p>Keep track of commits</p>
+
         </div>
       </div>
       <div class="content">
+        <i class="far fa-list-alt"></i>
         <div class="sub-content">
           <h1>To-do </h1>
           <p>Never miss anything</p>
         </div>
       </div>
       <div class="content">
+        <i class="far fa-sticky-note"></i>
         <div class="sub-content">
-          <h1>Commit count</h1>
-          <p>Keep track of commits</p>
+          <h1>Notes</h1>
+          <p>Every point is worth noting</p>
         </div>
       </div>
       <div class="content">
+        <i class="far fa-clock"></i>
         <div class="sub-content">
           <h1>Pomodoro</h1>
           <p>Increase your productivity</p>
@@ -34,8 +46,57 @@
     </div>
 
   </section>
+  {{! ASIDE }}
   <aside>
-    <h1>Welcome {{username}}</h1>
+    <div class="search-bar">
+      <input placeholder="Search" type="text" name="search" id="search" />
+      <i class="fas fa-search"></i>
+
+    </div>
+    {{! CARDS CONTAINER }}
+    <div class="card-main">
+      <h1> <span>Welcome</span> {{username}}!</h1>
+      <h4>Few steps to get started.</h4>
+
+      <div class="step-icons">
+
+        <div id="add-repository" class="item">
+          <i class="fas fa-code-branch"></i>
+          <h6>Add repository</h6>
+        </div>
+
+        <a
+          href="https://www.youtube.com/channel/UCLJKg2C6Sk9xe3Qd11dMkaw"
+          target="_blank"
+        >
+          <div class="item">
+            <i class="fab fa-youtube"></i>
+            <h6>Watch a guide </h6>
+
+          </div>
+        </a>
+        <a
+          href="https://opensource.com/article/17/5/30-best-practices-software-development-and-testing"
+          target="_blank"
+        >
+          <div class="item">
+            <i class="fas fa-book"></i>
+            <h6>Good practices</h6>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    {{! HIDDEN CONTENT }}
+
+    <div class="repo-container">
+      <h1>Add repository address</h1>
+      <form action="/dashboard/get-repo" method="POST">
+        <input type="text" name="userRepo" id="userrepo" />
+        <button>add repository</button>
+      </form>
+    </div>
 
   </aside>
 

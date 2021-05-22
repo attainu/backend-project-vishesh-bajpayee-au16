@@ -3,6 +3,7 @@ const express = require("express");
 const exphbs = require("express-handlebars");
 
 const Mongoose = require("mongoose");
+const app = express();
 
 // IMPORT ROUTES
 const homeRouter = require("./routes/home");
@@ -10,7 +11,9 @@ const signupRouter = require("./routes/signup");
 const gobackRouter = require("./routes/gobacktohome");
 const loginRouter = require("./routes/login");
 const dashboardRouter = require("./routes/dashboard");
-const app = express();
+const getRepoRouter = require("./routes/get-repo");
+const logoutRouter = require("./routes/logout");
+const profileRouter = require("./routes/profile");
 
 // MONGO DATABASE CONNECTION
 const { DATABASE_URL } = process.env;
@@ -43,5 +46,8 @@ app.use("/", signupRouter);
 app.use("/", loginRouter);
 app.use("/", gobackRouter);
 app.use("/", dashboardRouter);
+app.use("/", getRepoRouter);
+app.use("/", profileRouter);
+app.use("/", logoutRouter);
 
 app.listen(5000, () => console.log("Server Started"));
