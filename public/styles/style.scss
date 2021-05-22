@@ -328,9 +328,26 @@ body {
 
     .dashboard-btns {
       position: absolute;
-      top: 20vh;
+      top: 22vh;
       left: 4vw;
 
+      #profile-btn {
+        position: absolute;
+        left: 6vw;
+        top: 0vh;
+        padding: 15px;
+        border: none;
+        outline: none;
+        border-radius: 20px;
+        font-size: 16px;
+        margin: 0px 20px 0px 20px;
+        cursor: pointer;
+        transition: all ease 0.2s;
+
+        &:hover {
+          background-color: $primary;
+        }
+      }
       button {
         padding: 15px;
         border: none;

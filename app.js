@@ -13,6 +13,7 @@ const loginRouter = require("./routes/login");
 const dashboardRouter = require("./routes/dashboard");
 const getRepoRouter = require("./routes/get-repo");
 const logoutRouter = require("./routes/logout");
+const profileRouter = require("./routes/profile");
 
 // MONGO DATABASE CONNECTION
 const { DATABASE_URL } = process.env;
@@ -46,6 +47,7 @@ app.use("/", loginRouter);
 app.use("/", gobackRouter);
 app.use("/", dashboardRouter);
 app.use("/", getRepoRouter);
+app.use("/", profileRouter);
 app.use("/", logoutRouter);
 
 app.listen(5000, () => console.log("Server Started"));
