@@ -618,6 +618,14 @@ body {
   top: 15px;
   font-size: 20px;
   cursor: pointer;
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+}
+
+.notes .container i:hover {
+  color: white;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .notes .container #title-input {
@@ -692,23 +700,30 @@ body {
 .notes .wrapper .note-wrapper .note .button-wrapper #highlight {
   font-size: 24px;
   padding: 15px;
-  -webkit-transition: all ease-in-out 0.2s;
-  transition: all ease-in-out 0.2s;
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
   color: white;
   cursor: pointer;
 }
 
 .notes .wrapper .note-wrapper .note .button-wrapper #highlight:hover {
   color: #38b5c0;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 .notes .wrapper .note-wrapper .note .button-wrapper #delete {
   font-size: 24px;
   padding: 15px;
-  -webkit-transition: all ease-in-out 0.2s;
-  transition: all ease-in-out 0.2s;
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
   color: crimson;
   cursor: pointer;
+}
+
+.notes .wrapper .note-wrapper .note .button-wrapper #delete:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .notes .wrapper .note-wrapper .note h1 {
