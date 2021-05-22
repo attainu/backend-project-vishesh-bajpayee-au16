@@ -643,6 +643,23 @@ body {
         border-radius: 30px;
         position: relative;
 
+        h1 {
+          position: absolute;
+          color: $primary;
+          top: 8vh;
+          padding: 20px;
+
+          width: 380px;
+        }
+
+        p {
+          position: absolute;
+          color: white;
+          top: 18vh;
+          padding: 20px;
+          width: 380px;
+        }
+
         .button-wrapper {
           position: absolute;
           right: 20px;
@@ -671,25 +688,6 @@ body {
               transform: scale(1.1);
             }
           }
-        }
-
-        h1 {
-          position: absolute;
-          color: $primary;
-          top: 8vh;
-          padding: 20px;
-          display: inline;
-          width: 380px;
-        }
-
-        p {
-          position: absolute;
-          color: white;
-          top: 18vh;
-          padding: 20px;
-          display: inline;
-          width: 380px;
-          font-stretch: expanded;
         }
       }
     }
