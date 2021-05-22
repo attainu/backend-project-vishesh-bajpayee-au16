@@ -11,8 +11,13 @@ noteInput.addEventListener("click", () => {
   noteInput.style.top = "5vh";
 });
 
-console.log(noteWrapper);
 addBtn.addEventListener("click", () => {
-  noteWrapper.innerHTML += `<div class="note"></div>`;
+  let title = titleInput.value;
+  let para = noteInput.value;
+  noteWrapper.innerHTML += `<div class="note">
+ 
+  <h1>${title}</h1>
+  <p>${para}</p>
+  
+  </div>`;
 });
-console.log(noteWrapper);

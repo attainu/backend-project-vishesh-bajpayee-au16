@@ -160,6 +160,8 @@ body {
       left: 2vw;
     }
   }
+
+  // MEDIA QUERRIES
 }
 
 // SIGNUP PAGE
@@ -634,7 +636,25 @@ body {
         margin: 2vh;
         margin-top: 2.5vh;
         border-radius: 30px;
-        line-height: 600px;
+
+        h1 {
+          position: absolute;
+          color: $primary;
+          top: 8vh;
+          padding: 20px;
+          display: inline;
+          width: 380px;
+        }
+
+        p {
+          position: absolute;
+          color: white;
+          top: 18vh;
+          padding: 20px;
+          display: inline;
+          width: 380px;
+          font-stretch: expanded;
+        }
       }
     }
   }

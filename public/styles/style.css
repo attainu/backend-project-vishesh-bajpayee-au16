@@ -680,6 +680,24 @@ body {
   margin: 2vh;
   margin-top: 2.5vh;
   border-radius: 30px;
-  line-height: 600px;
+}
+
+.notes .wrapper .note-wrapper .note h1 {
+  position: absolute;
+  color: #38b5c0;
+  top: 8vh;
+  padding: 20px;
+  display: inline;
+  width: 380px;
+}
+
+.notes .wrapper .note-wrapper .note p {
+  position: absolute;
+  color: white;
+  top: 18vh;
+  padding: 20px;
+  display: inline;
+  width: 380px;
+  font-stretch: expanded;
 }
 /*# sourceMappingURL=style.css.map */
