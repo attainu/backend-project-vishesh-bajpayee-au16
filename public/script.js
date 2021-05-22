@@ -15,9 +15,12 @@ addBtn.addEventListener("click", () => {
   let title = titleInput.value;
   let para = noteInput.value;
   noteWrapper.innerHTML += `<div class="note">
- 
   <h1>${title}</h1>
   <p>${para}</p>
-  
-  </div>`;
+  <div class="button-wrapper">
+      <i id="highlight" class="fas fa-star"></i>
+      <i id="delete" class="far fa-trash-alt"></i>
+  </div>
+
+</div>`;
 });

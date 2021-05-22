@@ -680,6 +680,35 @@ body {
   margin: 2vh;
   margin-top: 2.5vh;
   border-radius: 30px;
+  position: relative;
+}
+
+.notes .wrapper .note-wrapper .note .button-wrapper {
+  position: absolute;
+  right: 20px;
+  top: 30px;
+}
+
+.notes .wrapper .note-wrapper .note .button-wrapper #highlight {
+  font-size: 24px;
+  padding: 15px;
+  -webkit-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
+  color: white;
+  cursor: pointer;
+}
+
+.notes .wrapper .note-wrapper .note .button-wrapper #highlight:hover {
+  color: #38b5c0;
+}
+
+.notes .wrapper .note-wrapper .note .button-wrapper #delete {
+  font-size: 24px;
+  padding: 15px;
+  -webkit-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
+  color: crimson;
+  cursor: pointer;
 }
 
 .notes .wrapper .note-wrapper .note h1 {
