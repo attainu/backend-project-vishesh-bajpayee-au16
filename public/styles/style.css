@@ -8,6 +8,7 @@
 
 body {
   background-image: url("../images/banner.png");
+  background-attachment: fixed;
 }
 
 .landingPage header {
@@ -377,6 +378,17 @@ body {
   left: 0px;
 }
 
+.dashboard section .wrapper a {
+  text-decoration: none;
+  color: black;
+  -webkit-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
+}
+
+.dashboard section .wrapper a:hover {
+  color: white;
+}
+
 .dashboard section .wrapper .content {
   position: relative;
   width: 36vh;
@@ -579,5 +591,95 @@ body {
   width: 90px;
   top: 80px;
   left: -6px;
+}
+
+.notes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.notes .container {
+  width: 500px;
+  height: 50px;
+  background-color: black;
+  border-radius: 30px;
+  margin-top: 8vh;
+  position: relative;
+}
+
+.notes .container i {
+  position: absolute;
+  color: #38b5c0;
+  right: 30px;
+  top: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.notes .container #title-input {
+  display: none;
+  width: 400px;
+  position: absolute;
+  background-color: transparent;
+  top: 1.2vh;
+  left: 2vh;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  font-weight: 500;
+  padding: 10px;
+  color: #38b5c0;
+}
+
+.notes .container #note-input {
+  padding: 10px;
+  width: 500px;
+  position: absolute;
+  background-color: transparent;
+  top: 0.5vh;
+  left: 2vh;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  color: white;
+  height: 150px;
+  font-size: 16px;
+}
+
+.notes .wrapper {
+  width: 95vw;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  border-radius: 30px;
+  top: 30vh;
+}
+
+.notes .wrapper .note-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.notes .wrapper .note-wrapper .note {
+  width: 400px;
+  height: 600px;
+  background-color: #000000;
+  margin: 2vh;
+  margin-top: 2.5vh;
+  border-radius: 30px;
+  line-height: 600px;
 }
 /*# sourceMappingURL=style.css.map */

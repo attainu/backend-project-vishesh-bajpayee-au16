@@ -14,7 +14,10 @@ const dashboardRouter = require("./routes/dashboard");
 const getRepoRouter = require("./routes/get-repo");
 const logoutRouter = require("./routes/logout");
 const profileRouter = require("./routes/profile");
-
+const notesRouter = require("./routes/notes");
+const todoRouter = require("./routes/todo");
+const commitcounterRouter = require("./routes/commitcounter");
+const pomodoroRouter = require("./routes/pomodoro");
 // MONGO DATABASE CONNECTION
 const { DATABASE_URL } = process.env;
 
@@ -39,6 +42,7 @@ app.set("view engine", ".hbs");
 // MIDDLEWARE
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
 // ROUTES
 app.use("/", homeRouter);
@@ -49,5 +53,9 @@ app.use("/", dashboardRouter);
 app.use("/", getRepoRouter);
 app.use("/", profileRouter);
 app.use("/", logoutRouter);
+app.use("/", notesRouter);
+app.use("/", todoRouter);
+app.use("/", commitcounterRouter);
+app.use("/", pomodoroRouter);
 
 app.listen(5000, () => console.log("Server Started"));
