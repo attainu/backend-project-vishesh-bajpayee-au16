@@ -62,7 +62,7 @@
 
         <div id="add-repository" class="item">
           <i class="fas fa-code-branch"></i>
-          <h6>Add repository</h6>
+          <h6>Add repository*</h6>
         </div>
 
         <a
@@ -84,20 +84,26 @@
             <h6>Good practices</h6>
           </div>
         </a>
-
+        {{! HIDDEN CONTENT }}
       </div>
-    </div>
-
-    {{! HIDDEN CONTENT }}
-
-    <div class="repo-container">
-      <h1>Add repository address</h1>
       <form action="/dashboard/get-repo" method="POST">
-        <input type="text" name="userRepo" id="userrepo" />
-        <button>add repository</button>
+        <div class="input-field">
+          <input type="text" name="userRepo" id="githubinput" />
+          <button type="submit" id="addrepoBtn">add repository</button>
+        </div>
       </form>
     </div>
 
   </aside>
 
 </div>
+
+<script>
+
+  const btnClick = document.getElementById("add-repository"); const inputField =
+  document.getElementsByClassName("input-field")[0];
+  btnClick.addEventListener("click", () => { if (inputField.style.display ===
+  "none") { inputField.style.display = "block"; } else {
+  inputField.style.display = "none"; } });
+
+</script>

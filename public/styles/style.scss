@@ -452,6 +452,36 @@ body {
         box-shadow: 0px 0px 5px 5px $primary;
       }
 
+      .input-field {
+        display: none;
+        position: absolute;
+        top: 40vh;
+        left: 5vh;
+        transition: all ease-in-out 0.2s;
+
+        #githubinput {
+          padding: 15px;
+          border: none;
+          outline: none;
+          border-radius: 20px;
+        }
+
+        #addrepoBtn {
+          padding: 15px;
+          border: none;
+          outline: none;
+          border-radius: 20px;
+          font-size: 16px;
+          margin-left: 20px;
+          transition: all ease-in-out 0.2s;
+
+          &:hover {
+            background-color: $primary;
+            color: white;
+          }
+        }
+      }
+
       h1 {
         padding: 20px;
         color: white;
@@ -517,64 +547,5 @@ body {
         }
       }
     }
-
-    .repo-container {
-      display: none;
-      width: 30vw;
-      height: 35vh;
-      border-radius: 30px;
-      background-color: limegreen;
-      position: absolute;
-      top: 33vh;
-      left: 14vw;
-      z-index: 2;
-
-      h1 {
-        color: white;
-        text-align: center;
-        padding-top: 50px;
-        font-size: 40px;
-      }
-      #userrepo {
-        position: absolute;
-        width: 20vw;
-        height: 5vh;
-        top: 15vh;
-        left: 9vh;
-        border-radius: 30px;
-        outline: none;
-        border: none;
-        text-align: center;
-        font-size: 20px;
-      }
-
-      button {
-        padding: 15px;
-        border: none;
-        outline: none;
-        border-radius: 20px;
-        font-size: 16px;
-        margin: 0px 20px 0px 20px;
-        cursor: pointer;
-        position: absolute;
-        top: 250px;
-        left: 18vh;
-        transition: all ease-in-out 0.2s;
-
-        &:hover {
-          background-color: $primary;
-          color: white;
-        }
-      }
-    }
   }
-}
-
-.overlay {
-  position: absolute;
-  /* color with alpha transparency */
-  background-color: rgba(0, 0, 0, 0.8);
-  /* stretch to screen edges */
-  width: 100vw;
-  height: 100vh;
 }

@@ -470,6 +470,38 @@ body {
           box-shadow: 0px 0px 5px 5px #38b5c0;
 }
 
+.dashboard aside .card-main .input-field {
+  display: none;
+  position: absolute;
+  top: 40vh;
+  left: 5vh;
+  -webkit-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
+}
+
+.dashboard aside .card-main .input-field #githubinput {
+  padding: 15px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+}
+
+.dashboard aside .card-main .input-field #addrepoBtn {
+  padding: 15px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-size: 16px;
+  margin-left: 20px;
+  -webkit-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
+}
+
+.dashboard aside .card-main .input-field #addrepoBtn:hover {
+  background-color: #38b5c0;
+  color: white;
+}
+
 .dashboard aside .card-main h1 {
   padding: 20px;
   color: white;
@@ -547,66 +579,5 @@ body {
   width: 90px;
   top: 80px;
   left: -6px;
-}
-
-.dashboard aside .repo-container {
-  display: none;
-  width: 30vw;
-  height: 35vh;
-  border-radius: 30px;
-  background-color: limegreen;
-  position: absolute;
-  top: 33vh;
-  left: 14vw;
-  z-index: 2;
-}
-
-.dashboard aside .repo-container h1 {
-  color: white;
-  text-align: center;
-  padding-top: 50px;
-  font-size: 40px;
-}
-
-.dashboard aside .repo-container #userrepo {
-  position: absolute;
-  width: 20vw;
-  height: 5vh;
-  top: 15vh;
-  left: 9vh;
-  border-radius: 30px;
-  outline: none;
-  border: none;
-  text-align: center;
-  font-size: 20px;
-}
-
-.dashboard aside .repo-container button {
-  padding: 15px;
-  border: none;
-  outline: none;
-  border-radius: 20px;
-  font-size: 16px;
-  margin: 0px 20px 0px 20px;
-  cursor: pointer;
-  position: absolute;
-  top: 250px;
-  left: 18vh;
-  -webkit-transition: all ease-in-out 0.2s;
-  transition: all ease-in-out 0.2s;
-}
-
-.dashboard aside .repo-container button:hover {
-  background-color: #38b5c0;
-  color: white;
-}
-
-.overlay {
-  position: absolute;
-  /* color with alpha transparency */
-  background-color: rgba(0, 0, 0, 0.8);
-  /* stretch to screen edges */
-  width: 100vw;
-  height: 100vh;
 }
 /*# sourceMappingURL=style.css.map */
