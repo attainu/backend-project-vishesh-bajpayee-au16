@@ -602,6 +602,48 @@ body {
           justify-content: center;
 }
 
+.notes #clear-all {
+  position: absolute;
+  top: 8vh;
+  right: 52vh;
+  padding: 15px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  background-color: crimson;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.notes #gobackBtn {
+  position: absolute;
+  top: 8vh;
+  right: 40vh;
+  padding: 15px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.notes #signout {
+  position: absolute;
+  top: 8vh;
+  right: 28vh;
+  padding: 15px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
 .notes .container {
   width: 500px;
   height: 50px;
@@ -682,6 +724,7 @@ body {
 }
 
 .notes .wrapper .note-wrapper .note {
+  outline: none;
   width: 400px;
   height: 600px;
   background-color: #000000;
@@ -689,6 +732,22 @@ body {
   margin-top: 2.5vh;
   border-radius: 30px;
   position: relative;
+}
+
+.notes .wrapper .note-wrapper .note h1 {
+  position: absolute;
+  color: #38b5c0;
+  top: 8vh;
+  padding: 20px;
+  width: 380px;
+}
+
+.notes .wrapper .note-wrapper .note p {
+  position: absolute;
+  color: white;
+  top: 18vh;
+  padding: 20px;
+  width: 380px;
 }
 
 .notes .wrapper .note-wrapper .note .button-wrapper {
@@ -724,24 +783,5 @@ body {
 .notes .wrapper .note-wrapper .note .button-wrapper #delete:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
-}
-
-.notes .wrapper .note-wrapper .note h1 {
-  position: absolute;
-  color: #38b5c0;
-  top: 8vh;
-  padding: 20px;
-  display: inline;
-  width: 380px;
-}
-
-.notes .wrapper .note-wrapper .note p {
-  position: absolute;
-  color: white;
-  top: 18vh;
-  padding: 20px;
-  display: inline;
-  width: 380px;
-  font-stretch: expanded;
 }
 /*# sourceMappingURL=style.css.map */

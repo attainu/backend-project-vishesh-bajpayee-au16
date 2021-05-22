@@ -566,6 +566,47 @@ body {
 .notes {
   display: flex;
   justify-content: center;
+
+  #clear-all {
+    position: absolute;
+    top: 8vh;
+    right: 52vh;
+    padding: 15px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    background-color: crimson;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  #gobackBtn {
+    position: absolute;
+    top: 8vh;
+    right: 40vh;
+    padding: 15px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  #signout {
+    position: absolute;
+    top: 8vh;
+    right: 28vh;
+    padding: 15px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
   .container {
     width: 500px;
     height: 50px;
@@ -635,6 +676,7 @@ body {
       flex-wrap: wrap;
 
       .note {
+        outline: none;
         width: 400px;
         height: 600px;
         background-color: #000000;
@@ -648,7 +690,6 @@ body {
           color: $primary;
           top: 8vh;
           padding: 20px;
-
           width: 380px;
         }
 
@@ -659,7 +700,6 @@ body {
           padding: 20px;
           width: 380px;
         }
-
         .button-wrapper {
           position: absolute;
           right: 20px;
