@@ -1,10 +1,25 @@
 const express = require("express");
 const router = express.Router();
+const UserdataModel = require("../models/UserData");
+router.post("/dashboard/get-repo", async (req, res) => {
+  try {
+    const userRepo = req.body.userRepo;
 
-router.post("/dashboard/get-repo", (req, res) => {
-  const repoURL = req.body.userRepo;
-  console.log(repoURL);
-  res.redirect("/dashboard");
+    const userObj = {
+      githubRepo: userRepo,
+      activityCount: 1,
+      level: 1,
+      colorCode: 123123,
+      user: req.session.user._id,
+    };
+    const newUserData = await UserdataModel.create(userObj);
+
+    await newUserData.save();
+
+    res.redirect("/dashboard");
+  } catch (error) {
+    res.send(error);
+  }
 });
 
 module.exports = router;

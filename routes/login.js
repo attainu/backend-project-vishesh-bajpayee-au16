@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcrypt");
 const session = require("express-session");
-const SignupModel = require("../models/signup");
+const SignupModel = require("../models/Signup");
 const myStore = new session.MemoryStore();
 
 router.use(

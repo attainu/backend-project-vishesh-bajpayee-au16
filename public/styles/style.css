@@ -8,6 +8,7 @@
 
 body {
   background-image: url("../images/banner.png");
+  background-attachment: fixed;
 }
 
 .landingPage header {
@@ -377,6 +378,17 @@ body {
   left: 0px;
 }
 
+.dashboard section .wrapper a {
+  text-decoration: none;
+  color: black;
+  -webkit-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
+}
+
+.dashboard section .wrapper a:hover {
+  color: white;
+}
+
 .dashboard section .wrapper .content {
   position: relative;
   width: 36vh;
@@ -470,6 +482,38 @@ body {
           box-shadow: 0px 0px 5px 5px #38b5c0;
 }
 
+.dashboard aside .card-main .input-field {
+  display: none;
+  position: absolute;
+  top: 40vh;
+  left: 5vh;
+  -webkit-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
+}
+
+.dashboard aside .card-main .input-field #githubinput {
+  padding: 15px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+}
+
+.dashboard aside .card-main .input-field #addrepoBtn {
+  padding: 15px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-size: 16px;
+  margin-left: 20px;
+  -webkit-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
+}
+
+.dashboard aside .card-main .input-field #addrepoBtn:hover {
+  background-color: #38b5c0;
+  color: white;
+}
+
 .dashboard aside .card-main h1 {
   padding: 20px;
   color: white;
@@ -549,64 +593,195 @@ body {
   left: -6px;
 }
 
-.dashboard aside .repo-container {
-  display: none;
-  width: 30vw;
-  height: 35vh;
-  border-radius: 30px;
-  background-color: limegreen;
+.notes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.notes #clear-all {
   position: absolute;
-  top: 33vh;
-  left: 14vw;
-  z-index: 2;
-}
-
-.dashboard aside .repo-container h1 {
-  color: white;
-  text-align: center;
-  padding-top: 50px;
-  font-size: 40px;
-}
-
-.dashboard aside .repo-container #userrepo {
-  position: absolute;
-  width: 20vw;
-  height: 5vh;
-  top: 15vh;
-  left: 9vh;
-  border-radius: 30px;
-  outline: none;
-  border: none;
-  text-align: center;
-  font-size: 20px;
-}
-
-.dashboard aside .repo-container button {
+  top: 8vh;
+  right: 52vh;
   padding: 15px;
   border: none;
   outline: none;
   border-radius: 20px;
-  font-size: 16px;
-  margin: 0px 20px 0px 20px;
-  cursor: pointer;
-  position: absolute;
-  top: 250px;
-  left: 18vh;
-  -webkit-transition: all ease-in-out 0.2s;
-  transition: all ease-in-out 0.2s;
-}
-
-.dashboard aside .repo-container button:hover {
-  background-color: #38b5c0;
+  background-color: crimson;
   color: white;
+  font-size: 16px;
+  cursor: pointer;
 }
 
-.overlay {
+.notes #gobackBtn {
   position: absolute;
-  /* color with alpha transparency */
-  background-color: rgba(0, 0, 0, 0.8);
-  /* stretch to screen edges */
-  width: 100vw;
-  height: 100vh;
+  top: 8vh;
+  right: 40vh;
+  padding: 15px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.notes #signout {
+  position: absolute;
+  top: 8vh;
+  right: 28vh;
+  padding: 15px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.notes .container {
+  width: 500px;
+  height: 50px;
+  background-color: black;
+  border-radius: 30px;
+  margin-top: 8vh;
+  position: relative;
+}
+
+.notes .container i {
+  position: absolute;
+  color: #38b5c0;
+  right: 30px;
+  top: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+}
+
+.notes .container i:hover {
+  color: white;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.notes .container #title-input {
+  display: none;
+  width: 400px;
+  position: absolute;
+  background-color: transparent;
+  top: 1.2vh;
+  left: 2vh;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  font-weight: 500;
+  padding: 10px;
+  color: #38b5c0;
+}
+
+.notes .container #note-input {
+  padding: 10px;
+  width: 500px;
+  position: absolute;
+  background-color: transparent;
+  top: 0.5vh;
+  left: 2vh;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  color: white;
+  height: 150px;
+  font-size: 16px;
+}
+
+.notes .wrapper {
+  width: 95vw;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  border-radius: 30px;
+  top: 30vh;
+}
+
+.notes .wrapper .note-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.notes .wrapper .note-wrapper .note {
+  outline: none;
+  width: 400px;
+  height: 600px;
+  background-color: #000000;
+  margin: 2vh;
+  margin-top: 2.5vh;
+  border-radius: 30px;
+  position: relative;
+}
+
+.notes .wrapper .note-wrapper .note h1 {
+  position: absolute;
+  color: #38b5c0;
+  top: 8vh;
+  padding: 20px;
+  width: 380px;
+}
+
+.notes .wrapper .note-wrapper .note p {
+  position: absolute;
+  color: white;
+  top: 18vh;
+  padding: 20px;
+  width: 380px;
+}
+
+.notes .wrapper .note-wrapper .note .button-wrapper {
+  position: absolute;
+  right: 20px;
+  top: 30px;
+}
+
+.notes .wrapper .note-wrapper .note .button-wrapper #highlight {
+  font-size: 24px;
+  padding: 15px;
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+  color: white;
+  cursor: pointer;
+}
+
+.notes .wrapper .note-wrapper .note .button-wrapper #highlight:hover {
+  color: #38b5c0;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.notes .wrapper .note-wrapper .note .button-wrapper #delete {
+  font-size: 24px;
+  padding: 15px;
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+  color: crimson;
+  cursor: pointer;
+}
+
+.notes .wrapper .note-wrapper .note .button-wrapper #delete:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 /*# sourceMappingURL=style.css.map */

@@ -9,19 +9,19 @@
       <form action="/profile" method="POST">
         <button id="profile-btn">Profile</button>
       </form>
-
     </div>
 
     <div class="wrapper">
+     <a href="/dashboard/commitcounter">
       <div class="content">
-
         <i class="fab fa-github"></i>
         <div class="sub-content">
           <h1>Commit count</h1>
           <p>Keep track of commits</p>
-
         </div>
+     </a>
       </div>
+      <a href="/dashboard/todo">
       <div class="content">
         <i class="far fa-list-alt"></i>
         <div class="sub-content">
@@ -29,13 +29,17 @@
           <p>Never miss anything</p>
         </div>
       </div>
-      <div class="content">
+      </a>
+     <a href="/dashboard/notes">
+       <div class="content">
         <i class="far fa-sticky-note"></i>
         <div class="sub-content">
           <h1>Notes</h1>
           <p>Every point is worth noting</p>
         </div>
+     </a>
       </div>
+      <a href="/dashboard/pomodoro">
       <div class="content">
         <i class="far fa-clock"></i>
         <div class="sub-content">
@@ -43,6 +47,7 @@
           <p>Increase your productivity</p>
         </div>
       </div>
+      </a>
     </div>
 
   </section>
@@ -62,7 +67,7 @@
 
         <div id="add-repository" class="item">
           <i class="fas fa-code-branch"></i>
-          <h6>Add repository</h6>
+          <h6>Add repository*</h6>
         </div>
 
         <a
@@ -84,20 +89,26 @@
             <h6>Good practices</h6>
           </div>
         </a>
-
+        {{! HIDDEN CONTENT }}
       </div>
-    </div>
-
-    {{! HIDDEN CONTENT }}
-
-    <div class="repo-container">
-      <h1>Add repository address</h1>
       <form action="/dashboard/get-repo" method="POST">
-        <input type="text" name="userRepo" id="userrepo" />
-        <button>add repository</button>
+        <div class="input-field">
+          <input type="text" name="userRepo" id="githubinput" />
+          <button type="submit" id="addrepoBtn">add repository</button>
+        </div>
       </form>
     </div>
 
   </aside>
 
 </div>
+
+<script>
+
+  const btnClick = document.getElementById("add-repository"); const inputField =
+  document.getElementsByClassName("input-field")[0];
+  btnClick.addEventListener("click", () => { if (inputField.style.display ===
+  "none") { inputField.style.display = "block"; } else {
+  inputField.style.display = "none"; } });
+
+</script>

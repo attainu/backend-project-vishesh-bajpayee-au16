@@ -1,0 +1,30 @@
+<div class="notes">
+
+  <div class="container">
+
+    <i id="addBtn" class="fas fa-plus"></i>
+
+    <input placeholder="Title" type="text" name="title" id="title-input" />
+    <textarea
+      placeholder="write a note"
+      type="text"
+      name="note"
+      id="note-input"
+    ></textarea>
+  </div>
+
+  <div class="wrapper">
+    <div class="note-wrapper">
+
+    </div>
+
+  </div>
+
+  <form action="/dashboard" method="GET">
+    <button id="gobackBtn" type="submit">Go back</button>
+  </form>
+  <form action="/logout" method="POST">
+    <button id="signout" type="submit">Log out</button>
+  </form>
+  <button id="clear-all" type="submit">clear all</button>
+</div>
