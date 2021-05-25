@@ -1,5 +1,5 @@
 <div class="notes">
-
+  <h1 id="heading">Notes</h1>
   <div class="container">
 
     <i id="addBtn" class="fas fa-plus"></i>
@@ -29,7 +29,7 @@
   <button id="clear-all" type="submit">clear all</button>
 </div>
 
-{{! <script>
+<script>
   const container = document.getElementsByClassName("container")[0]; const
   titleInput = document.getElementById("title-input"); const noteInput =
   document.getElementById("note-input"); const body =
@@ -40,11 +40,15 @@
   function () { container.style.height = "150px"; titleInput.style.display =
   "inline"; noteInput.style.top = "5vh"; }); addBtn.addEventListener("click",
   function () { let title = titleInput.value; let para = noteInput.value;
-  noteWrapper.innerHTML += `<div contenteditable id=${title} class="note">
-  <h1>${title}</h1> <p>${para}</p> <div class="button-wrapper"> <i
-  id="highlight" class="fas fa-star"></i> <i id="delete" class="far
-  fa-trash-alt"></i> </div> </div>`; }); clearAllBtn.addEventListener("click",
-  function () { noteWrapper.innerHTML = ""; }); const allNotes =
-  document.getElementsByClassName("note"); console.log(allNotes);
+  noteWrapper.innerHTML += `<div id=${title} class="note"> <h1
+  contenteditable>${title}</h1> <p contenteditable>${para}</p> <div
+  class="button-wrapper"> <i id="highlight" class="fas fa-star"></i> <i
+  id="delete" class="far fa-trash-alt"></i> </div> </div>`; const notes =
+  document.querySelectorAll(".note"); const deleteBtns =
+  document.querySelectorAll("#delete"); console.log(notes, deleteBtns); for (let
+  index = 0; index < deleteBtns.length; index++) { const deletebtn =
+  deleteBtns[index]; deletebtn.addEventListener("click", function () {
+  notes[index].remove(); }); } }); clearAllBtn.addEventListener("click",
+  function () { noteWrapper.innerHTML = ""; });
 
-</script> }}
+</script>

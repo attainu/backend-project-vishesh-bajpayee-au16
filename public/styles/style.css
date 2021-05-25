@@ -602,6 +602,13 @@ body {
           justify-content: center;
 }
 
+.notes #heading {
+  font-size: 100px;
+  position: absolute;
+  top: 7vh;
+  left: 7vh;
+}
+
 .notes #clear-all {
   position: absolute;
   top: 8vh;
@@ -905,5 +912,55 @@ body {
   line-height: 8vh;
   margin-left: 30px;
   color: #38b5c0;
+}
+
+.todo #heading {
+  font-size: 100px;
+  position: absolute;
+  top: 7vh;
+  left: 7vh;
+}
+
+.todo .todo-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10vh;
+}
+
+.todo .todo-wrapper #item {
+  padding: 10px 20px 10px 20px;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  background-color: #000000;
+  color: white;
+  font-size: 24px;
+}
+
+.todo .todo-wrapper i {
+  position: absolute;
+  color: white;
+  left: 58vw;
+  font-size: 20px;
+  cursor: pointer;
+  -webkit-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
+}
+
+.todo .todo-wrapper i:hover {
+  color: #38b5c0;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 /*# sourceMappingURL=style.css.map */

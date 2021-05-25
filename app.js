@@ -60,4 +60,7 @@ app.use("/", commitcounterRouter);
 app.use("/", pomodoroRouter);
 app.use("/", gobackToDashboard);
 
-app.listen(5000, () => console.log("Server Started"));
+// PORT
+const port = 5000;
+
+app.listen(port, () => console.log("Server Started"));

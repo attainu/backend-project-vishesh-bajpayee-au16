@@ -564,6 +564,12 @@ body {
 
 // NOTES PAGE
 .notes {
+  #heading {
+    font-size: 100px;
+    position: absolute;
+    top: 7vh;
+    left: 7vh;
+  }
   display: flex;
   justify-content: center;
 
@@ -834,6 +840,46 @@ body {
             color: $primary;
           }
         }
+      }
+    }
+  }
+}
+
+// TODO LIST
+.todo {
+  #heading {
+    font-size: 100px;
+    position: absolute;
+    top: 7vh;
+    left: 7vh;
+  }
+  .todo-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vh;
+
+    #item {
+      padding: 10px 20px 10px 20px;
+      border: none;
+      border-radius: 30px;
+      outline: none;
+      background-color: #000000;
+      color: white;
+      font-size: 24px;
+    }
+
+    i {
+      position: absolute;
+      color: white;
+      left: 58vw;
+      font-size: 20px;
+      cursor: pointer;
+      transition: all ease-in-out 0.2s;
+      &:hover {
+        color: $primary;
+        transform: rotate(90deg);
       }
     }
   }
