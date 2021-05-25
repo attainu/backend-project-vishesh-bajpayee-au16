@@ -26,6 +26,7 @@
     "express-session": "^1.17.1",
     "mongodb": "^3.6.6",
     "mongoose": "^5.12.9",
+    "parcel-plugin-handlebars": "^0.4.4",
     "prettify": "^0.1.7"
   }
 }

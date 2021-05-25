@@ -735,3 +735,104 @@ body {
 }
 
 // PROFILE PAGE
+.profile {
+  display: flex;
+  justify-content: center;
+
+  .container {
+    width: 90vw;
+    height: 80vh;
+    background-color: rgba($color: #000000, $alpha: 0.8);
+    border-radius: 30px;
+    margin-top: 10vh;
+
+    .btn-container {
+      position: absolute;
+      right: 20vh;
+      top: 14vh;
+
+      a {
+        button {
+          padding: 15px;
+          border: none;
+          outline: none;
+          border-radius: 20px;
+          background-color: white;
+          color: black;
+          font-size: 16px;
+          cursor: pointer;
+          outline: none;
+          transition: all ease-in-out 0.2s;
+
+          &:hover {
+            background-color: $primary;
+          }
+        }
+      }
+    }
+
+    .text-wrapper {
+      display: flex;
+      justify-content: center;
+      h1 {
+        font-weight: 300;
+        margin-top: 20px;
+        color: $primary;
+        font-size: 80px;
+
+        span {
+          color: white;
+        }
+      }
+    }
+
+    .info-container {
+      background-color: teal;
+      margin: 5vh;
+      padding: 20px;
+      width: 30vw;
+      height: 30vw;
+      border-radius: 30px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      #heading {
+        padding-left: 5px;
+        color: white;
+        margin-left: 28px;
+        font-size: 50px;
+      }
+
+      .main-wrapper {
+        margin-top: 20px;
+        .wrapper {
+          width: 23vw;
+          height: 8vh;
+          background-color: white;
+          border-radius: 30px;
+          margin: 20px 0px 0px 20px;
+          display: flex;
+
+          i {
+            font-size: 40px;
+            line-height: 8vh;
+            margin-left: 20px;
+          }
+          h1 {
+            color: black;
+            line-height: 8vh;
+            margin-left: 10px;
+          }
+          h2 {
+            font-size: 50px;
+            line-height: 8vh;
+            margin-left: 30px;
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+}

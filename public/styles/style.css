@@ -784,4 +784,125 @@ body {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
+
+.profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.profile .container {
+  width: 90vw;
+  height: 80vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 30px;
+  margin-top: 10vh;
+}
+
+.profile .container .btn-container {
+  position: absolute;
+  right: 20vh;
+  top: 14vh;
+}
+
+.profile .container .btn-container a button {
+  padding: 15px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
+}
+
+.profile .container .btn-container a button:hover {
+  background-color: #38b5c0;
+}
+
+.profile .container .text-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.profile .container .text-wrapper h1 {
+  font-weight: 300;
+  margin-top: 20px;
+  color: #38b5c0;
+  font-size: 80px;
+}
+
+.profile .container .text-wrapper h1 span {
+  color: white;
+}
+
+.profile .container .info-container {
+  background-color: teal;
+  margin: 5vh;
+  padding: 20px;
+  width: 30vw;
+  height: 30vw;
+  border-radius: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.profile .container .info-container #heading {
+  padding-left: 5px;
+  color: white;
+  margin-left: 28px;
+  font-size: 50px;
+}
+
+.profile .container .info-container .main-wrapper {
+  margin-top: 20px;
+}
+
+.profile .container .info-container .main-wrapper .wrapper {
+  width: 23vw;
+  height: 8vh;
+  background-color: white;
+  border-radius: 30px;
+  margin: 20px 0px 0px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.profile .container .info-container .main-wrapper .wrapper i {
+  font-size: 40px;
+  line-height: 8vh;
+  margin-left: 20px;
+}
+
+.profile .container .info-container .main-wrapper .wrapper h1 {
+  color: black;
+  line-height: 8vh;
+  margin-left: 10px;
+}
+
+.profile .container .info-container .main-wrapper .wrapper h2 {
+  font-size: 50px;
+  line-height: 8vh;
+  margin-left: 30px;
+  color: #38b5c0;
+}
 /*# sourceMappingURL=style.css.map */
