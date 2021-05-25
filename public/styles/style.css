@@ -916,9 +916,51 @@ body {
 
 .todo #heading {
   font-size: 100px;
-  position: absolute;
+  position: fixed;
   top: 7vh;
   left: 7vh;
+}
+
+.todo #clear-all {
+  position: fixed;
+  top: 10vh;
+  right: 52vh;
+  padding: 15px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  background-color: crimson;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.todo #gobackBtn {
+  position: fixed;
+  top: 10vh;
+  right: 40vh;
+  padding: 15px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.todo #signout {
+  position: fixed;
+  top: 10vh;
+  right: 28vh;
+  padding: 15px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 .todo .todo-wrapper {
@@ -938,7 +980,21 @@ body {
   margin-top: 10vh;
 }
 
-.todo .todo-wrapper #item {
+.todo .todo-wrapper .create-todo #clear-all {
+  position: absolute;
+  top: 8vh;
+  right: 52vh;
+  padding: 15px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  background-color: crimson;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.todo .todo-wrapper .create-todo #item {
   padding: 10px 20px 10px 20px;
   border: none;
   border-radius: 30px;
@@ -946,21 +1002,92 @@ body {
   background-color: #000000;
   color: white;
   font-size: 24px;
+  font-weight: 600;
 }
 
-.todo .todo-wrapper i {
+.todo .todo-wrapper .create-todo #add-btn {
   position: absolute;
   color: white;
-  left: 58vw;
+  left: 58.3vw;
+  top: 11.5vh;
   font-size: 20px;
   cursor: pointer;
   -webkit-transition: all ease-in-out 0.2s;
   transition: all ease-in-out 0.2s;
 }
 
-.todo .todo-wrapper i:hover {
+.todo .todo-wrapper .create-todo #add-btn:hover {
   color: #38b5c0;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
+}
+
+.todo .todo-wrapper .todo-item {
+  width: 40vh;
+  height: 15vh;
+  background-color: black;
+  color: #38b5c0;
+  margin-top: 30px;
+  border-radius: 30px;
+  padding: 20px;
+  position: relative;
+  -webkit-box-shadow: 0px 0px 5px 1px black;
+          box-shadow: 0px 0px 5px 1px black;
+}
+
+.todo .todo-wrapper .todo-item .icon-wrapper {
+  position: absolute;
+  bottom: 12px;
+}
+
+.todo .todo-wrapper .todo-item .icon-wrapper .icons #popup {
+  color: white;
+  font-size: 24px;
+  padding: 5px;
+  cursor: pointer;
+  -webkit-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
+}
+
+.todo .todo-wrapper .todo-item .icon-wrapper .icons #popup:hover {
+  color: #38b5c0;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.todo .todo-wrapper .todo-item .icon-wrapper .icons #delete {
+  color: crimson;
+  padding-top: 10px;
+  font-size: 24px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.todo .todo-wrapper .todo-item .icon-wrapper .icons #check {
+  color: #81b214;
+  font-size: 24px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.todo .todo-wrapper .todo-item .icon-wrapper .icons #copy {
+  color: #ff9a00;
+  font-size: 24px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.todo .todo-wrapper .todo-item .icon-wrapper .icons #strike {
+  color: #3ec1d3;
+  font-size: 24px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.todo .todo-wrapper .todo-item .icon-wrapper .icons #edit {
+  color: b61aae;
+  font-size: 24px;
+  padding: 5px;
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */
