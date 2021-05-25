@@ -1,35 +1,25 @@
-const container = document.getElementsByClassName("container")[0];
-const titleInput = document.getElementById("title-input");
-const noteInput = document.getElementById("note-input");
-const body = document.getElementsByClassName("notes")[0];
-const addBtn = document.getElementById("addBtn");
-const noteWrapper = document.getElementsByClassName("note-wrapper")[0];
-const clearAllBtn = document.getElementById("clear-all");
-noteInput.addEventListener("click", () => {
-  container.style.height = "150px";
-  titleInput.style.display = "inline";
-  noteInput.style.top = "5vh";
+const createTodo = document.querySelector("#item");
+const addBtn = document.querySelector("#add-btn");
+const todoWrapper = document.querySelector(".todo-items-list");
+const clearAllBtn = document.querySelector("#clear-all");
+addBtn.addEventListener("click", function () {
+  let value = createTodo.value;
+  todoWrapper.innerHTML += `<div class="todo-item">
+      <h1>${value}</h1>
+      <div class="icon-wrapper">
+        <div class="icons">
+          <i id="popup" class="fas fa-plus"></i>
+          <i id="delete" class="far fa-trash-alt"></i>
+          <i id="check" class="fas fa-check-square"></i>
+          <i id="strike" class="fas fa-strikethrough"></i>
+          <i id="copy" class="far fa-copy"></i>
+          <i id="edit" class="far fa-edit"></i>
+
+        </div>
+      </div>
+    </div>`;
 });
 
-// ADD A NOTE
-addBtn.addEventListener("click", () => {
-  let title = titleInput.value;
-  let para = noteInput.value;
-  noteWrapper.innerHTML += `<div contenteditable class="note">
-  <h1>${title}</h1>
-  <p>${para}</p>
-  <div class="button-wrapper">
-      <i id="highlight" class="fas fa-star"></i>
-      <i id="delete" class="far fa-trash-alt"></i>
-  </div>
-
-</div>`;
-});
-
-// DELETE EVERYTHING
 clearAllBtn.addEventListener("click", () => {
-  noteWrapper.remove();
+  todoWrapper.innerHTML = "";
 });
-
-const allNotes = document.getElementsByClassName("note");
-console.log(allNotes);
