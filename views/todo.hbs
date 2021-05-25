@@ -1,8 +1,25 @@
 <div class="todo">
   <h1 id="heading">Todo List</h1>
 
+  <button id="clear-all">Clear all</button>
+  <form action="/dashboard" method="GET">
+    <button type="submit" id="gobackBtn">Go back</button>
+  </form>
+
+  <form action="/logout" method="POST">
+    <button type="submit" id="signout">Log out</button>
+  </form>
   <div class="todo-wrapper">
-    <input placeholder="Add Item" type="text" name="item" id="item" />
-    <i class="fas fa-plus"></i>
+    <div class="create-todo">
+      <input placeholder="Add Item" type="text" name="item" id="item" />
+      <i id="add-btn" class="fas fa-plus"></i>
+
+    </div>
+
+    <div class="todo-items-list">
+
+    </div>
+
   </div>
+
 </div>
