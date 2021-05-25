@@ -1,16 +1,36 @@
-const wrapper = document.getElementsByClassName("profile-wrapper");
-const icon = document.getElementsByTagName("i");
-const heading = document.getElementsByTagName("h1");
-const number = document.getElementsByTagName("h2");
-for (let index = 0; index < wrapper.length; index++) {
-  const element = wrapper[index];
-  element.addEventListener("mouseenter", () => {
-    element.style.background = "crimson";
-    console.log("hover");
-  });
+const container = document.getElementsByClassName("container")[0];
+const titleInput = document.getElementById("title-input");
+const noteInput = document.getElementById("note-input");
+const body = document.getElementsByClassName("notes")[0];
+const addBtn = document.getElementById("addBtn");
+const noteWrapper = document.getElementsByClassName("note-wrapper")[0];
+const clearAllBtn = document.getElementById("clear-all");
+noteInput.addEventListener("click", function () {
+  container.style.height = "150px";
+  titleInput.style.display = "inline";
+  noteInput.style.top = "5vh";
+});
+addBtn.addEventListener("click", function () {
+  let title = titleInput.value;
+  let para = noteInput.value;
+  noteWrapper.innerHTML += `<div  id=${title} class="note">
+  <h1 contenteditable>${title}</h1> <p contenteditable>${para}</p> <div class="button-wrapper"> <i
+  id="highlight" class="fas fa-star"></i> <i id="delete" class="far
+  fa-trash-alt"></i> </div> </div>`;
 
-  element.addEventListener("mouseleave", () => {
-    element.style.background = "white";
-    console.log("out");
-  });
-}
+  const notes = document.querySelectorAll(".note");
+  const deleteBtns = document.querySelectorAll("#delete");
+  console.log(notes, deleteBtns);
+
+  for (let index = 0; index < deleteBtns.length; index++) {
+    const deletebtn = deleteBtns[index];
+
+    deletebtn.addEventListener("click", function () {
+      notes[index].remove();
+    });
+  }
+});
+
+clearAllBtn.addEventListener("click", function () {
+  noteWrapper.innerHTML = "";
+});
