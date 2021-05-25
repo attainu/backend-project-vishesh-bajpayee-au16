@@ -787,7 +787,7 @@ body {
     }
 
     .info-container {
-      background-color: teal;
+      background-color: $primary;
       margin: 5vh;
       padding: 20px;
       width: 30vw;
@@ -807,7 +807,8 @@ body {
 
       .main-wrapper {
         margin-top: 20px;
-        .wrapper {
+
+        .profile-wrapper {
           width: 23vw;
           height: 8vh;
           background-color: white;
@@ -824,6 +825,7 @@ body {
             color: black;
             line-height: 8vh;
             margin-left: 10px;
+            cursor: pointer;
           }
           h2 {
             font-size: 50px;

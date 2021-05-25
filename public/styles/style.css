@@ -847,7 +847,7 @@ body {
 }
 
 .profile .container .info-container {
-  background-color: teal;
+  background-color: #38b5c0;
   margin: 5vh;
   padding: 20px;
   width: 30vw;
@@ -876,7 +876,7 @@ body {
   margin-top: 20px;
 }
 
-.profile .container .info-container .main-wrapper .wrapper {
+.profile .container .info-container .main-wrapper .profile-wrapper {
   width: 23vw;
   height: 8vh;
   background-color: white;
@@ -887,19 +887,20 @@ body {
   display: flex;
 }
 
-.profile .container .info-container .main-wrapper .wrapper i {
+.profile .container .info-container .main-wrapper .profile-wrapper i {
   font-size: 40px;
   line-height: 8vh;
   margin-left: 20px;
 }
 
-.profile .container .info-container .main-wrapper .wrapper h1 {
+.profile .container .info-container .main-wrapper .profile-wrapper h1 {
   color: black;
   line-height: 8vh;
   margin-left: 10px;
+  cursor: pointer;
 }
 
-.profile .container .info-container .main-wrapper .wrapper h2 {
+.profile .container .info-container .main-wrapper .profile-wrapper h2 {
   font-size: 50px;
   line-height: 8vh;
   margin-left: 30px;

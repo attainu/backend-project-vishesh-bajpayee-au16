@@ -1,24 +1,16 @@
-const container = document.getElementsByClassName("container")[0];
-const titleInput = document.getElementById("title-input");
-const noteInput = document.getElementById("note-input");
-const body = document.getElementsByClassName("notes")[0];
-const addBtn = document.getElementById("addBtn");
-const noteWrapper = document.getElementsByClassName("note-wrapper")[0];
-const clearAllBtn = document.getElementById("clear-all");
-noteInput.addEventListener("click", function () {
-  container.style.height = "150px";
-  titleInput.style.display = "inline";
-  noteInput.style.top = "5vh";
-});
-addBtn.addEventListener("click", function () {
-  let title = titleInput.value;
-  let para = noteInput.value;
-  noteWrapper.innerHTML += `<div contenteditable id=${title}  class="note"> <h1>${title}</h1>
-  <p>${para}</p> <div class="button-wrapper"> <i id="highlight" class="fas
-  fa-star"></i> <i id="delete" class="far fa-trash-alt"></i> </div> </div>`;
-});
-clearAllBtn.addEventListener("click", function () {
-  noteWrapper.innerHTML = "";
-});
-const allNotes = document.getElementsByClassName("note");
-console.log(allNotes);
+const wrapper = document.getElementsByClassName("profile-wrapper");
+const icon = document.getElementsByTagName("i");
+const heading = document.getElementsByTagName("h1");
+const number = document.getElementsByTagName("h2");
+for (let index = 0; index < wrapper.length; index++) {
+  const element = wrapper[index];
+  element.addEventListener("mouseenter", () => {
+    element.style.background = "crimson";
+    console.log("hover");
+  });
+
+  element.addEventListener("mouseleave", () => {
+    element.style.background = "white";
+    console.log("out");
+  });
+}
