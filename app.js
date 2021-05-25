@@ -60,4 +60,5 @@ app.use("/", commitcounterRouter);
 app.use("/", pomodoroRouter);
 app.use("/", gobackToDashboard);
 
-app.listen(5000, () => console.log("Server Started"));
+
+app.listen(3100, () => console.log("Server Started"));
