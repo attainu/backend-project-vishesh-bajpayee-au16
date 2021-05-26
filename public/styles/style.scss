@@ -960,10 +960,12 @@ body {
         .icons {
           // display: flex;
           // justify-content: center;
+          // display: none;
+
           #popup {
             color: white;
             font-size: 24px;
-
+            display: inline;
             padding: 5px;
             cursor: pointer;
             transition: all ease-in-out 0.2s;
@@ -971,7 +973,7 @@ body {
               color: $primary;
               transform: rotate(-90deg);
             }
-          }
+            
           #delete {
             color: crimson;
             padding-top: 10px;

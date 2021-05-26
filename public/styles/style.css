@@ -1043,6 +1043,7 @@ body {
 .todo .todo-wrapper .todo-item .icon-wrapper .icons #popup {
   color: white;
   font-size: 24px;
+  display: inline;
   padding: 5px;
   cursor: pointer;
   -webkit-transition: all ease-in-out 0.2s;
