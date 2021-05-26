@@ -1,56 +1,41 @@
-const createItem = document.querySelector("#item");
-const addBtn = document.querySelector("#add-btn");
-const todoWrapper = document.querySelector(".todo-items-list");
-const clearAllBtn = document.querySelector("#clear-all");
+const container = document.getElementsByClassName("container")[0];
+const titleInput = document.getElementById("title-input");
+const noteInput = document.getElementById("note-input");
+const body = document.getElementsByClassName("notes")[0];
+const addBtn = document.getElementById("addBtn");
+const noteWrapper = document.getElementsByClassName("note-wrapper")[0];
+const clearAllBtn = document.getElementById("clear-all");
 let count = 0;
-
+noteInput.addEventListener("click", function () {
+  container.style.height = "150px";
+  titleInput.style.display = "inline";
+  noteInput.style.top = "5vh";
+});
 addBtn.addEventListener("click", async function () {
   count += 1;
-  let value = createItem.value;
-  todoWrapper.innerHTML += `<div
-  class="todo-item"> <h1 id="item-value">${value}</h1> <div class="icon-wrapper"> <div
-  class="icons"> <i id="popup" class="fas fa-plus"></i> <i id="delete"
-  class="far fa-trash-alt"></i> <i id="check" class="fas fa-check-square"></i>
-  <i id="strike" class="fas fa-strikethrough"></i> <i id="copy" class="far
-  fa-copy"></i> <i id="edit" class="far fa-edit"></i> </div> </div> </div>`;
-  const todoItems = document.querySelectorAll(".todo-item");
+  let title = titleInput.value;
+  let para = noteInput.value;
+  noteWrapper.innerHTML += `<div id=${title} class="note"> <h1
+  contenteditable>${title}</h1> <p contenteditable>${para}</p> <div
+  class="button-wrapper"> <i id="highlight" class="fas fa-star"></i> <i
+  id="delete" class="far fa-trash-alt"></i> </div> </div>`;
+  const notes = document.querySelectorAll(".note");
   const deleteBtns = document.querySelectorAll("#delete");
-  const checkBtns = document.querySelectorAll("#check");
-  const strikeBtns = document.querySelectorAll("#strike");
-  const editBtns = document.querySelectorAll("#edit");
-  const itemValues = document.querySelectorAll("#item-value");
+  console.log(notes, deleteBtns);
   for (let index = 0; index < deleteBtns.length; index++) {
-    const btn = deleteBtns[index];
-    const checkBtn = checkBtns[index];
-    const strikeBtn = strikeBtns[index];
-    const itemValue = itemValues[index];
-    const editBtn = editBtns[index];
-    btn.addEventListener("click", function () {
-      todoItems[index].remove();
-    });
-    checkBtn.addEventListener("click", function () {
-      todoItems[index].style.background = "white";
-      todoItems[index].style.boxShadow = "0px 0px 5px 1px #81b214";
-      //   createItem.color = "black";
-      checkBtn.style.color = "teal";
-    });
-
-    strikeBtn.addEventListener("click", function () {
-      itemValue.style.textDecoration = "line-through";
-    });
-
-    editBtn.addEventListener("click", function () {
-      itemValue.toggleAttribute("contenteditable", true);
+    const deletebtn = deleteBtns[index];
+    deletebtn.addEventListener("click", function () {
+      notes[index].remove();
     });
   }
-
-  const valObj = {
+  const payloadObj = {
+    title: title,
+    content: para,
     count: count,
-    item: value,
   };
-  const axiosSend = await axios.post("/dashboard/todo", valObj);
-  console.log(axiosSend);
+
+  const axiousReq = await axios.post("/dashboard/notes/", payloadObj);
 });
-clearAllBtn.addEventListener("click", () => {
-  todoWrapper.innerHTML = "";
+clearAllBtn.addEventListener("click", function () {
+  noteWrapper.innerHTML = "";
 });

@@ -13,6 +13,9 @@ const NotesSchema = mongoose.Schema({
   content: {
     type: String,
   },
+  count: {
+    type: Number,
+  },
 
   createdAt: {
     type: Date,
