@@ -941,72 +941,58 @@ body {
         }
       }
     }
+  }
 
-    .todo-item {
-      width: 40vh;
-      height: 15vh;
-      background-color: black;
-      color: $primary;
-      margin-top: 30px;
-      border-radius: 30px;
-      padding: 20px;
-      position: relative;
-      box-shadow: 0px 0px 5px 1px black;
+  .todo-item {
+    width: 40vh;
+    height: 15vh;
+    background-color: black;
+    color: $primary;
+    margin-top: 30px;
+    border-radius: 30px;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0px 0px 5px 1px black;
 
-      .icon-wrapper {
+    i {
+      cursor: pointer;
+    }
+
+    .icon {
+      #add {
         position: absolute;
-        bottom: 12px;
+        right: 30px;
+        top: 20px;
 
-        .icons {
-          // display: flex;
-          // justify-content: center;
-          // display: none;
+        i {
+          color: lime;
+          font-size: 20px;
+        }
+      }
 
-          #popup {
-            color: white;
-            font-size: 24px;
-            display: inline;
-            padding: 5px;
-            cursor: pointer;
-            transition: all ease-in-out 0.2s;
-            &:hover {
-              color: $primary;
-              transform: rotate(-90deg);
-            }
-            
-          #delete {
-            color: crimson;
-            padding-top: 10px;
-            font-size: 24px;
-            padding: 5px;
-            cursor: pointer;
-          }
+      .icon-feature {
+        position: absolute;
+        bottom: 10px;
 
-          #check {
-            color: #81b214;
-            font-size: 24px;
-            padding: 5px;
-            cursor: pointer;
-          }
+        #delete {
+          color: crimson;
+        }
 
-          #copy {
-            color: #ff9a00;
-            font-size: 24px;
-            padding: 5px;
-            cursor: pointer;
-          }
-          #strike {
-            color: #3ec1d3;
-            font-size: 24px;
-            padding: 5px;
-            cursor: pointer;
-          }
-          #edit {
-            color: b61aae;
-            font-size: 24px;
-            padding: 5px;
-            cursor: pointer;
-          }
+        #copy {
+          color: orangered;
+        }
+
+        #edit {
+          color: purple;
+        }
+
+        #save {
+          color: lime;
+        }
+
+        i {
+          padding: 13px;
+          font-size: 24px;
         }
       }
     }

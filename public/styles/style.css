@@ -1022,7 +1022,7 @@ body {
           transform: rotate(90deg);
 }
 
-.todo .todo-wrapper .todo-item {
+.todo .todo-item {
   width: 40vh;
   height: 15vh;
   background-color: black;
@@ -1035,60 +1035,44 @@ body {
           box-shadow: 0px 0px 5px 1px black;
 }
 
-.todo .todo-wrapper .todo-item .icon-wrapper {
+.todo .todo-item i {
+  cursor: pointer;
+}
+
+.todo .todo-item .icon #add {
   position: absolute;
-  bottom: 12px;
+  right: 30px;
+  top: 20px;
 }
 
-.todo .todo-wrapper .todo-item .icon-wrapper .icons #popup {
-  color: white;
-  font-size: 24px;
-  display: inline;
-  padding: 5px;
-  cursor: pointer;
-  -webkit-transition: all ease-in-out 0.2s;
-  transition: all ease-in-out 0.2s;
+.todo .todo-item .icon #add i {
+  color: lime;
+  font-size: 20px;
 }
 
-.todo .todo-wrapper .todo-item .icon-wrapper .icons #popup:hover {
-  color: #38b5c0;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
+.todo .todo-item .icon .icon-feature {
+  position: absolute;
+  bottom: 10px;
 }
 
-.todo .todo-wrapper .todo-item .icon-wrapper .icons #delete {
+.todo .todo-item .icon .icon-feature #delete {
   color: crimson;
-  padding-top: 10px;
-  font-size: 24px;
-  padding: 5px;
-  cursor: pointer;
 }
 
-.todo .todo-wrapper .todo-item .icon-wrapper .icons #check {
-  color: #81b214;
-  font-size: 24px;
-  padding: 5px;
-  cursor: pointer;
+.todo .todo-item .icon .icon-feature #copy {
+  color: orangered;
 }
 
-.todo .todo-wrapper .todo-item .icon-wrapper .icons #copy {
-  color: #ff9a00;
-  font-size: 24px;
-  padding: 5px;
-  cursor: pointer;
+.todo .todo-item .icon .icon-feature #edit {
+  color: purple;
 }
 
-.todo .todo-wrapper .todo-item .icon-wrapper .icons #strike {
-  color: #3ec1d3;
-  font-size: 24px;
-  padding: 5px;
-  cursor: pointer;
+.todo .todo-item .icon .icon-feature #save {
+  color: lime;
 }
 
-.todo .todo-wrapper .todo-item .icon-wrapper .icons #edit {
-  color: b61aae;
+.todo .todo-item .icon .icon-feature i {
+  padding: 13px;
   font-size: 24px;
-  padding: 5px;
-  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */
