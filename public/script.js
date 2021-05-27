@@ -7,13 +7,26 @@ addBtn.addEventListener("click", async function () {
   count += 1;
   let value = createItem.value;
   createItem.value = "";
-  todoWrapper.innerHTML += `<div
-  class="todo-item"> <h1 id="item-value">${value}</h1> <div
-  class="icon-wrapper"> <div class="icons"> <i id="popup" class="fas
-  fa-plus"></i> <i id="delete" class="far fa-trash-alt"></i> <i id="check"
-  class="fas fa-check-square"></i> <i id="strike" class="fas
-  fa-strikethrough"></i> <i id="copy" class="far fa-copy"></i> <i id="edit"
-  class="far fa-edit"></i> </div> </div> </div>`;
+  todoWrapper.innerHTML += ` <div class="todo-item">
+        <h1 id="item-value">${value}</h1>
+
+        <div class="icon">
+
+          <div id="add">
+
+            <i id="" class="fas fa-check-circle"></i>
+          </div>
+
+          <div class="icon-feature">
+            <i id="delete" class="far fa-trash-alt"></i>
+            <i id="copy" class="far fa-copy"></i>
+            <i id="edit" class="far fa-edit"></i>
+
+          </div>
+        </div>
+
+      </div>
+    </div>`;
   const todoItems = document.querySelectorAll(".todo-item");
   const deleteBtns = document.querySelectorAll("#delete");
   const checkBtns = document.querySelectorAll("#check");
