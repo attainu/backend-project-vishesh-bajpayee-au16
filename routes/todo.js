@@ -18,9 +18,6 @@ router.post("/dashboard/todo", async (req, res) => {
 });
 
 router.delete("/dashboard/todo/delete", async (req, res) => {
-  // console.log("Hit");
-  // console.log(req.body);
-  // console.log(deleteObj);
   const deleteObj = req.body.deletePayload;
   const refrenceObj = await TodoModel.deleteOne({ item: deleteObj.item });
 });
