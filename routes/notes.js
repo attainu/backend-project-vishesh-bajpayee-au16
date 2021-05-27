@@ -17,8 +17,6 @@ router.post("/dashboard/notes", async (req, res) => {
 
   const newEntry = new NotesModel(newNoteObj);
   await newEntry.save();
-
-  console.log(newEntry);
 });
 
 module.exports = router;

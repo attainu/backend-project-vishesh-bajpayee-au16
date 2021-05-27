@@ -1022,7 +1022,7 @@ body {
           transform: rotate(90deg);
 }
 
-.todo .todo-wrapper .todo-item {
+.todo .todo-wrapper .todo-items-list .todo-item {
   width: 40vh;
   height: 15vh;
   background-color: black;
@@ -1035,12 +1035,12 @@ body {
           box-shadow: 0px 0px 5px 1px black;
 }
 
-.todo .todo-wrapper .todo-item .icon-wrapper {
+.todo .todo-wrapper .todo-items-list .todo-item .icon-wrapper {
   position: absolute;
   bottom: 12px;
 }
 
-.todo .todo-wrapper .todo-item .icon-wrapper .icons #popup {
+.todo .todo-wrapper .todo-items-list .todo-item .icon-wrapper .icons #popup {
   color: white;
   font-size: 24px;
   display: inline;
@@ -1050,42 +1050,42 @@ body {
   transition: all ease-in-out 0.2s;
 }
 
-.todo .todo-wrapper .todo-item .icon-wrapper .icons #popup:hover {
+.todo .todo-wrapper .todo-items-list .todo-item .icon-wrapper .icons #popup:hover {
   color: #38b5c0;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
 }
 
-.todo .todo-wrapper .todo-item .icon-wrapper .icons #delete {
-  color: crimson;
+.todo .todo-wrapper .todo-items-list .todo-item .icon-wrapper .icons #popup #delete {
+  color: blue;
   padding-top: 10px;
-  font-size: 24px;
+  font-size: 10px;
   padding: 5px;
   cursor: pointer;
 }
 
-.todo .todo-wrapper .todo-item .icon-wrapper .icons #check {
+.todo .todo-wrapper .todo-items-list .todo-item .icon-wrapper .icons #popup #check {
   color: #81b214;
   font-size: 24px;
   padding: 5px;
   cursor: pointer;
 }
 
-.todo .todo-wrapper .todo-item .icon-wrapper .icons #copy {
+.todo .todo-wrapper .todo-items-list .todo-item .icon-wrapper .icons #popup #copy {
   color: #ff9a00;
   font-size: 24px;
   padding: 5px;
   cursor: pointer;
 }
 
-.todo .todo-wrapper .todo-item .icon-wrapper .icons #strike {
+.todo .todo-wrapper .todo-items-list .todo-item .icon-wrapper .icons #popup #strike {
   color: #3ec1d3;
   font-size: 24px;
   padding: 5px;
   cursor: pointer;
 }
 
-.todo .todo-wrapper .todo-item .icon-wrapper .icons #edit {
+.todo .todo-wrapper .todo-items-list .todo-item .icon-wrapper .icons #popup #edit {
   color: b61aae;
   font-size: 24px;
   padding: 5px;

@@ -17,4 +17,9 @@ router.post("/dashboard/todo", async (req, res) => {
   await newEntry.save();
 });
 
+router.delete("/dashboard/todo/delete", async (req, res) => {
+  const deletObject = req.body;
+  const refrenceObj = await TodoModel.find({ item: deletObject.item });
+  console.log(refrenceObj);
+});
 module.exports = router;
