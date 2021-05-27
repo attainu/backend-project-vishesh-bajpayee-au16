@@ -8,7 +8,7 @@ router.get("/dashboard/todo", (req, res) => {
 
 router.post("/dashboard/todo", async (req, res) => {
   const TodoObj = {
-    userId: req.session.user._id,
+    userId: req.session.user_id,
     item: req.body.item,
     count: req.body.count,
   };
@@ -18,8 +18,10 @@ router.post("/dashboard/todo", async (req, res) => {
 });
 
 router.delete("/dashboard/todo/delete", async (req, res) => {
-  const deletObject = req.body;
-  const refrenceObj = await TodoModel.find({ item: deletObject.item });
-  console.log(refrenceObj);
+  // console.log("Hit");
+  // console.log(req.body);
+  // console.log(deleteObj);
+  const deleteObj = req.body.deletePayload;
+  const refrenceObj = await TodoModel.deleteOne({ item: deleteObj.item });
 });
 module.exports = router;

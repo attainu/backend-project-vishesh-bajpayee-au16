@@ -42,17 +42,18 @@ addBtn.addEventListener("click", async function () {
     const itemValue = itemValues[index];
     const editBtn = editBtns[index];
     deleteBtn.addEventListener("click", async function () {
+      todoItem.remove();
+      let item = itemValue.textContent;
+
       const deletePayload = {
-        item: itemValue[index],
+        item: item,
         count: count,
       };
 
-      const axiosRequest = await axios.delete(
-        "/dashboard/todo/delete",
-        deletePayload
-      );
-      todoItem.remove();
-      console.log("Clicked");
+      console.log(deletePayload);
+      await axios.delete("/dashboard/todo/delete", {
+        data: { deletePayload: deletePayload },
+      });
     });
     checkBtn.addEventListener("click", function () {
       todoItem.style.background = "white";
