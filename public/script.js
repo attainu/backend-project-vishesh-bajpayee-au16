@@ -14,13 +14,14 @@ addBtn.addEventListener("click", async function () {
 
           <div id="add">
 
-            <i id="" class="fas fa-check-circle"></i>
+            <i id="check" class="fas fa-check-circle"></i>
           </div>
 
           <div class="icon-feature">
             <i id="delete" class="far fa-trash-alt"></i>
             <i id="copy" class="far fa-copy"></i>
-            <i id="edit" class="far fa-edit"></i>
+            <i id="strike" class="fas fa-strikethrough"></i>
+            <i id="edit" id="edit" class="far fa-edit"></i>
 
           </div>
         </div>
@@ -33,13 +34,14 @@ addBtn.addEventListener("click", async function () {
   const strikeBtns = document.querySelectorAll("#strike");
   const editBtns = document.querySelectorAll("#edit");
   const itemValues = document.querySelectorAll("#item-value");
-  for (let index = 0; index < deleteBtns.length; index++) {
-    const btn = deleteBtns[index];
+  for (let index = 0; index < todoItems.length; index++) {
+    const todoItem = todoItems[index];
+    const deleteBtn = deleteBtns[index];
     const checkBtn = checkBtns[index];
     const strikeBtn = strikeBtns[index];
     const itemValue = itemValues[index];
     const editBtn = editBtns[index];
-    btn.addEventListener("click", async function () {
+    deleteBtn.addEventListener("click", async function () {
       const deletePayload = {
         item: itemValue[index],
         count: count,
@@ -49,11 +51,12 @@ addBtn.addEventListener("click", async function () {
         "/dashboard/todo/delete",
         deletePayload
       );
-      todoItems[index].remove();
+      todoItem.remove();
+      console.log("Clicked");
     });
     checkBtn.addEventListener("click", function () {
-      todoItems[index].style.background = "white";
-      todoItems[index].style.boxShadow = "0px 0px 5px 1px #81b214"; // createItem.color = "black";
+      todoItem.style.background = "white";
+      todoItem.style.boxShadow = "0px 0px 5px 1px #81b214"; // createItem.color = "black";
       checkBtn.style.color = "teal";
     });
     strikeBtn.addEventListener("click", function () {
