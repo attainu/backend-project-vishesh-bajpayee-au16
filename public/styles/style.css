@@ -1022,7 +1022,11 @@ body {
           transform: rotate(90deg);
 }
 
+<<<<<<< HEAD
 .todo .todo-wrapper .todo-items-list .todo-item {
+=======
+.todo .todo-item {
+>>>>>>> test-todo
   width: 40vh;
   height: 15vh;
   background-color: black;
@@ -1035,11 +1039,21 @@ body {
           box-shadow: 0px 0px 5px 1px black;
 }
 
+<<<<<<< HEAD
 .todo .todo-wrapper .todo-items-list .todo-item .icon-wrapper {
-  position: absolute;
-  bottom: 12px;
+=======
+.todo .todo-item i {
+  cursor: pointer;
 }
 
+.todo .todo-item .icon #add {
+>>>>>>> test-todo
+  position: absolute;
+  right: 30px;
+  top: 20px;
+}
+
+<<<<<<< HEAD
 .todo .todo-wrapper .todo-items-list .todo-item .icon-wrapper .icons #popup {
   color: white;
   font-size: 24px;
@@ -1087,8 +1101,36 @@ body {
 
 .todo .todo-wrapper .todo-items-list .todo-item .icon-wrapper .icons #popup #edit {
   color: b61aae;
+=======
+.todo .todo-item .icon #add i {
+  color: lime;
+  font-size: 20px;
+}
+
+.todo .todo-item .icon .icon-feature {
+  position: absolute;
+  bottom: 10px;
+}
+
+.todo .todo-item .icon .icon-feature #delete {
+  color: crimson;
+}
+
+.todo .todo-item .icon .icon-feature #copy {
+  color: orangered;
+}
+
+.todo .todo-item .icon .icon-feature #edit {
+  color: purple;
+}
+
+.todo .todo-item .icon .icon-feature #save {
+  color: lime;
+}
+
+.todo .todo-item .icon .icon-feature i {
+  padding: 13px;
+>>>>>>> test-todo
   font-size: 24px;
-  padding: 5px;
-  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */
