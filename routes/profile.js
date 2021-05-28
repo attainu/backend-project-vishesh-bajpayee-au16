@@ -1,10 +1,8 @@
 const express = require("express");
-
+const NotesModel = require("../models/Notes");
 const router = express.Router();
 
 router.post("/profile", (req, res) => {
-  const userObj = req.session.user;
-  res.render("profile", userObj);
+  res.send("Profile");
 });
-
 module.exports = router;
