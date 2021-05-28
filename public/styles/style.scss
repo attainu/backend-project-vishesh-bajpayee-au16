@@ -6,6 +6,7 @@
 }
 
 $primary: #38b5c0;
+$buttonColor01: #ff165d;
 
 body {
   background-image: url("../images/banner.png");
@@ -924,6 +925,8 @@ body {
             margin-top: 18px;
 
             .profile-side-btn {
+              outline: none;
+              cursor: pointer;
               width: 100px;
               height: 100px;
               background-color: black;
@@ -933,20 +936,47 @@ body {
               display: flex;
               justify-content: center;
 
+              // transition: all ease-in-out 0.4s;
+              &:hover {
+                // font-weight: 600;
+                i {
+                  transform: rotate(360deg);
+                  // transform: scale(1.1);
+                }
+              }
+
               i {
                 color: white;
                 font-size: 50px;
                 line-height: 100px;
+                transition: all ease-in-out 0.4s;
               }
+            }
+
+            #github {
+              background-color: #06d6a0;
+            }
+
+            #notes {
+              background-color: #ef476f;
+            }
+            #todo {
+              background-color: #ffd166;
+            }
+
+            #pomodoro {
+              background-color: #118ab2;
             }
           }
           .table-btn-wrapper {
             width: 20vh;
             height: 7vh;
-            background-color: rgb(236, 28, 70);
+            background-color: black;
             border-radius: 30px;
             margin-top: 14px;
             margin-left: 4vh;
+            cursor: pointer;
+            outline: none;
 
             h3 {
               line-height: 7vh;

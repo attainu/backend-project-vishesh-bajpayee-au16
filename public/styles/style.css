@@ -1006,6 +1006,8 @@ body {
 }
 
 .profile .container .user-container .side-wrapper .side-sub-wrapper .four-btn-wrapper .profile-side-btn {
+  outline: none;
+  cursor: pointer;
   width: 100px;
   height: 100px;
   background-color: black;
@@ -1020,19 +1022,44 @@ body {
           justify-content: center;
 }
 
+.profile .container .user-container .side-wrapper .side-sub-wrapper .four-btn-wrapper .profile-side-btn:hover i {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
 .profile .container .user-container .side-wrapper .side-sub-wrapper .four-btn-wrapper .profile-side-btn i {
   color: white;
   font-size: 50px;
   line-height: 100px;
+  -webkit-transition: all ease-in-out 0.4s;
+  transition: all ease-in-out 0.4s;
+}
+
+.profile .container .user-container .side-wrapper .side-sub-wrapper .four-btn-wrapper #github {
+  background-color: #06d6a0;
+}
+
+.profile .container .user-container .side-wrapper .side-sub-wrapper .four-btn-wrapper #notes {
+  background-color: #ef476f;
+}
+
+.profile .container .user-container .side-wrapper .side-sub-wrapper .four-btn-wrapper #todo {
+  background-color: #ffd166;
+}
+
+.profile .container .user-container .side-wrapper .side-sub-wrapper .four-btn-wrapper #pomodoro {
+  background-color: #118ab2;
 }
 
 .profile .container .user-container .side-wrapper .side-sub-wrapper .table-btn-wrapper {
   width: 20vh;
   height: 7vh;
-  background-color: #ec1c46;
+  background-color: black;
   border-radius: 30px;
   margin-top: 14px;
   margin-left: 4vh;
+  cursor: pointer;
+  outline: none;
 }
 
 .profile .container .user-container .side-wrapper .side-sub-wrapper .table-btn-wrapper h3 {
