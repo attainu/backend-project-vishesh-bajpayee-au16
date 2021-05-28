@@ -8,7 +8,7 @@ router.get("/dashboard/todo", (req, res) => {
 
 router.post("/dashboard/todo", async (req, res) => {
   const TodoObj = {
-    userId: req.session.user_id,
+    userId: req.session.user._id,
     item: req.body.item,
     count: req.body.count,
   };
