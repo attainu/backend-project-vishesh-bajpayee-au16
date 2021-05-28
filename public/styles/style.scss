@@ -842,6 +842,122 @@ body {
         }
       }
     }
+
+    .user-container {
+      background-color: rgba($color: black, $alpha: 0.7);
+      margin: 5vh;
+      padding: 20px;
+      width: 47vw;
+      height: 30vw;
+      border-radius: 30px;
+      position: absolute;
+      top: 21.65vh;
+      left: 40vw;
+      padding: 20px;
+
+      #info-heading {
+        padding-left: 5px;
+        color: white;
+        margin-left: 28px;
+        font-size: 50px;
+      }
+
+      h3 {
+        color: $primary;
+        font-size: 20px;
+        padding-left: 4.5vh;
+      }
+
+      .info-wrapper {
+        position: absolute;
+        top: 14vh;
+        left: 5vh;
+        padding: 20px;
+        background-color: white;
+        border-radius: 30px;
+        width: 26vw;
+
+        h1 {
+          color: black;
+          padding: 10px;
+
+          span {
+            color: $primary;
+          }
+        }
+      }
+
+      .change-wrapper {
+        position: absolute;
+        top: 40vh;
+        left: 5vh;
+        padding: 20px;
+        background-color: white;
+        border-radius: 30px;
+        width: 26vw;
+        height: 12vh;
+
+        h1 {
+          color: $primary;
+        }
+      }
+
+      .side-wrapper {
+        position: absolute;
+        right: 33px;
+        top: 14vh;
+        width: 15vw;
+        height: 38vh;
+        background-color: white;
+        border-radius: 30px;
+
+        .side-sub-wrapper {
+          .four-btn-wrapper {
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            width: 10vw;
+            height: 25vh;
+            margin-left: 25px;
+            margin-top: 18px;
+
+            .profile-side-btn {
+              width: 100px;
+              height: 100px;
+              background-color: black;
+              margin-top: 20px;
+              border-radius: 30px;
+              margin: 10px;
+              display: flex;
+              justify-content: center;
+
+              i {
+                color: white;
+                font-size: 50px;
+                line-height: 100px;
+              }
+            }
+          }
+          .table-btn-wrapper {
+            width: 20vh;
+            height: 7vh;
+            background-color: rgb(236, 28, 70);
+            border-radius: 30px;
+            margin-top: 14px;
+            margin-left: 4vh;
+
+            h3 {
+              line-height: 7vh;
+              color: white;
+              cursor: pointer;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
