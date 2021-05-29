@@ -1,6 +1,5 @@
 const dynamicColorDivs = document.getElementsByClassName("dynamic-color");
 const dynamicBgDivs = document.getElementsByClassName("dynamic-background");
-const getLevel = document.getElementById("levelFetch");
 
 const updateLevels = (level) => {
   for (let index = 0; index < dynamicColorDivs.length; index++) {

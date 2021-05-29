@@ -11,8 +11,8 @@
   </form>
   <div class="todo-wrapper">
     <div class="create-todo">
-      <input placeholder="Add Item" type="text" name="item" id="item" />
-      <i id="add-btn" class="fas fa-plus"></i>
+      <input class="dynamic-color" placeholder="Add Item" type="text" name="item" id="item" />
+      <i id="add-btn" class=" dynamic-color fas fa-plus"></i>
 
     </div>
     <div class="todo-items-list">
@@ -34,7 +34,7 @@ addBtn.addEventListener("click", async function () {
   let value = createItem.value;
   createItem.value = "";
   todoWrapper.innerHTML += ` <div class="todo-item">
-        <h1 id="item-value">${value}</h1>
+        <h1 class="dynamic-color" id="item-value">${value}</h1>
 
         <div class="icon">
 
