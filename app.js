@@ -19,6 +19,8 @@ const todoRouter = require("./routes/todo");
 const commitcounterRouter = require("./routes/commitcounter");
 const pomodoroRouter = require("./routes/pomodoro");
 const gobackToDashboard = require("./routes/gobackToDashboard");
+const levelChartRouter = require("./routes/levelchart");
+const gobackToProfile = require("./routes/gobackToProfile");
 // MONGO DATABASE CONNECTION
 const { DATABASE_URL } = process.env;
 
@@ -59,8 +61,10 @@ app.use("/", todoRouter);
 app.use("/", commitcounterRouter);
 app.use("/", pomodoroRouter);
 app.use("/", gobackToDashboard);
+app.use("/", levelChartRouter);
+app.use("/", gobackToProfile);
 
 // PORT
-const port = 5000;
+const port = 5003;
 
 app.listen(port, () => console.log("Server Started"));

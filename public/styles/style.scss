@@ -5,7 +5,7 @@
   font-family: "Montserrat", sans-serif;
 }
 
-$primary: #38b5c0;
+$primary: #ef2d56;
 $buttonColor01: #ff165d;
 
 body {
@@ -911,7 +911,9 @@ body {
         height: 38vh;
         background-color: white;
         border-radius: 30px;
-
+        a {
+          text-decoration: none;
+        }
         .side-sub-wrapper {
           .four-btn-wrapper {
             display: flex;
@@ -923,6 +925,11 @@ body {
             height: 25vh;
             margin-left: 25px;
             margin-top: 18px;
+
+            a {
+              color: transparent;
+              text-decoration: none;
+            }
 
             .profile-side-btn {
               outline: none;
@@ -968,22 +975,24 @@ body {
               background-color: #118ab2;
             }
           }
-          .table-btn-wrapper {
-            width: 20vh;
-            height: 7vh;
-            background-color: black;
-            border-radius: 30px;
-            margin-top: 14px;
-            margin-left: 4vh;
-            cursor: pointer;
-            outline: none;
+        }
 
-            h3 {
-              line-height: 7vh;
-              color: white;
-              cursor: pointer;
-              font-weight: 600;
-            }
+        .table-btn-wrapper {
+          width: 20vh;
+          height: 7vh;
+          background-color: black;
+          border-radius: 30px;
+          margin-top: 1.5vh;
+          margin-left: 4.5vh;
+
+          cursor: pointer;
+          outline: none;
+
+          h3 {
+            line-height: 7vh;
+            color: white;
+            cursor: pointer;
+            font-weight: 600;
           }
         }
       }
@@ -1142,5 +1151,34 @@ body {
         }
       }
     }
+  }
+}
+
+.levelchart {
+  a {
+    text-decoration: none;
+  }
+  button {
+    position: absolute;
+    top: 6vh;
+    right: 40vh;
+    padding: 15px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all ease-in-out 0.2s;
+    font-weight: 500;
+    &:hover {
+      background-color: $primary;
+      color: white;
+    }
+  }
+  img {
+    width: 100vw;
+    height: 100vh;
   }
 }
