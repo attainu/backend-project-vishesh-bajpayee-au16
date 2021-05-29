@@ -1,6 +1,7 @@
 const express = require("express");
 const NotesModel = require("../models/Notes");
 const TodoModel = require("../models/Todo");
+
 const router = express.Router();
 
 router.post("/profile", async (req, res) => {
@@ -17,6 +18,7 @@ router.post("/profile", async (req, res) => {
   let levelCount = 0;
   let level = 0;
 
+  //
   if (totalCount < 10) {
     levelCount = 10 - totalCount;
     level = 1;

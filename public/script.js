@@ -17,8 +17,10 @@ const backendUserDataHandler = async () => {
   const response = await fetch("/profile/data");
   const data = await response.json();
 
-  const { level } = data;
-  dynamicColorChange(level);
+  let level = data.level;
+  console.log(`level color: ${colorsObj[level]}`);
+  console.log(`user level" ${level}`);
+  // dynamicColorChange(level);
 };
 
 const dynamicColorChange = (level) => {

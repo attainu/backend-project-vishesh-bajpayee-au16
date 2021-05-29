@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const SignupModel = require("../models/Signup");
+const LevelModel = require("../models/Level");
 const bcrypt = require("bcrypt");
 
 router.get("/signup", (req, res) => {
@@ -13,14 +14,27 @@ router.post("/signup", async (req, res) => {
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(password, salt);
     console.log(hashedPassword);
+
+    // signupdatas collection
+
     const userObj = {
       username: username,
       email: email,
       password: hashedPassword,
     };
     const newUser = new SignupModel(userObj);
+    console.log(newUser);
     await newUser.save();
-    console.log(userObj);
+
+    // levels collections
+
+    const level = {
+      userId: newUser._id,
+      level: 1,
+    };
+    const levelObj = new LevelModel(level);
+    await levelObj.save();
+
     res.redirect("/");
   } catch (error) {
     console.log(error);
