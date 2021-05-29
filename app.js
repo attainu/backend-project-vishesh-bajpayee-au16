@@ -65,12 +65,7 @@ app.use("/", gobackToDashboard);
 app.use("/", levelChartRouter);
 app.use("/", gobackToProfile);
 
-<<<<<<< HEAD
 // PORT
 const port = 5000 || 5001 || 5002;
 
 app.listen(port, () => console.log("Server Started"));
-=======
-
-app.listen(3100, () => console.log("Server Started"));
->>>>>>> 34ecd9a84325ff2a4fbe804ded8d87ec3803ff60
