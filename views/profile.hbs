@@ -6,55 +6,67 @@
     </div>
     <div class="text-wrapper">
 
-      <h1>Hi! <span>{{userDetails.username}}</span></h1>
+      <h1 class="dynamic-color">Hi! <span>{{userDetails.username}}</span></h1>
 
     </div>
 
-    <div class="info-container">
+    <div  class="dynamic-background info-container">
       <h1 id="heading">Your Activity</h1>
       <div class="main-wrapper">
         <div class="profile-wrapper">
           <i class="fab fa-github"></i>
           <h1>Total commits</h1>
-          <h2>04</h2>
+          <h2 class="dynamic-color">04</h2>
         </div>
 
         <div class="profile-wrapper">
           <i class="far fa-list-alt"></i>
           <h1>Total todo</h1>
-          <h2>{{todoCount}}</h2>
+          <h2 class="dynamic-color">{{todoCount}}</h2>
         </div>
 
         <div class="profile-wrapper">
           <i class="far fa-sticky-note"></i>
           <h1>Total notes</h1>
-          <h2>{{notesCount}}</h2>
+          <h2 class="dynamic-color">{{notesCount}}</h2>
         </div>
 
         <div class="profile-wrapper">
           <i class="far fa-clock"></i>
           <h1>Total pomodoro</h1>
-          <h2>11</h2>
+          <h2 class="dynamic-color">11</h2>
         </div>
       </div>
 
     </div>
 
     <div class="user-container">
-      <h1 id="info-heading">Your Profile </h1>
-      <h3>Level 1</h3>
-
+      <h1 id="info-heading">Your Details</h1>
+      <h3  class="dynamic-color">Level {{level}}</h3>
       <div class="info-wrapper">
 
-        <h1>Name: <span>{{userDetails.username}}</span></h1>
-        <h1>Activity score: <span>{{totalCount}}</span></h1>
-        <h1>Email: <span>{{userDetails.email}}</span></h1>
+        <h1>Name: <span class="dynamic-color">{{userDetails.username}}</span></h1>
+        <h1>Activity score: <span class="dynamic-color">{{totalCount}}</span></h1>
+        <h1>Email: <span class="dynamic-color">{{userDetails.email}}</span></h1>
 
       </div>
 
       <div class="change-wrapper">
-        <div class="change-info-wrapper">
-          <h1>Edit Panel</h1>
+        <div class="sub-change-wrapper">
+          <div class="change-info-wrapper">
+          
+             <div class="next-level-wrapper">
+                  <h3>Points required</h3>
+                  <h2 class="dynamic-color">{{levelCount}}</h2>
+                </div>  
+                <div class="next-level-wrapper">
+                  <h3 >Total progress</h3>
+                  <h2 class="dynamic-color">{{totalCount}}%</h2>
+                </div>  
+                    
+            
+           
+        </div>
         </div>
       </div>
 
