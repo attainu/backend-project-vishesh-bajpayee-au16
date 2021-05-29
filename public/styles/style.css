@@ -72,7 +72,7 @@ body {
 }
 
 .landingPage section .login-section h2 {
-  color: #38b5c0;
+  color: #ef2d56;
   position: absolute;
   z-index: 2;
   top: 33vh;
@@ -125,7 +125,7 @@ body {
 }
 
 .landingPage section .login-section #login-btn:hover {
-  background-color: #38b5c0;
+  background-color: #ef2d56;
   font-weight: 500;
   color: white;
 }
@@ -157,7 +157,7 @@ body {
 }
 
 .landingPage aside h1 span {
-  color: #38b5c0;
+  color: #ef2d56;
   font-size: 150px;
 }
 
@@ -294,7 +294,7 @@ body {
 }
 
 .signupPage .container .content #signup-btn:hover {
-  background-color: #38b5c0;
+  background-color: #ef2d56;
   font-weight: 500;
 }
 
@@ -314,7 +314,7 @@ body {
 }
 
 .signupPage .container #goback-btn:hover {
-  background-color: #38b5c0;
+  background-color: #ef2d56;
   font-weight: 500;
 }
 
@@ -353,7 +353,7 @@ body {
 }
 
 .dashboard section .dashboard-btns #profile-btn:hover {
-  background-color: #38b5c0;
+  background-color: #ef2d56;
 }
 
 .dashboard section .dashboard-btns button {
@@ -369,7 +369,7 @@ body {
 }
 
 .dashboard section .dashboard-btns button:hover {
-  background-color: #38b5c0;
+  background-color: #ef2d56;
 }
 
 .dashboard section .wrapper {
@@ -418,7 +418,7 @@ body {
 }
 
 .dashboard section .wrapper .content:hover {
-  background-color: #38b5c0;
+  background-color: #ef2d56;
   color: white;
 }
 
@@ -453,7 +453,7 @@ body {
   left: 50px;
   width: 55vw;
   background-color: transparent;
-  color: #38b5c0;
+  color: #ef2d56;
   font-size: 24px;
 }
 
@@ -478,8 +478,8 @@ body {
 }
 
 .dashboard aside .card-main:hover {
-  -webkit-box-shadow: 0px 0px 5px 5px #38b5c0;
-          box-shadow: 0px 0px 5px 5px #38b5c0;
+  -webkit-box-shadow: 0px 0px 5px 5px #ef2d56;
+          box-shadow: 0px 0px 5px 5px #ef2d56;
 }
 
 .dashboard aside .card-main .input-field {
@@ -510,7 +510,7 @@ body {
 }
 
 .dashboard aside .card-main .input-field #addrepoBtn:hover {
-  background-color: #38b5c0;
+  background-color: #ef2d56;
   color: white;
 }
 
@@ -523,7 +523,7 @@ body {
 
 .dashboard aside .card-main h1 span {
   font-weight: 400;
-  color: #38b5c0;
+  color: #ef2d56;
 }
 
 .dashboard aside .card-main h4 {
@@ -562,8 +562,8 @@ body {
 }
 
 .dashboard aside .card-main .step-icons .item:hover {
-  -webkit-box-shadow: 0px 0px 5px 2px #38b5c0;
-          box-shadow: 0px 0px 5px 2px #38b5c0;
+  -webkit-box-shadow: 0px 0px 5px 2px #ef2d56;
+          box-shadow: 0px 0px 5px 2px #ef2d56;
 }
 
 .dashboard aside .card-main .step-icons .item i {
@@ -576,7 +576,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   font-size: 30px;
-  color: #38b5c0;
+  color: #ef2d56;
   -webkit-transition: all ease-in-out 0.2s;
   transition: all ease-in-out 0.2s;
 }
@@ -587,7 +587,7 @@ body {
 
 .dashboard aside .card-main .step-icons .item h6 {
   position: absolute;
-  color: #38b5c0;
+  color: #ef2d56;
   width: 90px;
   top: 80px;
   left: -6px;
@@ -662,7 +662,7 @@ body {
 
 .notes .container i {
   position: absolute;
-  color: #38b5c0;
+  color: #ef2d56;
   right: 30px;
   top: 15px;
   font-size: 20px;
@@ -689,7 +689,7 @@ body {
   outline: none;
   font-weight: 500;
   padding: 10px;
-  color: #38b5c0;
+  color: #ef2d56;
 }
 
 .notes .container #note-input {
@@ -743,7 +743,7 @@ body {
 
 .notes .wrapper .note-wrapper .note h1 {
   position: absolute;
-  color: #38b5c0;
+  color: #ef2d56;
   top: 8vh;
   padding: 20px;
   width: 380px;
@@ -773,7 +773,7 @@ body {
 }
 
 .notes .wrapper .note-wrapper .note .button-wrapper #highlight:hover {
-  color: #38b5c0;
+  color: #ef2d56;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
 }
@@ -830,7 +830,7 @@ body {
 }
 
 .profile .container .btn-container a button:hover {
-  background-color: #38b5c0;
+  background-color: #ef2d56;
 }
 
 .profile .container .text-wrapper {
@@ -845,7 +845,7 @@ body {
 .profile .container .text-wrapper h1 {
   font-weight: 300;
   margin-top: 20px;
-  color: #38b5c0;
+  color: #ef2d56;
   font-size: 80px;
 }
 
@@ -854,7 +854,7 @@ body {
 }
 
 .profile .container .info-container {
-  background-color: #38b5c0;
+  background-color: #ef2d56;
   margin: 5vh;
   padding: 20px;
   width: 30vw;
@@ -911,7 +911,220 @@ body {
   font-size: 50px;
   line-height: 8vh;
   margin-left: 30px;
-  color: #38b5c0;
+  color: #ef2d56;
+}
+
+.profile .container .user-container {
+  background-color: rgba(0, 0, 0, 0.7);
+  margin: 5vh;
+  padding: 20px;
+  width: 47vw;
+  height: 30vw;
+  border-radius: 30px;
+  position: absolute;
+  top: 21.65vh;
+  left: 40vw;
+  padding: 20px;
+}
+
+.profile .container .user-container #info-heading {
+  padding-left: 5px;
+  color: white;
+  margin-left: 28px;
+  font-size: 50px;
+}
+
+.profile .container .user-container h3 {
+  color: #ef2d56;
+  font-size: 20px;
+  padding-left: 4.5vh;
+}
+
+.profile .container .user-container .info-wrapper {
+  position: absolute;
+  top: 14vh;
+  left: 5vh;
+  padding: 20px;
+  background-color: white;
+  border-radius: 30px;
+  width: 26vw;
+}
+
+.profile .container .user-container .info-wrapper h1 {
+  color: black;
+  padding: 10px;
+}
+
+.profile .container .user-container .info-wrapper h1 span {
+  color: #ef2d56;
+}
+
+.profile .container .user-container .change-wrapper {
+  position: absolute;
+  top: 40vh;
+  left: 5vh;
+  padding: 20px;
+  background-color: white;
+  border-radius: 30px;
+  width: 26vw;
+  height: 12vh;
+}
+
+.profile .container .user-container .change-wrapper .sub-change-wrapper {
+  position: absolute;
+  top: 5px;
+  right: 40px;
+}
+
+.profile .container .user-container .change-wrapper .change-info-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.profile .container .user-container .change-wrapper .change-info-wrapper .next-level-wrapper {
+  background-color: black;
+  width: 10vw;
+  height: 9vh;
+  border-radius: 30px;
+  margin: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profile .container .user-container .change-wrapper .change-info-wrapper .next-level-wrapper h3 {
+  text-align: center;
+  color: white;
+  padding: 5px;
+}
+
+.profile .container .user-container .change-wrapper .change-info-wrapper .next-level-wrapper h2 {
+  color: #ef2d56;
+}
+
+.profile .container .user-container .side-wrapper {
+  position: absolute;
+  right: 33px;
+  top: 14vh;
+  width: 15vw;
+  height: 38vh;
+  background-color: white;
+  border-radius: 30px;
+}
+
+.profile .container .user-container .side-wrapper a {
+  text-decoration: none;
+}
+
+.profile .container .user-container .side-wrapper .side-sub-wrapper .four-btn-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 10vw;
+  height: 25vh;
+  margin-left: 25px;
+  margin-top: 18px;
+}
+
+.profile .container .user-container .side-wrapper .side-sub-wrapper .four-btn-wrapper a {
+  color: transparent;
+  text-decoration: none;
+}
+
+.profile .container .user-container .side-wrapper .side-sub-wrapper .four-btn-wrapper .profile-side-btn {
+  outline: none;
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  margin-top: 20px;
+  border-radius: 30px;
+  margin: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.profile .container .user-container .side-wrapper .side-sub-wrapper .four-btn-wrapper .profile-side-btn:hover i {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.profile .container .user-container .side-wrapper .side-sub-wrapper .four-btn-wrapper .profile-side-btn i {
+  color: white;
+  font-size: 50px;
+  line-height: 100px;
+  -webkit-transition: all ease-in-out 0.4s;
+  transition: all ease-in-out 0.4s;
+}
+
+.profile .container .user-container .side-wrapper .side-sub-wrapper .four-btn-wrapper #github {
+  background-color: #06d6a0;
+}
+
+.profile .container .user-container .side-wrapper .side-sub-wrapper .four-btn-wrapper #notes {
+  background-color: #ef476f;
+}
+
+.profile .container .user-container .side-wrapper .side-sub-wrapper .four-btn-wrapper #todo {
+  background-color: #ffd166;
+}
+
+.profile .container .user-container .side-wrapper .side-sub-wrapper .four-btn-wrapper #pomodoro {
+  background-color: #118ab2;
+}
+
+.profile .container .user-container .side-wrapper .table-btn-wrapper {
+  width: 20vh;
+  height: 7vh;
+  background-color: black;
+  border-radius: 30px;
+  margin-top: 1.5vh;
+  margin-left: 4.5vh;
+  -webkit-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
+  cursor: pointer;
+  outline: none;
+}
+
+.profile .container .user-container .side-wrapper .table-btn-wrapper:hover {
+  background-color: #ef2d56;
+  color: white;
+}
+
+.profile .container .user-container .side-wrapper .table-btn-wrapper h3 {
+  line-height: 7vh;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
 }
 
 .todo #heading {
@@ -1017,16 +1230,16 @@ body {
 }
 
 .todo .todo-wrapper .create-todo #add-btn:hover {
-  color: #38b5c0;
+  color: #ef2d56;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
 }
 
-.todo .todo-wrapper .todo-item {
+.todo .todo-item {
   width: 40vh;
   height: 15vh;
   background-color: black;
-  color: #38b5c0;
+  color: #ef2d56;
   margin-top: 30px;
   border-radius: 30px;
   padding: 20px;
@@ -1035,59 +1248,75 @@ body {
           box-shadow: 0px 0px 5px 1px black;
 }
 
-.todo .todo-wrapper .todo-item .icon-wrapper {
-  position: absolute;
-  bottom: 12px;
+.todo .todo-item i {
+  cursor: pointer;
 }
 
-.todo .todo-wrapper .todo-item .icon-wrapper .icons #popup {
-  color: white;
+.todo .todo-item .icon #add {
+  position: absolute;
+  right: 30px;
+  top: 20px;
+}
+
+.todo .todo-item .icon #add i {
+  color: lime;
+  font-size: 20px;
+}
+
+.todo .todo-item .icon .icon-feature {
+  position: absolute;
+  bottom: 10px;
+}
+
+.todo .todo-item .icon .icon-feature #delete {
+  color: crimson;
+}
+
+.todo .todo-item .icon .icon-feature #copy {
+  color: orangered;
+}
+
+.todo .todo-item .icon .icon-feature #edit {
+  color: purple;
+}
+
+.todo .todo-item .icon .icon-feature #check {
+  color: lime;
+}
+
+.todo .todo-item .icon .icon-feature i {
+  padding: 13px;
   font-size: 24px;
-  padding: 5px;
+}
+
+.levelchart a {
+  text-decoration: none;
+}
+
+.levelchart button {
+  position: absolute;
+  top: 6vh;
+  right: 40vh;
+  padding: 15px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  background-color: black;
+  color: white;
+  font-size: 16px;
   cursor: pointer;
   -webkit-transition: all ease-in-out 0.2s;
   transition: all ease-in-out 0.2s;
+  font-weight: 500;
 }
 
-.todo .todo-wrapper .todo-item .icon-wrapper .icons #popup:hover {
-  color: #38b5c0;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
+.levelchart button:hover {
+  background-color: #ef2d56;
+  color: white;
 }
 
-.todo .todo-wrapper .todo-item .icon-wrapper .icons #delete {
-  color: crimson;
-  padding-top: 10px;
-  font-size: 24px;
-  padding: 5px;
-  cursor: pointer;
-}
-
-.todo .todo-wrapper .todo-item .icon-wrapper .icons #check {
-  color: #81b214;
-  font-size: 24px;
-  padding: 5px;
-  cursor: pointer;
-}
-
-.todo .todo-wrapper .todo-item .icon-wrapper .icons #copy {
-  color: #ff9a00;
-  font-size: 24px;
-  padding: 5px;
-  cursor: pointer;
-}
-
-.todo .todo-wrapper .todo-item .icon-wrapper .icons #strike {
-  color: #3ec1d3;
-  font-size: 24px;
-  padding: 5px;
-  cursor: pointer;
-}
-
-.todo .todo-wrapper .todo-item .icon-wrapper .icons #edit {
-  color: b61aae;
-  font-size: 24px;
-  padding: 5px;
-  cursor: pointer;
+.levelchart img {
+  width: 100vw;
+  height: 100vh;
 }
 /*# sourceMappingURL=style.css.map */

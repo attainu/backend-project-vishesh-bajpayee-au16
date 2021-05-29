@@ -2,9 +2,15 @@
   <h1 id="heading">Notes</h1>
   <div class="container">
 
-    <i id="addBtn" class="fas fa-plus"></i>
+    <i id="addBtn" class="dynamic-color fas fa-plus"></i>
 
-    <input placeholder="Title" type="text" name="title" id="title-input" />
+    <input
+      class="dynamic-color"
+      placeholder="Title"
+      type="text"
+      name="title"
+      id="title-input"
+    />
     <textarea
       placeholder="write a note"
       type="text"
@@ -15,7 +21,14 @@
 
   <div class="wrapper">
     <div class="note-wrapper">
-
+      <div id="${title}" class="note">
+        <h1 class="dynamic-color" contenteditable>${title}</h1>
+        <p contenteditable>${para}</p>
+        <div class="button-wrapper">
+          <i id="highlight" class="fas fa-star"></i>
+          <i id="delete" class="far dynamic-color fa-trash-alt"></i>
+        </div>
+      </div>
     </div>
 
   </div>
@@ -36,19 +49,27 @@
   document.getElementsByClassName("notes")[0]; const addBtn =
   document.getElementById("addBtn"); const noteWrapper =
   document.getElementsByClassName("note-wrapper")[0]; const clearAllBtn =
-  document.getElementById("clear-all"); noteInput.addEventListener("click",
-  function () { container.style.height = "150px"; titleInput.style.display =
-  "inline"; noteInput.style.top = "5vh"; }); addBtn.addEventListener("click",
-  function () { let title = titleInput.value; let para = noteInput.value;
-  noteWrapper.innerHTML += `<div id=${title} class="note"> <h1
+  document.getElementById("clear-all"); let count = 0;
+  noteInput.addEventListener("click", function () { container.style.height =
+  "150px"; titleInput.style.display = "inline"; noteInput.style.top = "5vh"; });
+  addBtn.addEventListener("click", async function () { count += 1; let title =
+  titleInput.value; let para = noteInput.value; noteWrapper.innerHTML += `<div
+  id=${title} class="note"> <h1 class="dynamic-color"
   contenteditable>${title}</h1> <p contenteditable>${para}</p> <div
   class="button-wrapper"> <i id="highlight" class="fas fa-star"></i> <i
-  id="delete" class="far fa-trash-alt"></i> </div> </div>`; const notes =
-  document.querySelectorAll(".note"); const deleteBtns =
-  document.querySelectorAll("#delete"); console.log(notes, deleteBtns); for (let
-  index = 0; index < deleteBtns.length; index++) { const deletebtn =
-  deleteBtns[index]; deletebtn.addEventListener("click", function () {
-  notes[index].remove(); }); } }); clearAllBtn.addEventListener("click",
-  function () { noteWrapper.innerHTML = ""; });
+  id="delete" class="far dynamic-color fa-trash-alt"></i> </div> </div>`; const
+  notes = document.querySelectorAll(".note"); const deleteBtns =
+  document.querySelectorAll("#delete"); for (let index = 0; index <
+  deleteBtns.length; index++) { const deletebtn = deleteBtns[index]; const
+  notesDiv = notes[index]; deletebtn.addEventListener("click", async function ()
+  { const notesHeading = notesDiv.children[0].textContent; const notesPara =
+  notesDiv.children[1].textContent; const deletePayload = { notesHeading:
+  notesHeading, notesPara: notesPara, }; console.log(deletePayload);
+  notesDiv.remove(); await axios.delete("/database/notes/delete", { data: {
+  deletePayload: deletePayload }, }); }); } const payloadObj = { title: title,
+  content: para, count: count }; const axiousReq = await
+  axios.post("/dashboard/notes/", payloadObj); });
+  clearAllBtn.addEventListener("click", function () { noteWrapper.innerHTML =
+  ""; });
 
 </script>

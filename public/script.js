@@ -1,25 +1,36 @@
-const createTodo = document.querySelector("#item");
-const addBtn = document.querySelector("#add-btn");
-const todoWrapper = document.querySelector(".todo-items-list");
-const clearAllBtn = document.querySelector("#clear-all");
-addBtn.addEventListener("click", function () {
-  let value = createTodo.value;
-  todoWrapper.innerHTML += `<div class="todo-item">
-      <h1>${value}</h1>
-      <div class="icon-wrapper">
-        <div class="icons">
-          <i id="popup" class="fas fa-plus"></i>
-          <i id="delete" class="far fa-trash-alt"></i>
-          <i id="check" class="fas fa-check-square"></i>
-          <i id="strike" class="fas fa-strikethrough"></i>
-          <i id="copy" class="far fa-copy"></i>
-          <i id="edit" class="far fa-edit"></i>
+const dynamicColorDivs = document.getElementsByClassName("dynamic-color");
+const dynamicBgDivs = document.getElementsByClassName("dynamic-background");
 
-        </div>
-      </div>
-    </div>`;
-});
+const updateLevels = (level) => {
+  for (let index = 0; index < dynamicColorDivs.length; index++) {
+    const div = dynamicColorDivs[index];
+    if (level === 1) {
+      div.style.color = "38B5C0";
+    } else if (level === 2) {
+      div.style.color = "A300A0";
+    } else if (level === 3) {
+      div.style.color = "FFBD00";
+    }
+  }
 
-clearAllBtn.addEventListener("click", () => {
-  todoWrapper.innerHTML = "";
-});
+  for (let index = 0; index < dynamicBgDivs.length; index++) {
+    const div = dynamicBgDivs[index];
+
+    if (level === 1) {
+      div.style.backgroundColor = "38B5C0";
+    } else if (level === 2) {
+      div.style.backgroundColor = "A300A0";
+    } else if (level === 3) {
+      div.style.backgroundColor = "FFBD00";
+    }
+  }
+};
+
+const backendUserDataHandler = async () => {
+  const response = await fetch("/dashboard/data");
+  const data = await response.json();
+  const level = data[0].level;
+  updateLevels(level);
+};
+
+backendUserDataHandler();
