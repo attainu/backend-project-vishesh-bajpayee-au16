@@ -4,9 +4,12 @@ const NotesModel = require("../models/Notes");
 const NotesHTMLModel = require("../models/NotesHTML");
 router.get("/dashboard/notes", async (req, res) => {
   const userObj = req.session.user;
-  const notesHtmlObj = await NotesHTMLModel.findOne({ userId: userObj._id });
+  const notesHtmlObj = await NotesModel.find({ userId: userObj._id }).lean();
   console.log(notesHtmlObj);
-  res.render("notes", notesHtmlObj);
+
+  res.render("notes", {
+    notes: notesHtmlObj,
+  });
 });
 
 router.post("/dashboard/notes", async (req, res) => {

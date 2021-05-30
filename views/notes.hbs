@@ -21,7 +21,16 @@
 
   <div class="wrapper">
     <div class="note-wrapper">
-      {{notesHTML}}
+      {{#each notes}}
+        <div id="{{this.title}}" class="note">
+          <h1 class="dynamic-color" contenteditable>{{this.title}}</h1>
+          <p contenteditable>{{this.content}}</p>
+          <div class="button-wrapper">
+            <i id="highlight" class="fas fa-star"></i>
+            <i id="delete" class="far dynamic-color fa-trash-alt"></i>
+          </div>
+        </div>
+      {{/each}}
     </div>
 
   </div>

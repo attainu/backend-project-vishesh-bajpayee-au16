@@ -50,10 +50,10 @@ clearAllBtn.addEventListener("click", function () {
   noteWrapper.innerHTML = "";
 });
 
-setInterval(async () => {
-  let notesHtml = noteWrapper.innerHTML;
-  const payloadHtml = {
-    notesHtml: notesHtml,
-  };
-  await axios.put("/dashboard/notes/updatehtml", payloadHtml);
-}, 30000);
+// setInterval(async () => {
+//   let notesHtml = noteWrapper.innerHTML;
+//   const payloadHtml = {
+//     notesHtml: notesHtml,
+//   };
+//   await axios.put("/dashboard/notes/updatehtml", payloadHtml);
+// }, 30000);
