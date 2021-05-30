@@ -11,20 +11,50 @@
   </form>
   <div class="todo-wrapper">
     <div class="create-todo">
-      <input class="dynamic-color" placeholder="Add Item" type="text" name="item" id="item" />
-      <i id="add-btn" class=" dynamic-color fas fa-plus"></i>
+      <input
+        class="dynamic-color"
+        placeholder="Add Item"
+        type="text"
+        name="item"
+        id="item"
+      />
+      <i id="add-btn" class="dynamic-color fas fa-plus"></i>
 
     </div>
     <div class="todo-items-list">
-      
+      {{#each todo}}
+        <div class="todo-item">
+        <h1 class="dynamic-color" id="item-value">{{this.title}}</h1>
+
+        <div class="icon">
+
+          <div id="add">
+
+            <i id="check" class="fas fa-check-circle"></i>
+          </div>
+
+          <div class="icon-feature">
+            <i id="delete" class="far fa-trash-alt"></i>
+            <i id="copy" class="far fa-copy"></i>
+            <i id="strike" class="fas fa-strikethrough"></i>
+            <i id="edit" id="edit" class="far fa-edit"></i>
+
+          </div>
+        </div>
+
+      </div>
+      {{/each}}
+
+    </div>
 
   </div>
 
-</div>
+
+
 
 <script>
-  
-const createItem = document.querySelector("#item");
+
+  const createItem = document.querySelector("#item");
 const addBtn = document.querySelector("#add-btn");
 const todoWrapper = document.querySelector(".todo-items-list");
 const clearAllBtn = document.querySelector("#clear-all");
@@ -100,9 +130,20 @@ addBtn.addEventListener("click", async function () {
   const axiosSend = await axios.post("/dashboard/todo", valObj);
   console.log(axiosSend);
 });
-clearAllBtn.addEventListener("click", () => {
+
+let todoArray = [];
+clearAllBtn.addEventListener("click", async () => {
+  // const todoList = document.querySelectorAll(".todo-item");
+  // for (let index = 0; index < todoList.length; index++) {
+  //   const todoItem = todoList[index];
+  //   todoArray.push(todoItem);
+  //   const payloadObj = {
+  //     deleteAllPayload: todoArray,
+  //   };
+  //   await axios.delete("/dashboard/todo/deleteall", payloadObj);
+  // }
+
   todoWrapper.innerHTML = "";
 });
-
 
 </script>

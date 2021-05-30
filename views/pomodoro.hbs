@@ -1,1 +1,47 @@
-<h1>Pomodoro</h1>
+<div class="pomodoro">
+  <h1 id="heading">Pomodoro</h1>
+  <form action="/dashboard" method="GET">
+    <button id="goback-btn">go back</button>
+  </form>
+  <div class="btn-wrapper">
+    <div class="btn-position-wrapper">
+      <button id="create-btn">Create</button>
+
+    </div>
+  </div>
+
+  <div class="hidden-btn-position-wrapper">
+    <div class="hidden-wrapper">
+      <button id="custom-timer-btn" class="default-btn">custom</button>
+      <button id="default-timer-btn" class="default-btn">default</button>
+    </div>
+  </div>
+
+  <div class="hidden-set-timer-wrapper-position">
+    <div class="hidden-set-timer-wrapper-flex">
+      <div class="hidden-set-timer-wrapper">
+        <h3>timer:
+          <input
+            placeholder="enter timer in minutes"
+            type="number"
+            name="timer"
+            id="timer"
+          /></h3>
+        <h3>break: <input type="number" name="break" id="break" /></h3>
+        <button>begin</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="hidden-default-timer-wrapper-position">
+    <div class="hidden-default-timer-wrapper-flex">
+      <div class="hidden-default-timer-wrapper">
+        <h3>timer: 25 minutes
+        </h3>
+        <h3>break: 5 minutes </h3>
+        <button>begin</button>
+      </div>
+    </div>
+  </div>
+
+</div>
