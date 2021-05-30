@@ -1,8 +1,12 @@
 const express = require("express");
 const router = express.Router();
 const NotesModel = require("../models/Notes");
-router.get("/dashboard/notes", (req, res) => {
-  res.render("notes");
+const NotesHTMLModel = require("../models/NotesHTML");
+router.get("/dashboard/notes", async (req, res) => {
+  const userObj = req.session.user;
+  const notesHtmlObj = await NotesHTMLModel.findOne({ userId: userObj._id });
+  console.log(notesHtmlObj);
+  res.render("notes", notesHtmlObj);
 });
 
 router.post("/dashboard/notes", async (req, res) => {
@@ -40,8 +44,17 @@ router.delete("/database/notes/delete", async (req, res) => {
   }
 });
 
-router.put("/dashboard/notes/updatehtml", (req, res) => {
-  console.log(req.body);
+router.put("/dashboard/notes/updatehtml", async (req, res) => {
+  try {
+    const userObj = req.session.user;
+    let htmlPayload = req.body.notesHtml;
+    const dbObj = await NotesHTMLModel.findOneAndUpdate(
+      { userId: userObj._id },
+      { notesHTML: htmlPayload }
+    );
+  } catch (error) {
+    res.send(error);
+  }
 });
 
 module.exports = router;
