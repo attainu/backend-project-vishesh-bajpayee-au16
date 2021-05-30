@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const SignupModel = require("../models/Signup");
 const LevelModel = require("../models/Level");
-const NotesHTMLModel = require("../models/NotesHTML");
+
 const bcrypt = require("bcrypt");
 
 router.get("/signup", (req, res) => {
@@ -35,16 +35,6 @@ router.post("/signup", async (req, res) => {
     };
     const levelObj = new LevelModel(level);
     await levelObj.save();
-
-    // notesHTML collections
-
-    const notesHTMLObj = {
-      userId: newUser._id,
-      notesHTML: "",
-    };
-
-    const noteshtmlObj = new NotesHTMLModel(notesHTMLObj);
-    await noteshtmlObj.save();
 
     res.redirect("/");
   } catch (error) {

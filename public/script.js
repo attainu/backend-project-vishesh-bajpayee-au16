@@ -6,6 +6,7 @@ const addBtn = document.getElementById("addBtn");
 const noteWrapper = document.getElementsByClassName("note-wrapper")[0];
 const clearAllBtn = document.getElementById("clear-all");
 let count = 0;
+
 noteInput.addEventListener("click", function () {
   container.style.height = "150px";
   titleInput.style.display = "inline";
@@ -15,7 +16,6 @@ addBtn.addEventListener("click", async function () {
   count += 1;
   let title = titleInput.value;
   let para = noteInput.value;
-
   noteWrapper.innerHTML += `<div
   id=${title} class="note"> <h1 class="dynamic-color"
   contenteditable>${title}</h1> <p contenteditable>${para}</p> <div
@@ -27,6 +27,7 @@ addBtn.addEventListener("click", async function () {
     const deletebtn = deleteBtns[index];
     const notesDiv = notes[index];
     deletebtn.addEventListener("click", async function () {
+      // console.log("clicked");
       const notesHeading = notesDiv.children[0].textContent;
       const notesPara = notesDiv.children[1].textContent;
       const deletePayload = {
@@ -35,25 +36,29 @@ addBtn.addEventListener("click", async function () {
       };
       console.log(deletePayload);
       notesDiv.remove();
-      await axios.delete("/database/notes/delete", {
+      await axios.delete("/dashboard/notes/delete", {
         data: {
           deletePayload: deletePayload,
         },
       });
     });
   }
-
   const payloadObj = { title: title, content: para, count: count };
   const axiousReq = await axios.post("/dashboard/notes/", payloadObj);
 });
-clearAllBtn.addEventListener("click", function () {
-  noteWrapper.innerHTML = "";
-});
 
-// setInterval(async () => {
-//   let notesHtml = noteWrapper.innerHTML;
-//   const payloadHtml = {
-//     notesHtml: notesHtml,
-//   };
-//   await axios.put("/dashboard/notes/updatehtml", payloadHtml);
-// }, 30000);
+let notes = document.querySelectorAll(".note");
+clearAllBtn.addEventListener("click", async function () {
+  noteWrapper.innerHTML = "";
+  let payloadArray = [];
+  for (let index = 0; index < notes.length; index++) {
+    const note = notes[index];
+    payloadArray.push(note.children[0].textContent);
+  }
+
+  await axios.delete("/dashboard/notes/deleteall", {
+    data: {
+      deleteAllPayload: payloadArray,
+    },
+  });
+});
