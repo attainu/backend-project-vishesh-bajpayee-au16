@@ -1215,6 +1215,16 @@ body {
 }
 
 .pomodoro {
+  @keyframes opacityup {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
   #heading {
     font-size: 100px;
     position: absolute;
