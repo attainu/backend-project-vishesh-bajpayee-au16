@@ -1368,6 +1368,7 @@ body {
 }
 
 .pomodoro .hidden-btn-position-wrapper {
+  display: none;
   position: absolute;
   left: 46%;
   top: 20vh;
@@ -1448,6 +1449,7 @@ body {
 }
 
 .pomodoro .hidden-default-timer-wrapper-position {
+  display: none;
   position: absolute;
   left: 41%;
   top: 32vh;
