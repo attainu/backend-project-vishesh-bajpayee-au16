@@ -21,14 +21,7 @@
 
   <div class="wrapper">
     <div class="note-wrapper">
-      <div id="${title}" class="note">
-        <h1 class="dynamic-color" contenteditable>${title}</h1>
-        <p contenteditable>${para}</p>
-        <div class="button-wrapper">
-          <i id="highlight" class="fas fa-star"></i>
-          <i id="delete" class="far dynamic-color fa-trash-alt"></i>
-        </div>
-      </div>
+
     </div>
 
   </div>
@@ -42,7 +35,7 @@
   <button id="clear-all" type="submit">clear all</button>
 </div>
 
-<script>
+{{! <script>
   const container = document.getElementsByClassName("container")[0]; const
   titleInput = document.getElementById("title-input"); const noteInput =
   document.getElementById("note-input"); const body =
@@ -72,4 +65,4 @@
   clearAllBtn.addEventListener("click", function () { noteWrapper.innerHTML =
   ""; });
 
-</script>
+</script> }}

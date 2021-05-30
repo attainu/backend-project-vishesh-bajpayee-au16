@@ -12,11 +12,15 @@ router.get("/dashboard", (req, res) => {
 });
 
 router.get("/dashboard/data", async (req, res) => {
-  const sessionObj = req.session.user;
-  const levelUpdatedObj = await LevelModel.find({ userId: sessionObj._id });
-  console.log(sessionObj);
-  console.log(levelUpdatedObj);
-  res.send(levelUpdatedObj);
+  try {
+    const sessionObj = req.session.user;
+    const levelUpdatedObj = await LevelModel.find({ userId: sessionObj._id });
+    // console.log(sessionObj);
+    // console.log(levelUpdatedObj);
+    res.send(levelUpdatedObj);
+  } catch (error) {
+    res.send(error);
+  }
 });
 
 module.exports = router;
