@@ -1374,4 +1374,64 @@ body {
       }
     }
   }
+
+  .timer-wrapper-position {
+    position: absolute;
+    top: 25vh;
+    left: 10vw;
+    .timer-wrapper {
+      display: flex;
+      justify-content: space-around;
+      margin: 20px;
+      padding: 10x;
+
+      .timer-container {
+        background-color: black;
+        width: 350px;
+        height: 350px;
+        border-radius: 30px;
+        padding: 20px;
+        margin: 20px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        h1 {
+          color: $primary;
+          // line-height: 350px;
+          font-size: 150px;
+          font-weight: 500;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .break-wrapper-position {
+    position: absolute;
+    top: 44vh;
+    left: 33.9vh;
+
+    .break-wrapper {
+      display: flex;
+
+      .break-container {
+        margin-left: 230px;
+        margin-right: 100px;
+        width: 60px;
+        height: 60px;
+        background-color: rgba($color: teal, $alpha: 0.7);
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        h4 {
+          color: black;
+        }
+      }
+    }
+  }
 }
