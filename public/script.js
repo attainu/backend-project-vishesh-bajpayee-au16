@@ -1,3 +1,4 @@
+// DOCUMENTS
 const createBtn = document.getElementById("create-btn");
 const customDefaultBtn = document.querySelector(".hidden-btn-position-wrapper");
 const customTimerBtn = document.getElementById("custom-timer-btn");
@@ -10,9 +11,12 @@ const hiddenDefaultTimer = document.querySelector(
 );
 const beginSetBtn = document.getElementById("begin-set");
 const beginDefaultBtn = document.getElementById("begin-default");
-
 const setTimerInput = document.getElementById("timer");
 const setBreakInput = document.getElementById("break");
+const timerWrapper = document.querySelector(".timer-wrapper-position");
+const breakWrapper = document.querySelector(".break-wrapper-position");
+const timeIndicator = document.querySelectorAll(".time-indicator");
+// FUNCTIONS
 
 const enableDisplay = function (clickBtn, displayDiv) {
   clickBtn.addEventListener("click", function () {
@@ -33,11 +37,27 @@ const disableDisplay = function (button) {
   });
 };
 
+// EVENT LISTENERS
 beginSetBtn.addEventListener("click", function () {
   const timerInfoList = [];
   timerInfoList.push(setTimerInput.value);
   timerInfoList.push(setBreakInput.value);
   console.log(timerInfoList);
+});
+
+beginDefaultBtn.addEventListener("click", function () {
+  timerWrapper.style.display = "block";
+  breakWrapper.style.display = "block";
+  createBtn.setAttribute("disabled", true);
+  createBtn.style.background = "gray";
+  let timeValue = 10;
+  const intervel = setInterval(() => {
+    timeValue -= 1;
+    timeIndicator[0].textContent = `${timeValue}`;
+    if (timeValue == 0) {
+      clearInterval(intervel);
+    }
+  }, 1000);
 });
 
 enableDisplay(createBtn, customDefaultBtn);

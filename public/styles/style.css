@@ -1507,6 +1507,7 @@ body {
 }
 
 .pomodoro .timer-wrapper-position {
+  display: none;
   position: absolute;
   top: 25vh;
   left: 10vw;
@@ -1544,7 +1545,7 @@ body {
           align-items: center;
 }
 
-.pomodoro .timer-wrapper-position .timer-wrapper .timer-container h1 {
+.pomodoro .timer-wrapper-position .timer-wrapper .timer-container .time-indicator {
   color: crimson;
   font-size: 150px;
   font-weight: 500;
@@ -1552,6 +1553,7 @@ body {
 }
 
 .pomodoro .break-wrapper-position {
+  display: none;
   position: absolute;
   top: 44vh;
   left: 33.9vh;
