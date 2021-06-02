@@ -50,11 +50,9 @@
   </div>
 
 
-{{!-- 
-
 <script>
 
-  const createItem = document.querySelector("#item");
+const createItem = document.querySelector("#item");
 const addBtn = document.querySelector("#add-btn");
 const todoWrapper = document.querySelector(".todo-items-list");
 const clearAllBtn = document.querySelector("#clear-all");
@@ -128,18 +126,23 @@ addBtn.addEventListener("click", async function () {
     item: value,
   };
   const axiosSend = await axios.post("/dashboard/todo", valObj);
-  console.log(axiosSend);
+  // console.log(axiosSend);
 });
 
-let todoArray = [];
+let payloadArray = [];
 clearAllBtn.addEventListener("click", async () => {
   const todoItems = document.querySelectorAll(".todo-item");
-  
-  
+  for (let index = 0; index < todoItems.length; index++) {
+    const todoContent = todoItems[index].children;
+    payloadArray.push(todoContent[0].textContent);
+  }
+  // console.log(todoItems);
 
-
-
+  console.log(payloadArray);
   todoWrapper.innerHTML = "";
+  await axios.delete("/dashboard/todo/deleteall", {
+    data: { deleteAllPayload: payloadArray },
+  });
 });
 
-</script> --}}
+</script>
