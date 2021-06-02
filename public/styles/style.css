@@ -72,7 +72,7 @@ body {
 }
 
 .landingPage section .login-section h2 {
-  color: crimson;
+  color: #33d6d6;
   position: absolute;
   z-index: 2;
   top: 33vh;
@@ -125,7 +125,7 @@ body {
 }
 
 .landingPage section .login-section #login-btn:hover {
-  background-color: crimson;
+  background-color: #33d6d6;
   font-weight: 500;
   color: white;
 }
@@ -157,7 +157,7 @@ body {
 }
 
 .landingPage aside h1 span {
-  color: crimson;
+  color: #33d6d6;
   font-size: 150px;
 }
 
@@ -294,7 +294,7 @@ body {
 }
 
 .signupPage .container .content #signup-btn:hover {
-  background-color: crimson;
+  background-color: #33d6d6;
   font-weight: 500;
 }
 
@@ -314,7 +314,7 @@ body {
 }
 
 .signupPage .container #goback-btn:hover {
-  background-color: crimson;
+  background-color: #33d6d6;
   font-weight: 500;
 }
 
@@ -353,7 +353,7 @@ body {
 }
 
 .dashboard section .dashboard-btns #profile-btn:hover {
-  background-color: crimson;
+  background-color: #33d6d6;
 }
 
 .dashboard section .dashboard-btns button {
@@ -369,7 +369,7 @@ body {
 }
 
 .dashboard section .dashboard-btns button:hover {
-  background-color: crimson;
+  background-color: #33d6d6;
 }
 
 .dashboard section .wrapper {
@@ -418,7 +418,7 @@ body {
 }
 
 .dashboard section .wrapper .content:hover {
-  background-color: crimson;
+  background-color: #33d6d6;
   color: white;
 }
 
@@ -453,7 +453,7 @@ body {
   left: 50px;
   width: 55vw;
   background-color: transparent;
-  color: crimson;
+  color: #33d6d6;
   font-size: 24px;
 }
 
@@ -478,8 +478,8 @@ body {
 }
 
 .dashboard aside .card-main:hover {
-  -webkit-box-shadow: 0px 0px 5px 5px crimson;
-          box-shadow: 0px 0px 5px 5px crimson;
+  -webkit-box-shadow: 0px 0px 5px 5px #33d6d6;
+          box-shadow: 0px 0px 5px 5px #33d6d6;
 }
 
 .dashboard aside .card-main .input-field {
@@ -510,7 +510,7 @@ body {
 }
 
 .dashboard aside .card-main .input-field #addrepoBtn:hover {
-  background-color: crimson;
+  background-color: #33d6d6;
   color: white;
 }
 
@@ -523,7 +523,7 @@ body {
 
 .dashboard aside .card-main h1 span {
   font-weight: 400;
-  color: crimson;
+  color: #33d6d6;
 }
 
 .dashboard aside .card-main h4 {
@@ -562,8 +562,8 @@ body {
 }
 
 .dashboard aside .card-main .step-icons .item:hover {
-  -webkit-box-shadow: 0px 0px 5px 2px crimson;
-          box-shadow: 0px 0px 5px 2px crimson;
+  -webkit-box-shadow: 0px 0px 5px 2px #33d6d6;
+          box-shadow: 0px 0px 5px 2px #33d6d6;
 }
 
 .dashboard aside .card-main .step-icons .item i {
@@ -576,7 +576,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   font-size: 30px;
-  color: crimson;
+  color: #33d6d6;
   -webkit-transition: all ease-in-out 0.2s;
   transition: all ease-in-out 0.2s;
 }
@@ -587,7 +587,7 @@ body {
 
 .dashboard aside .card-main .step-icons .item h6 {
   position: absolute;
-  color: crimson;
+  color: #33d6d6;
   width: 90px;
   top: 80px;
   left: -6px;
@@ -662,7 +662,7 @@ body {
 
 .notes .container i {
   position: absolute;
-  color: crimson;
+  color: #33d6d6;
   right: 30px;
   top: 15px;
   font-size: 20px;
@@ -689,7 +689,7 @@ body {
   outline: none;
   font-weight: 500;
   padding: 10px;
-  color: crimson;
+  color: #33d6d6;
 }
 
 .notes .container #note-input {
@@ -743,7 +743,7 @@ body {
 
 .notes .wrapper .note-wrapper .note h1 {
   position: absolute;
-  color: crimson;
+  color: #33d6d6;
   top: 8vh;
   padding: 20px;
   width: 380px;
@@ -773,7 +773,7 @@ body {
 }
 
 .notes .wrapper .note-wrapper .note .button-wrapper #highlight:hover {
-  color: crimson;
+  color: #33d6d6;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
 }
@@ -830,7 +830,7 @@ body {
 }
 
 .profile .container .btn-container a button:hover {
-  background-color: crimson;
+  background-color: #33d6d6;
 }
 
 .profile .container .text-wrapper {
@@ -845,7 +845,7 @@ body {
 .profile .container .text-wrapper h1 {
   font-weight: 300;
   margin-top: 20px;
-  color: crimson;
+  color: #33d6d6;
   font-size: 80px;
 }
 
@@ -854,7 +854,7 @@ body {
 }
 
 .profile .container .info-container {
-  background-color: crimson;
+  background-color: #33d6d6;
   margin: 5vh;
   padding: 20px;
   width: 30vw;
@@ -911,7 +911,7 @@ body {
   font-size: 50px;
   line-height: 8vh;
   margin-left: 30px;
-  color: crimson;
+  color: #33d6d6;
 }
 
 .profile .container .user-container {
@@ -935,7 +935,7 @@ body {
 }
 
 .profile .container .user-container h3 {
-  color: crimson;
+  color: #33d6d6;
   font-size: 20px;
   padding-left: 4.5vh;
 }
@@ -956,7 +956,7 @@ body {
 }
 
 .profile .container .user-container .info-wrapper h1 span {
-  color: crimson;
+  color: #33d6d6;
 }
 
 .profile .container .user-container .change-wrapper {
@@ -1013,7 +1013,7 @@ body {
 }
 
 .profile .container .user-container .change-wrapper .change-info-wrapper .next-level-wrapper h2 {
-  color: crimson;
+  color: #33d6d6;
 }
 
 .profile .container .user-container .side-wrapper {
@@ -1116,7 +1116,7 @@ body {
 }
 
 .profile .container .user-container .side-wrapper .table-btn-wrapper:hover {
-  background-color: crimson;
+  background-color: #33d6d6;
   color: white;
 }
 
@@ -1230,7 +1230,7 @@ body {
 }
 
 .todo .todo-wrapper .create-todo #add-btn:hover {
-  color: crimson;
+  color: #33d6d6;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
 }
@@ -1239,7 +1239,7 @@ body {
   width: 40vh;
   height: 15vh;
   background-color: black;
-  color: crimson;
+  color: #33d6d6;
   margin-top: 30px;
   border-radius: 30px;
   padding: 20px;
@@ -1311,7 +1311,7 @@ body {
 }
 
 .levelchart button:hover {
-  background-color: crimson;
+  background-color: #33d6d6;
   color: white;
 }
 
@@ -1446,7 +1446,7 @@ body {
   padding: 10px;
   border: none;
   border-radius: 30px;
-  background-color: crimson;
+  background-color: #33d6d6;
   color: white;
   margin: 10px;
   outline: none;
@@ -1546,7 +1546,7 @@ body {
 }
 
 .pomodoro .timer-wrapper-position .timer-wrapper .timer-container .time-indicator {
-  color: crimson;
+  color: #33d6d6;
   font-size: 150px;
   font-weight: 500;
   text-align: center;

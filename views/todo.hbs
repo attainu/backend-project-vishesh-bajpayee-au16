@@ -24,7 +24,7 @@
     <div class="todo-items-list">
       {{#each todo}}
         <div class="todo-item">
-        <h1 class="dynamic-color" id="item-value">{{this.title}}</h1>
+        <h1 class="dynamic-color" id="item-value">{{this.item}}</h1>
 
         <div class="icon">
 
@@ -50,7 +50,7 @@
   </div>
 
 
-
+{{!-- 
 
 <script>
 
@@ -133,17 +133,13 @@ addBtn.addEventListener("click", async function () {
 
 let todoArray = [];
 clearAllBtn.addEventListener("click", async () => {
-  // const todoList = document.querySelectorAll(".todo-item");
-  // for (let index = 0; index < todoList.length; index++) {
-  //   const todoItem = todoList[index];
-  //   todoArray.push(todoItem);
-  //   const payloadObj = {
-  //     deleteAllPayload: todoArray,
-  //   };
-  //   await axios.delete("/dashboard/todo/deleteall", payloadObj);
-  // }
+  const todoItems = document.querySelectorAll(".todo-item");
+  
+  
+
+
 
   todoWrapper.innerHTML = "";
 });
 
-</script>
+</script> --}}

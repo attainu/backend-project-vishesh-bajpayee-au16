@@ -1,5 +1,4 @@
 const express = require("express");
-const { log } = require("handlebars");
 const router = express.Router();
 const TodoModel = require("../models/Todo");
 
@@ -28,12 +27,13 @@ router.delete("/dashboard/todo/delete", async (req, res) => {
   const refrenceObj = await TodoModel.deleteOne({ item: deleteObj.item });
 });
 
-// router.delete("/dashboard/todo/deleteall", async (req, res) => {
-//   const payloadObj = req.body.deleteAllPayload;
+router.delete("/dashboard/todo/deleteall", async (req, res) => {
+  const userObj = req.session.user;
+  const todoItemArray = req.body.deleteAllPayload;
 
-//   for (let index = 0; index < payloadObj.length; index++) {
-//     const item = payloadObj[index];
-//     console.log(item);
-//   }
-// });
+  for (let index = 0; index < todoItemArray.length; index++) {
+    const userItem = todoItemArray[index];
+    await TodoModel.deleteOne({ item: userItem });
+  }
+});
 module.exports = router;
