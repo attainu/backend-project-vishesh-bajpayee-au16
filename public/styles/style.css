@@ -1653,4 +1653,38 @@ body {
     background-color: teal;
   }
 }
+
+.pomodoro #finish-wrapper {
+  position: absolute;
+  top: 35vh;
+  left: 20vh;
+  display: none;
+  width: 80vw;
+  height: 40vh;
+  border-radius: 30px;
+  background-color: greenyellow;
+}
+
+.pomodoro #finish-wrapper h1 {
+  position: absolute;
+  top: 40%;
+  left: 15vh;
+  color: #33d6d6;
+  text-align: center;
+  font-size: 50px;
+}
+
+.pomodoro #finish-wrapper #reset {
+  position: absolute;
+  left: 50%;
+  top: 65%;
+  padding: 5px 20px 5px 20px;
+  font-size: 20px;
+  border: none;
+  border-radius: 30px;
+  background-color: black;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+}
 /*# sourceMappingURL=style.css.map */

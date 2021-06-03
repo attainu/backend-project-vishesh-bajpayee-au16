@@ -18,6 +18,9 @@ const breakWrapper = document.querySelector(".break-wrapper-position");
 const breakContainer = document.querySelectorAll(".break-container");
 const timeIndicator = document.querySelectorAll(".time-indicator");
 const timerContainer = document.querySelectorAll(".timer-container");
+const finishWrapper = document.getElementById("finish-wrapper");
+const finishText = document.getElementById("finish-text");
+
 // FUNCTIONS
 
 const enableDisplay = function (clickBtn, displayDiv) {
@@ -53,6 +56,13 @@ const setBreakFunc = function (breakVal, delay, index) {
     }, 1000);
   }, delay);
 };
+const finishFunc = function (delay) {
+  setTimeout(() => {
+    breakWrapper.style.display = "none";
+    timerWrapper.style.display = "none";
+    finishWrapper.style.display = "block";
+  }, delay);
+};
 
 const setTimerFunc = function (timerVal, delay, index) {
   setTimeout(() => {
@@ -70,6 +80,11 @@ const setTimerFunc = function (timerVal, delay, index) {
   }, delay);
 };
 
+enableDisplay(createBtn, customDefaultBtn);
+enableDisplay(customTimerBtn, hiddenSetTimer);
+enableDisplay(defaultTimerBtn, hiddenDefaultTimer);
+disableDisplay(beginDefaultBtn);
+disableDisplay(beginSetBtn);
 // EVENT LISTENERS
 beginSetBtn.addEventListener("click", function () {
   const timerInfoList = [];
@@ -99,10 +114,5 @@ beginDefaultBtn.addEventListener("click", function () {
   setTimerFunc(10, 30000, 2);
   setBreakFunc(5, 45000, 2);
   setTimerFunc(10, 50000, 3);
+  finishFunc(75000);
 });
-
-enableDisplay(createBtn, customDefaultBtn);
-enableDisplay(customTimerBtn, hiddenSetTimer);
-enableDisplay(defaultTimerBtn, hiddenDefaultTimer);
-disableDisplay(beginDefaultBtn);
-disableDisplay(beginSetBtn);
