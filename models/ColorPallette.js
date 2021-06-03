@@ -5,26 +5,9 @@ const ColorPalletteSchema = mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "Signup",
   },
-  palletteName: {
-    type: String,
-  },
 
-  palletteColors: {
-    color01: {
-      type: String,
-    },
-    color02: {
-      type: String,
-    },
-    color3: {
-      type: String,
-    },
-    color04: {
-      type: String,
-    },
-    color05: {
-      type: String,
-    },
+  colors: {
+    type: Array,
   },
 
   createdAt: {

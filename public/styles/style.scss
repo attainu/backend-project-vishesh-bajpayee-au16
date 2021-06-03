@@ -1574,6 +1574,18 @@ body {
         cursor: pointer;
         margin: 20px;
       }
+
+      #pallette-name {
+        display: none;
+        padding: 15px;
+        border: none;
+        outline: none;
+        border-radius: 20px;
+        background-color: $primary;
+        color: white;
+        font-size: 16px;
+        font-weight: 500;
+      }
     }
 
     .color-container-wrapper {

@@ -6,7 +6,7 @@ const color03 = document.getElementById("container03");
 const color04 = document.getElementById("container04");
 const color05 = document.getElementById("container05");
 const colorCodes = document.querySelectorAll(".color-code");
-
+const palletteNameInp = document.getElementById("pallette-name");
 // vibrant colors
 // function randomHsl() {
 //   return "hsla(" + Math.random() * 360 + " 100%, 50%, 1)";
@@ -44,7 +44,6 @@ const generateColorsFunc = function () {
   return randomColorArray;
 };
 
-const updateColorCode = function () {};
 generateRandomBtn.addEventListener("click", async function () {
   generateColorsFunc();
   const payloadPbj = {
