@@ -3,11 +3,15 @@ const LevelModel = require("../models/Level");
 const router = express.Router();
 
 router.get("/dashboard", (req, res) => {
-  if (req.session.isLoggedIn === true) {
-    res.render("dashboard", req.session.user);
-    return;
-  } else {
-    res.redirect("/");
+  try {
+    if (req.session.isLoggedIn === true) {
+      res.render("dashboard", req.session.user);
+      return;
+    } else {
+      res.redirect("/");
+    }
+  } catch (error) {
+    res.send(error);
   }
 });
 
@@ -15,8 +19,6 @@ router.get("/dashboard/data", async (req, res) => {
   try {
     const sessionObj = req.session.user;
     const levelUpdatedObj = await LevelModel.find({ userId: sessionObj._id });
-    // console.log(sessionObj);
-    // console.log(levelUpdatedObj);
     res.send(levelUpdatedObj);
   } catch (error) {
     res.send(error);
