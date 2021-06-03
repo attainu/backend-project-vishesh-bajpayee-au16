@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
 
-router.get("/dashboard/commitcounter", (req, res) => {
-  res.render("commitcounter");
+router.get("/dashboard/colorpallette", (req, res) => {
+  res.render("colorpallette");
 });
 
 module.exports = router;
