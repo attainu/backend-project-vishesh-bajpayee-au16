@@ -1,3 +1,17 @@
+const generateRandomBtn = document.getElementById("generate-colors");
+const saveBtn = document.getElementById("save-colors");
+const color01 = document.getElementById("container01");
+const color02 = document.getElementById("container02");
+const color03 = document.getElementById("container03");
+const color04 = document.getElementById("container04");
+const color05 = document.getElementById("container05");
+const colorCodes = document.querySelectorAll(".color-code");
+
+// vibrant colors
+// function randomHsl() {
+//   return "hsla(" + Math.random() * 360 + " 100%, 50%, 1)";
+// }
+
 // generate random color
 function getRandomColor() {
   var letters = "0123456789ABCDEF";
@@ -8,52 +22,33 @@ function getRandomColor() {
   return color;
 }
 
-// Vibrant colors
-function rainbow(numOfSteps, step) {
-  // This function generates vibrant, "evenly spaced" colours (i.e. no clustering). This is ideal for creating easily distinguishable vibrant markers in Google Maps and other apps.
-  // Adam Cole, 2011-Sept-14
-  // HSV to RBG adapted from: http://mjijackson.com/2008/02/rgb-to-hsl-and-rgb-to-hsv-color-model-conversion-algorithms-in-javascript
-  var r, g, b;
-  var h = step / numOfSteps;
-  var i = ~~(h * 6);
-  var f = h * 6 - i;
-  var q = 1 - f;
-  switch (i % 6) {
-    case 0:
-      r = 1;
-      g = f;
-      b = 0;
-      break;
-    case 1:
-      r = q;
-      g = 1;
-      b = 0;
-      break;
-    case 2:
-      r = 0;
-      g = 1;
-      b = f;
-      break;
-    case 3:
-      r = 0;
-      g = q;
-      b = 1;
-      break;
-    case 4:
-      r = f;
-      g = 0;
-      b = 1;
-      break;
-    case 5:
-      r = 1;
-      g = 0;
-      b = q;
-      break;
+const generateColorsFunc = function () {
+  let randomColorArray = [
+    getRandomColor(),
+    getRandomColor(),
+    getRandomColor(),
+    getRandomColor(),
+    getRandomColor(),
+  ];
+  color01.style.background = randomColorArray[0];
+  color02.style.background = randomColorArray[1];
+  color03.style.background = randomColorArray[2];
+  color04.style.background = randomColorArray[3];
+  color05.style.background = randomColorArray[4];
+
+  for (let index = 0; index < colorCodes.length; index++) {
+    const codeHeading = colorCodes[index];
+    codeHeading.textContent = randomColorArray[index];
   }
-  var c =
-    "#" +
-    ("00" + (~~(r * 255)).toString(16)).slice(-2) +
-    ("00" + (~~(g * 255)).toString(16)).slice(-2) +
-    ("00" + (~~(b * 255)).toString(16)).slice(-2);
-  return c;
-}
+
+  return randomColorArray;
+};
+
+const updateColorCode = function () {};
+generateRandomBtn.addEventListener("click", async function () {
+  generateColorsFunc();
+  const payloadPbj = {
+    colorArray: generateColorsFunc(),
+  };
+  await axios.post("/dashboard/colorpallette", payloadPbj);
+});
