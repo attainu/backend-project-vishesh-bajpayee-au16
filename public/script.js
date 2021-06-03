@@ -20,7 +20,7 @@ const timeIndicator = document.querySelectorAll(".time-indicator");
 const timerContainer = document.querySelectorAll(".timer-container");
 const finishWrapper = document.getElementById("finish-wrapper");
 const finishText = document.getElementById("finish-text");
-
+const resetBtn = document.getElementById("reset");
 // FUNCTIONS
 
 const enableDisplay = function (clickBtn, displayDiv) {
@@ -41,7 +41,21 @@ const disableDisplay = function (button) {
     hiddenSetTimer.style.display = "none";
   });
 };
+const setTimerFunc = function (timerVal, delay, index) {
+  setTimeout(() => {
+    let timerValue = timerVal;
 
+    const timerIntervel = setInterval(() => {
+      timerValue -= 1;
+      timerContainer[index].setAttribute("class", "animation-class");
+      timeIndicator[index].textContent = `${timerValue}`;
+      if (timerValue == 0) {
+        clearInterval(timerIntervel);
+        timerContainer[index].style.background = "teal";
+      }
+    }, 1000);
+  }, delay);
+};
 const setBreakFunc = function (breakVal, delay, index) {
   let breakValue = breakVal;
   setTimeout(() => {
@@ -64,35 +78,13 @@ const finishFunc = function (delay) {
   }, delay);
 };
 
-const setTimerFunc = function (timerVal, delay, index) {
-  setTimeout(() => {
-    let timerValue = timerVal;
-
-    const timerIntervel = setInterval(() => {
-      timerValue -= 1;
-      timerContainer[index].setAttribute("class", "animation-class");
-      timeIndicator[index].textContent = `${timerValue}`;
-      if (timerValue == 0) {
-        clearInterval(timerIntervel);
-        timerContainer[index].style.background = "teal";
-      }
-    }, 1000);
-  }, delay);
-};
-
 enableDisplay(createBtn, customDefaultBtn);
 enableDisplay(customTimerBtn, hiddenSetTimer);
 enableDisplay(defaultTimerBtn, hiddenDefaultTimer);
 disableDisplay(beginDefaultBtn);
 disableDisplay(beginSetBtn);
-// EVENT LISTENERS
-beginSetBtn.addEventListener("click", function () {
-  const timerInfoList = [];
-  timerInfoList.push(setTimerInput.value);
-  timerInfoList.push(setBreakInput.value);
-  console.log(timerInfoList);
-});
 
+// EVENT LISTENERS
 beginDefaultBtn.addEventListener("click", function () {
   timerWrapper.style.display = "block";
   breakWrapper.style.display = "block";
@@ -115,4 +107,11 @@ beginDefaultBtn.addEventListener("click", function () {
   setBreakFunc(5, 45000, 2);
   setTimerFunc(10, 50000, 3);
   finishFunc(75000);
+});
+
+beginSetBtn.addEventListener("click", function () {
+  const timerInfoList = [];
+  timerInfoList.push(setTimerInput.value);
+  timerInfoList.push(setBreakInput.value);
+  console.log(timerInfoList);
 });
