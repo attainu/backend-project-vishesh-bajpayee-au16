@@ -114,4 +114,37 @@ beginSetBtn.addEventListener("click", function () {
   timerInfoList.push(setTimerInput.value);
   timerInfoList.push(setBreakInput.value);
   console.log(timerInfoList);
+
+  timerWrapper.style.display = "block";
+  breakWrapper.style.display = "block";
+  timerContainer[0].setAttribute("class", "animation-class");
+  createBtn.setAttribute("disabled", true);
+  createBtn.style.background = "gray";
+
+  let timeValue = timerInfoList[0];
+  const timeDynamicVal = timerInfoList[0] * 1000;
+  const breakDynamicVal = timerInfoList[1] * 1000;
+
+  const initialIntervel = setInterval(() => {
+    timeValue -= 1;
+    timeIndicator[0].textContent = `${timeValue}`;
+    if (timeValue == 0) {
+      timerContainer[0].style.background = "teal";
+      clearInterval(initialIntervel);
+    }
+  }, 1000);
+  setBreakFunc(timerInfoList[1], timeDynamicVal, 0);
+  setTimerFunc(timerInfoList[0], timeDynamicVal + breakDynamicVal, 1);
+  setBreakFunc(timerInfoList[1], timeDynamicVal * 2 + breakDynamicVal, 1);
+  setTimerFunc(timerInfoList[0], timeDynamicVal * 2 + breakDynamicVal * 2, 2);
+  setBreakFunc(timerInfoList[1], timeDynamicVal * 3 + breakDynamicVal * 2, 2);
+  setTimerFunc(timerInfoList[0], timeDynamicVal * 3 + breakDynamicVal * 3, 3);
+  finishFunc(timeDynamicVal * 4 + breakDynamicVal * 3);
+});
+
+resetBtn.addEventListener("click", function () {
+  console.log("Clicked");
+  createBtn.removeAttribute("disabled");
+  createBtn.style.background = "crimson";
+  finishWrapper.style.display = "none";
 });
