@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const SignupModel = require("../models/Signup");
 const LevelModel = require("../models/Level");
+
 const bcrypt = require("bcrypt");
 
 router.get("/signup", (req, res) => {

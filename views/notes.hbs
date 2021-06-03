@@ -21,14 +21,16 @@
 
   <div class="wrapper">
     <div class="note-wrapper">
-      <div id="${title}" class="note">
-        <h1 class="dynamic-color" contenteditable>${title}</h1>
-        <p contenteditable>${para}</p>
-        <div class="button-wrapper">
-          <i id="highlight" class="fas fa-star"></i>
-          <i id="delete" class="far dynamic-color fa-trash-alt"></i>
+      {{#each notes}}
+        <div id="{{this.title}}" class="note">
+          <h1 class="dynamic-color" contenteditable>{{this.title}}</h1>
+          <p contenteditable>{{this.content}}</p>
+          <div class="button-wrapper">
+            <i id="highlight" class="fas fa-star"></i>
+            <i id="delete" class="far dynamic-color fa-trash-alt"></i>
+          </div>
         </div>
-      </div>
+      {{/each}}
     </div>
 
   </div>
@@ -39,7 +41,9 @@
   <form action="/logout" method="POST">
     <button id="signout" type="submit">Log out</button>
   </form>
+
   <button id="clear-all" type="submit">clear all</button>
+
 </div>
 
 <script>
@@ -62,14 +66,19 @@
   document.querySelectorAll("#delete"); for (let index = 0; index <
   deleteBtns.length; index++) { const deletebtn = deleteBtns[index]; const
   notesDiv = notes[index]; deletebtn.addEventListener("click", async function ()
-  { const notesHeading = notesDiv.children[0].textContent; const notesPara =
+  { console.log("clicked"); const notesHeading =
+  notesDiv.children[0].textContent; const notesPara =
   notesDiv.children[1].textContent; const deletePayload = { notesHeading:
   notesHeading, notesPara: notesPara, }; console.log(deletePayload);
-  notesDiv.remove(); await axios.delete("/database/notes/delete", { data: {
-  deletePayload: deletePayload }, }); }); } const payloadObj = { title: title,
+  notesDiv.remove(); await axios.delete("/dashboard/notes/delete", { data: {
+  deletePayload: deletePayload, }, }); }); } const payloadObj = { title: title,
   content: para, count: count }; const axiousReq = await
-  axios.post("/dashboard/notes/", payloadObj); });
-  clearAllBtn.addEventListener("click", function () { noteWrapper.innerHTML =
-  ""; });
+  axios.post("/dashboard/notes/", payloadObj); }); let notes =
+  document.querySelectorAll(".note"); clearAllBtn.addEventListener("click",
+  async function () { noteWrapper.innerHTML = ""; let payloadArray = []; for
+  (let index = 0; index < notes.length; index++) { const note = notes[index];
+  payloadArray.push(note.children[0].textContent); } await
+  axios.delete("/dashboard/notes/deleteall", { data: { deleteAllPayload:
+  payloadArray }, }); });
 
 </script>
