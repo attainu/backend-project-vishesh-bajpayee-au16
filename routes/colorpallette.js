@@ -7,11 +7,13 @@ router.get("/dashboard/colorpallette", async (req, res) => {
   const colorPalleteArray = await ColorpalletteModel.find({
     userId: userObj._id,
   }).lean();
-  console.log(colorPalleteArray);
-  res.render("colorpallette", { colorpallette: colorPalleteArray });
+
+  res.render("colorpallette", {
+    colorpallette: colorPalleteArray,
+  });
 });
 
-router.post("/dashboard/colorpallette/", (req, res) => {
+router.post("/dashboard/colorpallette/", async (req, res) => {
   try {
     const payload = req.body;
     const randomColorArr = payload.colorArray;
@@ -27,7 +29,6 @@ router.post("/dashboard/colorpallette/", (req, res) => {
         };
         const newPallette = new ColorpalletteModel(colorPalletteObj);
         await newPallette.save();
-        res.redirect("/dashboard/colorpallette/");
       } catch (error) {
         res.send(error);
       }

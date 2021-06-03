@@ -7,10 +7,7 @@ const color04 = document.getElementById("container04");
 const color05 = document.getElementById("container05");
 const colorCodes = document.querySelectorAll(".color-code");
 const palletteNameInp = document.getElementById("pallette-name");
-// vibrant colors
-// function randomHsl() {
-//   return "hsla(" + Math.random() * 360 + " 100%, 50%, 1)";
-// }
+const savedWrapperPositionDiv = document.querySelector(".saved-colors-wrapper");
 
 // generate random color
 function getRandomColor() {
@@ -46,8 +43,36 @@ const generateColorsFunc = function () {
 
 generateRandomBtn.addEventListener("click", async function () {
   generateColorsFunc();
-  const payloadPbj = {
+  payloadPbj = {
     colorArray: generateColorsFunc(),
   };
   await axios.post("/dashboard/colorpallette", payloadPbj);
+  arr = payloadPbj;
+});
+
+saveBtn.addEventListener("click", async function () {
+  savedWrapperPositionDiv.innerHTML += `<div class="saved-colors-container">
+      <div
+        style="background-color: ${payloadPbj.colorArray[0]} ;"
+        class="color-saved"
+      ></div>
+      <div
+        style="background-color: ${payloadPbj.colorArray[1]};"
+        class="color-saved"
+      ></div>
+      <div
+        style="background-color:${payloadPbj.colorArray[2]} ;"
+        class="color-saved"
+      ></div>
+      <div
+        style="background-color:${payloadPbj.colorArray[3]} ;"
+        class="color-saved"
+      ></div>
+      <div
+        style="background-color:${payloadPbj.colorArray[4]} ;"
+        class="color-saved"
+      ></div>
+    </div>`;
+
+  await axios.post("/dashboard/colorpallette/save-pallette", { a: 12 });
 });

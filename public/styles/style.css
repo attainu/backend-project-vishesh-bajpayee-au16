@@ -1819,6 +1819,7 @@ body {
   height: 60vh;
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 30px;
+  overflow: scroll;
 }
 
 .colorPalette .color-save-wrapper-position h1 {
@@ -1834,6 +1835,13 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: 45px;
 }
 
 .colorPalette .color-save-wrapper-position .saved-colors-wrapper .saved-colors-container {
@@ -1847,6 +1855,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-top: 20px;
 }
 
 .colorPalette .color-save-wrapper-position .saved-colors-wrapper .saved-colors-container .color-saved {

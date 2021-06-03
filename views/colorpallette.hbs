@@ -9,9 +9,9 @@
 
       <button id="generate-colors">Generate Random</button>
 
-      <form action="/dashboard/colorpallette/save-pallette" method="POST">
-        <button type="submit" id="save-colors">save</button>
-      </form>
+      {{! <form action="/dashboard/colorpallette/save-pallette" method="POST"> }}
+      <button type="submit" id="save-colors">save</button>
+      {{! </form> }}
 
     </div>
     <div class="color-container-wrapper">
@@ -37,13 +37,31 @@
     <h1>Saved</h1>
 
     <div class="saved-colors-wrapper">
-      <div class="saved-colors-container">
-        <div id="color-s-01" class="color-saved"></div>
-        <div id="color-s-02" class="color-saved"></div>
-        <div id="color-s-03" class="color-saved"></div>
-        <div id="color-s-04" class="color-saved"></div>
-        <div id="color-s-05" class="color-saved"></div>
-      </div>
+      {{#each colorpallette}}
+        {{!-- <div class="saved-colors-container">
+          <div
+            style="background-color: {{this.0.colors}};"
+            class="color-saved"
+          ></div>
+          <div
+            style="background-color: {{this.1.colors}};"
+            class="color-saved"
+          ></div>
+          <div
+            style="background-color: {{this.2.colors}};"
+            class="color-saved"
+          ></div>
+          <div
+            style="background-color: {{this.3.colors}};"
+            class="color-saved"
+          ></div>
+          <div
+            style="background-color: {{this.4.colors}};"
+            class="color-saved"
+          ></div>
+        </div> --}}
+        <h1 style="color: white;">{{this.1.colors}}</h1>
+      {{/each}}
     </div>
   </div>
 </div>
