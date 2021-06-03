@@ -2,7 +2,7 @@ const express = require("express");
 const NotesModel = require("../models/Notes");
 const LevelModel = require("../models/Level");
 const TodoModel = require("../models/Todo");
-
+const PomodoroModel = require("../models/Pomodoro");
 const router = express.Router();
 
 router.post("/profile", async (req, res) => {
@@ -10,14 +10,17 @@ router.post("/profile", async (req, res) => {
   // Getting list of elements specific to user from DB.
   const notesObjList = await NotesModel.find({ userId: sessionObj._id });
   const todoObjList = await TodoModel.find({ userId: sessionObj._id });
+  const pomodoroObjList = await PomodoroModel.find({ userId: sessionObj._id });
   // Total entries in list
   let notesCount = notesObjList.length;
   let todoCount = todoObjList.length;
-
+  let pomodoroCount = pomodoroObjList[0].count;
   // Level Variables
-  let totalCount = notesCount + todoCount;
+  let totalCount = notesCount + todoCount + pomodoroCount;
   let levelCount = 0;
   let levelUpdate = 0;
+
+  // pomodoro calculations
 
   //
   if (totalCount < 10) {
@@ -63,6 +66,7 @@ router.post("/profile", async (req, res) => {
     userDetails: sessionObj,
     notesCount: notesCount,
     todoCount: todoCount,
+    pomodoroCount: pomodoroCount,
     totalCount: totalCount,
     levelCount: levelCount,
     level: levelUpdatedObj.level,
