@@ -1820,4 +1820,63 @@ body {
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 30px;
 }
+
+.colorPalette .color-save-wrapper-position h1 {
+  color: #33d6d6;
+  margin: 20px;
+  text-align: center;
+}
+
+.colorPalette .color-save-wrapper-position .saved-colors-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.colorPalette .color-save-wrapper-position .saved-colors-wrapper .saved-colors-container {
+  width: 20vw;
+  height: 15vh;
+  background-color: black;
+  border-radius: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.colorPalette .color-save-wrapper-position .saved-colors-wrapper .saved-colors-container .color-saved {
+  width: 6vh;
+  height: 10vh;
+  padding: 10px;
+  margin-top: 23px;
+}
+
+.colorPalette .color-save-wrapper-position .saved-colors-wrapper .saved-colors-container #color-s-01 {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: crimson;
+}
+
+.colorPalette .color-save-wrapper-position .saved-colors-wrapper .saved-colors-container #color-s-02 {
+  background-color: #ffd166;
+}
+
+.colorPalette .color-save-wrapper-position .saved-colors-wrapper .saved-colors-container #color-s-03 {
+  background-color: #06d6a0;
+}
+
+.colorPalette .color-save-wrapper-position .saved-colors-wrapper .saved-colors-container #color-s-04 {
+  background-color: #ef476f;
+}
+
+.colorPalette .color-save-wrapper-position .saved-colors-wrapper .saved-colors-container #color-s-05 {
+  background-color: teal;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
 /*# sourceMappingURL=style.css.map */

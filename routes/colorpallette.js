@@ -2,8 +2,13 @@ const express = require("express");
 const router = express.Router();
 const ColorpalletteModel = require("../models/ColorPallette");
 
-router.get("/dashboard/colorpallette", (req, res) => {
-  res.render("colorpallette");
+router.get("/dashboard/colorpallette", async (req, res) => {
+  const userObj = req.session.user;
+  const colorPalleteArray = await ColorpalletteModel.find({
+    userId: userObj._id,
+  }).lean();
+  console.log(colorPalleteArray);
+  res.render("colorpallette", { colorpallette: colorPalleteArray });
 });
 
 router.post("/dashboard/colorpallette/", (req, res) => {
