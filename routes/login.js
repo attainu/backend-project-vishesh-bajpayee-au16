@@ -6,7 +6,7 @@ const session = require("express-session");
 const SignupModel = require("../models/Signup");
 const myStore = new session.MemoryStore();
 
-const { SECRET } = process.env;
+const { SECRET, MAX_AGE } = process.env;
 
 router.use(
   session({
@@ -14,7 +14,7 @@ router.use(
     resave: false,
     saveUninitialized: false,
     cookie: {
-      MAX_AGE: 4.32e7,
+      maxAge: MAX_AGE,
     },
   })
 );
