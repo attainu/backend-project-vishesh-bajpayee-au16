@@ -95,13 +95,13 @@
   (let index = 0; index < colorCodes.length; index++) { const codes =
   colorCodes[index]; codes.textContent = randomColors[index]; } });
   saveBtn.addEventListener("click", async function () {
-  console.log(randomColors); const payload = { randomColorsArr: randomColors, };
+  console.log(randomColors); const payload = { randomColorsArr: randomColors };
   setInterval(() => { popupSaved.style.display = "block"; }, 5000); await
   axios.post("/dashboard/colorpallette/", payload); console.log("Clicked"); });
-  function copyToClipboard(text) { window.prompt("Copy to clipboard: Ctrl+C,
-  Enter", text); } for (let index = 0; index < colorContainers.length; index++)
-  { const container = colorContainers[index]; const textArea =
-  colorCodes[index]; container.addEventListener("click", function (event) {
+  function copyToClipboard(text) { window.prompt("Copy to clipboard: Ctrl+C",
+  text); } for (let index = 0; index < colorContainers.length; index++) { const
+  container = colorContainers[index]; const textArea = colorCodes[index];
+  container.addEventListener("click", function (event) {
   copyToClipboard(textArea.textContent); }); }
 
 </script>
