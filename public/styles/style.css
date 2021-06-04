@@ -1752,16 +1752,12 @@ body {
   margin: 20px;
 }
 
-.colorPalette .color-generator-wrapper-position .color-generator-wrapper-display #pallette-name {
-  display: none;
-  padding: 15px;
-  border: none;
-  outline: none;
-  border-radius: 20px;
-  background-color: #33d6d6;
-  color: white;
-  font-size: 16px;
+.colorPalette .color-generator-wrapper-position .color-generator-wrapper-display #pallete-saved-popup {
   font-weight: 500;
+  font-style: italic;
+  color: white;
+  position: absolute;
+  top: 8vh;
 }
 
 .colorPalette .color-generator-wrapper-position .color-container-wrapper {
@@ -1819,7 +1815,7 @@ body {
   height: 60vh;
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 30px;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 .colorPalette .color-save-wrapper-position h1 {

@@ -1575,16 +1575,13 @@ body {
         margin: 20px;
       }
 
-      #pallette-name {
-        display: none;
-        padding: 15px;
-        border: none;
-        outline: none;
-        border-radius: 20px;
-        background-color: $primary;
-        color: white;
-        font-size: 16px;
+      #pallete-saved-popup {
+        // display: none;
         font-weight: 500;
+        font-style: italic;
+        color: white;
+        position: absolute;
+        top: 8vh;
       }
     }
 
@@ -1638,7 +1635,8 @@ body {
     height: 60vh;
     background-color: rgba($color: #000000, $alpha: 0.7);
     border-radius: 30px;
-    overflow: scroll;
+    overflow-y: scroll;
+
     h1 {
       color: $primary;
       margin: 20px;
