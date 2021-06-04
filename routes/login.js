@@ -1,3 +1,4 @@
+require("dotenv");
 const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcrypt");
@@ -5,9 +6,11 @@ const session = require("express-session");
 const SignupModel = require("../models/Signup");
 const myStore = new session.MemoryStore();
 
+const { SECRET } = process.env;
+
 router.use(
   session({
-    SECRET: "secret",
+    secret: SECRET,
     resave: false,
     saveUninitialized: false,
     cookie: {
