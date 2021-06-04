@@ -3,6 +3,7 @@ const NotesModel = require("../models/Notes");
 const LevelModel = require("../models/Level");
 const TodoModel = require("../models/Todo");
 const PomodoroModel = require("../models/Pomodoro");
+const ColorPalletteModel = require("../models/ColorPallette");
 const router = express.Router();
 
 router.post("/profile", async (req, res) => {
@@ -14,12 +15,17 @@ router.post("/profile", async (req, res) => {
     const pomodoroObjList = await PomodoroModel.find({
       userId: sessionObj._id,
     });
+    const colorPalletteObjList = await ColorPalletteModel.find({
+      userId: sessionObj._id,
+    });
     // Total entries in list
     let notesCount = notesObjList.length;
     let todoCount = todoObjList.length;
     let pomodoroCount = pomodoroObjList[0].count;
+    let colorpalletteCount = colorPalletteObjList.length;
     // Level Variables
-    let totalCount = notesCount + todoCount + pomodoroCount;
+    let totalCount =
+      notesCount + todoCount + pomodoroCount + colorpalletteCount;
     let levelCount = 0;
     let levelUpdate = 0;
 
@@ -70,6 +76,7 @@ router.post("/profile", async (req, res) => {
       notesCount: notesCount,
       todoCount: todoCount,
       pomodoroCount: pomodoroCount,
+      colorpalletteCount: colorpalletteCount,
       totalCount: totalCount,
       levelCount: levelCount,
       level: levelUpdatedObj.level,

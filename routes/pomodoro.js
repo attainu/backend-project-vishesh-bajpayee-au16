@@ -18,7 +18,7 @@ router.post("/dashboard/pomodoro", async (req, res) => {
       { userId: userObj._id },
       { count: pomodoroObj.count + 1 }
     );
-    res.json(pomodoroObj);
+    res.redirect("/dashboard/pomodoro");
   } catch (error) {
     res.send(error);
   }
