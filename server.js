@@ -21,7 +21,8 @@ const pomodoroRouter = require("./routes/pomodoro");
 const gobackToDashboard = require("./routes/gobackToDashboard");
 const levelChartRouter = require("./routes/levelchart");
 const gobackToProfile = require("./routes/gobackToProfile");
-
+const aboutRouter = require("./routes/about");
+const contactusRouter = require("./routes/contactus");
 // MONGO DATABASE CONNECTION
 const { DATABASE_URL } = process.env;
 
@@ -64,7 +65,8 @@ app.use("/", pomodoroRouter);
 app.use("/", gobackToDashboard);
 app.use("/", levelChartRouter);
 app.use("/", gobackToProfile);
-
+app.use("/", aboutRouter);
+app.use("/", contactusRouter);
 // PORT
 const port = process.env.PORT || 5000 || 5001 || 5002;
 
