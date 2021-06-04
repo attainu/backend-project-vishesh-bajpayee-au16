@@ -7,7 +7,21 @@ const ColorPalletteSchema = mongoose.Schema({
   },
 
   colors: {
-    type: Array,
+    color01: {
+      type: String,
+    },
+    color02: {
+      type: String,
+    },
+    color03: {
+      type: String,
+    },
+    color04: {
+      type: String,
+    },
+    color05: {
+      type: String,
+    },
   },
 
   createdAt: {
