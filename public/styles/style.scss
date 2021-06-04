@@ -1185,6 +1185,7 @@ body {
   }
 }
 
+// LEVEL CHART
 .levelchart {
   a {
     text-decoration: none;
@@ -1213,7 +1214,7 @@ body {
     height: 100vh;
   }
 }
-
+// POMODORO
 .pomodoro {
   @keyframes opacityup {
     0% {
@@ -1510,6 +1511,184 @@ body {
       color: white;
       font-weight: 500;
       cursor: pointer;
+    }
+  }
+}
+
+// COMMIT COUNT PAGE
+.colorPalette {
+  #heading {
+    font-size: 100px;
+    position: absolute;
+    top: 7vh;
+    left: 7vh;
+  }
+
+  #goback-btn {
+    position: fixed;
+    top: 12.5vh;
+    right: 40vh;
+    padding: 15px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .color-generator-wrapper-position {
+    position: absolute;
+    left: 10vh;
+    top: 28vh;
+    width: 60vw;
+    height: 60vh;
+    background-color: rgba($color: #000000, $alpha: 0.7);
+    border-radius: 30px;
+
+    .color-generator-wrapper-display {
+      display: flex;
+      justify-content: center;
+
+      #generate-colors {
+        padding: 15px;
+        border: none;
+        outline: none;
+        border-radius: 20px;
+        background-color: $primary;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        margin: 20px;
+      }
+
+      #save-colors {
+        padding: 15px;
+        border: none;
+        outline: none;
+        border-radius: 20px;
+        background-color: black;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        margin: 20px;
+      }
+
+      #pallete-saved-popup {
+        // display: none;
+        font-weight: 500;
+        font-style: italic;
+        color: white;
+        position: absolute;
+        top: 8vh;
+      }
+    }
+
+    .color-container-wrapper {
+      display: flex;
+      justify-content: center;
+      margin: 20px;
+
+      .color-container {
+        width: 30vw;
+        height: 47vh;
+        // background-color: lime;
+        padding: 10px;
+        cursor: pointer;
+
+        h3 {
+          color: white;
+          text-align: center;
+          line-height: 40vh;
+        }
+      }
+
+      #container01 {
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        background-color: #118ab2;
+      }
+
+      #container02 {
+        background-color: #ffd166;
+      }
+      #container03 {
+        background-color: teal;
+      }
+
+      #container04 {
+        background-color: lime;
+      }
+      #container05 {
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        background-color: #ff165d;
+      }
+    }
+  }
+  .color-save-wrapper-position {
+    position: absolute;
+    right: 10vh;
+    top: 28vh;
+    width: 25vw;
+    height: 60vh;
+    background-color: rgba($color: #000000, $alpha: 0.7);
+    border-radius: 30px;
+    overflow-y: scroll;
+
+    h1 {
+      color: $primary;
+      margin: 20px;
+      text-align: center;
+    }
+
+    .saved-colors-wrapper {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      flex-wrap: wrap;
+
+      margin-left: 45px;
+      .saved-colors-container {
+        width: 20vw;
+        height: 15vh;
+        background-color: black;
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+
+        .color-saved {
+          width: 6vh;
+          height: 10vh;
+          padding: 10px;
+          margin-top: 23px;
+        }
+
+        #color-s-01 {
+          border-top-left-radius: 20px;
+          border-bottom-left-radius: 20px;
+          background-color: crimson;
+        }
+
+        #color-s-02 {
+          background-color: #ffd166;
+        }
+
+        #color-s-03 {
+          background-color: #06d6a0;
+        }
+
+        #color-s-04 {
+          background-color: #ef476f;
+        }
+        #color-s-05 {
+          background-color: teal;
+          border-top-right-radius: 20px;
+          border-bottom-right-radius: 20px;
+        }
+      }
     }
   }
 }

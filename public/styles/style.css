@@ -1687,4 +1687,201 @@ body {
   font-weight: 500;
   cursor: pointer;
 }
+
+.colorPalette #heading {
+  font-size: 100px;
+  position: absolute;
+  top: 7vh;
+  left: 7vh;
+}
+
+.colorPalette #goback-btn {
+  position: fixed;
+  top: 12.5vh;
+  right: 40vh;
+  padding: 15px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.colorPalette .color-generator-wrapper-position {
+  position: absolute;
+  left: 10vh;
+  top: 28vh;
+  width: 60vw;
+  height: 60vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 30px;
+}
+
+.colorPalette .color-generator-wrapper-position .color-generator-wrapper-display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.colorPalette .color-generator-wrapper-position .color-generator-wrapper-display #generate-colors {
+  padding: 15px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  background-color: #33d6d6;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 20px;
+}
+
+.colorPalette .color-generator-wrapper-position .color-generator-wrapper-display #save-colors {
+  padding: 15px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 20px;
+}
+
+.colorPalette .color-generator-wrapper-position .color-generator-wrapper-display #pallete-saved-popup {
+  font-weight: 500;
+  font-style: italic;
+  color: white;
+  position: absolute;
+  top: 8vh;
+}
+
+.colorPalette .color-generator-wrapper-position .color-container-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px;
+}
+
+.colorPalette .color-generator-wrapper-position .color-container-wrapper .color-container {
+  width: 30vw;
+  height: 47vh;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.colorPalette .color-generator-wrapper-position .color-container-wrapper .color-container h3 {
+  color: white;
+  text-align: center;
+  line-height: 40vh;
+}
+
+.colorPalette .color-generator-wrapper-position .color-container-wrapper #container01 {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: #118ab2;
+}
+
+.colorPalette .color-generator-wrapper-position .color-container-wrapper #container02 {
+  background-color: #ffd166;
+}
+
+.colorPalette .color-generator-wrapper-position .color-container-wrapper #container03 {
+  background-color: teal;
+}
+
+.colorPalette .color-generator-wrapper-position .color-container-wrapper #container04 {
+  background-color: lime;
+}
+
+.colorPalette .color-generator-wrapper-position .color-container-wrapper #container05 {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: #ff165d;
+}
+
+.colorPalette .color-save-wrapper-position {
+  position: absolute;
+  right: 10vh;
+  top: 28vh;
+  width: 25vw;
+  height: 60vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 30px;
+  overflow-y: scroll;
+}
+
+.colorPalette .color-save-wrapper-position h1 {
+  color: #33d6d6;
+  margin: 20px;
+  text-align: center;
+}
+
+.colorPalette .color-save-wrapper-position .saved-colors-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: 45px;
+}
+
+.colorPalette .color-save-wrapper-position .saved-colors-wrapper .saved-colors-container {
+  width: 20vw;
+  height: 15vh;
+  background-color: black;
+  border-radius: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 20px;
+}
+
+.colorPalette .color-save-wrapper-position .saved-colors-wrapper .saved-colors-container .color-saved {
+  width: 6vh;
+  height: 10vh;
+  padding: 10px;
+  margin-top: 23px;
+}
+
+.colorPalette .color-save-wrapper-position .saved-colors-wrapper .saved-colors-container #color-s-01 {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: crimson;
+}
+
+.colorPalette .color-save-wrapper-position .saved-colors-wrapper .saved-colors-container #color-s-02 {
+  background-color: #ffd166;
+}
+
+.colorPalette .color-save-wrapper-position .saved-colors-wrapper .saved-colors-container #color-s-03 {
+  background-color: #06d6a0;
+}
+
+.colorPalette .color-save-wrapper-position .saved-colors-wrapper .saved-colors-container #color-s-04 {
+  background-color: #ef476f;
+}
+
+.colorPalette .color-save-wrapper-position .saved-colors-wrapper .saved-colors-container #color-s-05 {
+  background-color: teal;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
 /*# sourceMappingURL=style.css.map */

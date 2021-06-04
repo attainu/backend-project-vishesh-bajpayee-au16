@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const SignupModel = require("../models/Signup");
 const LevelModel = require("../models/Level");
+const PomodoroModel = require("../models/Pomodoro");
 
 const bcrypt = require("bcrypt");
 
@@ -36,6 +37,15 @@ router.post("/signup", async (req, res) => {
     const levelObj = new LevelModel(level);
     await levelObj.save();
 
+    // pomodoro collections
+
+    const pomodoro = {
+      userId: newUser._id,
+      count: 0,
+    };
+
+    const pomodoroObj = new PomodoroModel(pomodoro);
+    await pomodoroObj.save();
     res.redirect("/");
   } catch (error) {
     console.log(error);

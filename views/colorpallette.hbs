@@ -1,0 +1,107 @@
+<div class="ColorPalette">
+  <h1 id="heading">color palette </h1>
+  <form action="/dashboard" method="GET">
+    <button id="goback-btn">go back</button>
+  </form>
+
+  <div class="color-generator-wrapper-position">
+    <div class="color-generator-wrapper-display">
+
+      <button id="generate-colors">Generate Random</button>
+      <button type="submit" id="save-colors">save</button>
+      <h5 id="pallete-saved-popup">refresh to update saved, click on color code
+        to copy saved list</h5>
+
+    </div>
+    <div class="color-container-wrapper">
+      <div id="container01" class="color-container">
+        <h3 class="color-code">color code</h3>
+      </div>
+      <div id="container02" class="color-container">
+        <h3 class="color-code">color code</h3>
+      </div>
+      <div id="container03" class="color-container">
+        <h3 class="color-code">color code</h3>
+      </div>
+      <div id="container04" class="color-container">
+        <h3 class="color-code">color code</h3>
+      </div>
+      <div id="container05" class="color-container">
+        <h3 class="color-code">color code</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="color-save-wrapper-position">
+    <h1>Saved</h1>
+
+    <div class="saved-colors-wrapper">
+
+      {{#each pallette}}
+        <div class="saved-colors-container">
+          <div
+            style="background-color: {{this.colors.color01}};"
+            id="color-s-01"
+            class="color-saved"
+          ></div>
+          <div
+            style="background-color: {{this.colors.color02}};"
+            id="color-s-02"
+            class="color-saved"
+          ></div>
+          <div
+            style="background-color: {{this.colors.color03}};"
+            id="color-s-03"
+            class="color-saved"
+          ></div>
+          <div
+            style="background-color: {{this.colors.color04}};"
+            id="color-s-04"
+            class="color-saved"
+          ></div>
+          <div
+            style="background-color: {{this.colors.color05}};"
+            id="color-s-05"
+            class="color-saved"
+          ></div>
+
+        </div>
+      {{/each}}
+
+    </div>
+  </div>
+</div>
+
+<script>
+  const generateRandomBtn = document.getElementById("generate-colors"); const
+  saveBtn = document.getElementById("save-colors"); const color01 =
+  document.getElementById("container01"); const color02 =
+  document.getElementById("container02"); const color03 =
+  document.getElementById("container03"); const color04 =
+  document.getElementById("container04"); const color05 =
+  document.getElementById("container05"); const colorCodes =
+  document.querySelectorAll(".color-code"); const savedWrapperPositionDiv =
+  document.querySelector(".saved-colors-wrapper"); const popupSaved =
+  document.getElementById("pallete-saved-popup"); const colorContainers =
+  document.querySelectorAll(".color-container"); // generate random color
+  function getRandomColor() { var letters = "0123456789ABCDEF"; var color = "#";
+  for (var i = 0; i < 6; i++) { color += letters[Math.floor(Math.random() *
+  16)]; } return color; } generateRandomBtn.addEventListener("click", function
+  () { randomColors = [ getRandomColor(), getRandomColor(), getRandomColor(),
+  getRandomColor(), getRandomColor(), ]; color01.style.background =
+  `${randomColors[0]}`; color02.style.background = `${randomColors[1]}`;
+  color03.style.background = `${randomColors[2]}`; color04.style.background =
+  `${randomColors[3]}`; color05.style.background = `${randomColors[4]}`; for
+  (let index = 0; index < colorCodes.length; index++) { const codes =
+  colorCodes[index]; codes.textContent = randomColors[index]; } });
+  saveBtn.addEventListener("click", async function () {
+  console.log(randomColors); const payload = { randomColorsArr: randomColors };
+  setInterval(() => { popupSaved.style.display = "block"; }, 5000); await
+  axios.post("/dashboard/colorpallette/", payload); console.log("Clicked"); });
+  function copyToClipboard(text) { window.prompt("Copy to clipboard: Ctrl+C",
+  text); } for (let index = 0; index < colorContainers.length; index++) { const
+  container = colorContainers[index]; const textArea = colorCodes[index];
+  container.addEventListener("click", function (event) {
+  copyToClipboard(textArea.textContent); }); }
+
+</script>
