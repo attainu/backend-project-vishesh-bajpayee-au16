@@ -7,11 +7,11 @@ const myStore = new session.MemoryStore();
 
 router.use(
   session({
-    secret: "secret",
+    SECRET: "secret",
     resave: false,
     saveUninitialized: false,
     cookie: {
-      maxAge: 4.32e7,
+      MAX_AGE: 4.32e7,
     },
   })
 );

@@ -66,6 +66,6 @@ app.use("/", levelChartRouter);
 app.use("/", gobackToProfile);
 
 // PORT
-const port = 5000 || 5001 || 5002;
+const port = process.env.PORT || 5000 || 5001 || 5002;
 
 app.listen(port, () => console.log("Server Started"));
