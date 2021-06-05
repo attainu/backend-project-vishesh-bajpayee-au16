@@ -32,7 +32,7 @@ router.post("/login", async (req, res) => {
       res.send("user not found");
     }
   } catch (error) {
-    res.send(error);
+    res.render("404");
   }
 });
 

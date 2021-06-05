@@ -49,7 +49,7 @@ router.post("/signup", async (req, res) => {
     res.redirect("/");
   } catch (error) {
     console.log(error);
-    res.send("ERROR OCCURED");
+    res.render("404");
   }
 });
 

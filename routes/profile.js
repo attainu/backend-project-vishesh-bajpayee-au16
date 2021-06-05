@@ -84,7 +84,7 @@ router.post("/profile", async (req, res) => {
 
     res.render("profile", payloadObj);
   } catch (error) {
-    res.send(error);
+    res.render("404");
   }
 });
 

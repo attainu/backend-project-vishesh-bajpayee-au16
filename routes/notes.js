@@ -24,7 +24,7 @@ router.post("/dashboard/notes", async (req, res) => {
     const newEntry = new NotesModel(newNoteObj);
     await newEntry.save();
   } catch (error) {
-    res.send(error);
+    res.render("404");
   }
 });
 
@@ -45,7 +45,7 @@ router.delete("/dashboard/notes/delete", async (req, res) => {
       await NotesModel.deleteOne({ title: deleteObj.title });
     }
   } catch (error) {
-    res.send(error);
+    res.render("404");
   }
 });
 
@@ -60,7 +60,7 @@ router.delete("/dashboard/notes/deleteall", async (req, res) => {
       await NotesModel.deleteOne({ title: headingName });
     }
   } catch (error) {
-    res.send(error);
+    res.render("404");
   }
 });
 
@@ -73,7 +73,7 @@ router.put("/dashboard/notes/updatehtml", async (req, res) => {
       { notesHTML: htmlPayload }
     );
   } catch (error) {
-    res.send(error);
+    res.render("404");
   }
 });
 

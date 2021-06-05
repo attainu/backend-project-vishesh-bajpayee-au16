@@ -58,9 +58,10 @@
      <div class="link-display">
         <a href="/about">About</a>
       <a href="/contactus">contact</a>
-     </div>
-     
+     </div>  
     </div>
+
+
 
     <div class="search-bar">
       <input placeholder="Search" type="text" name="search" id="search" />
@@ -113,12 +114,16 @@
 </div>
 
 <script>
-
-  const btnClick = document.getElementById("add-repository"); const inputField =
-  document.getElementsByClassName("input-field")[0];
-  btnClick.addEventListener("click", () => { if (inputField.style.display ===
-  "none") { inputField.style.display = "block"; } else {
-  inputField.style.display = "none"; } });
+  const btnClick = document.getElementById("add-repository");
+const inputField = document.getElementsByClassName("input-field")[0];
+const quote = document.getElementById("qoute");
+btnClick.addEventListener("click", () => {
+  if (inputField.style.display === "none") {
+    inputField.style.display = "block";
+  } else {
+    inputField.style.display = "none";
+  }
+});
 
 
 </script>

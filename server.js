@@ -23,6 +23,7 @@ const levelChartRouter = require("./routes/levelchart");
 const gobackToProfile = require("./routes/gobackToProfile");
 const aboutRouter = require("./routes/about");
 const contactusRouter = require("./routes/contactus");
+const errorpageRouter = require("./routes/errorPage");
 // MONGO DATABASE CONNECTION
 const { DATABASE_URL } = process.env;
 
@@ -67,6 +68,7 @@ app.use("/", levelChartRouter);
 app.use("/", gobackToProfile);
 app.use("/", aboutRouter);
 app.use("/", contactusRouter);
+app.use("/", errorpageRouter);
 // PORT
 const port = process.env.PORT || 5000 || 5001 || 5002;
 

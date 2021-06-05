@@ -16,7 +16,7 @@ router.post("/dashboard/get-repo", async (req, res) => {
 
     res.redirect("/dashboard");
   } catch (error) {
-    res.send(error);
+    res.render("404");
   }
 });
 

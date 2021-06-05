@@ -33,7 +33,7 @@ router.post("/dashboard/colorpallette/", async (req, res) => {
     const newPallette = new ColorpalletteModel(newPalletteObj);
     await newPallette.save();
   } catch (error) {
-    res.send(error);
+    res.render("404");
   }
 });
 
