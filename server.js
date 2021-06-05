@@ -70,6 +70,6 @@ app.use("/", aboutRouter);
 app.use("/", contactusRouter);
 app.use("/", errorpageRouter);
 // PORT
-const port = process.env.PORT || 5000 || 5001 || 5002;
+const port = process.env.PORT || 5001;
 
 app.listen(port, () => console.log("Server Started"));
