@@ -24,6 +24,7 @@ const gobackToProfile = require("./routes/gobackToProfile");
 const aboutRouter = require("./routes/about");
 const contactusRouter = require("./routes/contactus");
 const errorpageRouter = require("./routes/errorPage");
+const submittedRouter = require("./routes/submitted");
 // MONGO DATABASE CONNECTION
 const { DATABASE_URL } = process.env;
 
@@ -69,7 +70,8 @@ app.use("/", gobackToProfile);
 app.use("/", aboutRouter);
 app.use("/", contactusRouter);
 app.use("/", errorpageRouter);
+app.use("/", submittedRouter);
 // PORT
-const port = process.env.PORT || 5001;
+const port = process.env.PORT || 5000;
 
 app.listen(port, () => console.log("Server Started"));
