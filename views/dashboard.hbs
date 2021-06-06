@@ -9,6 +9,10 @@
       <form action="/profile" method="POST">
         <button id="profile-btn">Profile</button>
       </form>
+     <a href="https://github.com/vishesh-bajpayee-au16" target="_blank">
+
+        <i id="githubBtn" class="fab fa-github"></i>
+     </a>
     </div>
 
     <div class="wrapper">
@@ -49,8 +53,7 @@
       </div>
       </a>
     </div>
-    
-  </section>
+    </section>
   {{! ASIDE }}
   <aside>
 
@@ -70,7 +73,7 @@
     </div>
     {{! CARDS CONTAINER }}
     <div class="card-main">
-      <h1> <span class="dynamic-color">Welcome</span> {{username}}!</h1>
+      <h1> <span class="dynamic-color">Welcome</span> {{userObj.username}}!</h1>
       <h4>Few steps to get started.</h4>
 
       <div class="step-icons">
@@ -109,6 +112,18 @@
       </form>
     </div>
 
+    <div class="recentActivity">
+      
+    </div>
+
+    <div class="quoteWrapper">
+        <h1 class="dynamic-color">Quote</h1>
+        <h2 id="quote">{{quote}}</h2>
+        <h5  id="author">{{author}}</h5>
+      
+    </div>
+
+    
   </aside>
 
 </div>

@@ -1,12 +1,21 @@
 const express = require("express");
 const all = require("everyday-fun");
 const LevelModel = require("../models/Level");
+const GithubRepoModel = require("../models/GithubRepo");
 const router = express.Router();
 
-router.get("/dashboard", (req, res) => {
+router.get("/dashboard", async (req, res) => {
   try {
+    const userObj = req.session.user;
+    const quoteObj = all.getRandomQuote();
+
+    const payloadObj = {
+      userObj: userObj,
+      quote: quoteObj.quote,
+      author: quoteObj.author,
+    };
     if (req.session.isLoggedIn === true) {
-      res.render("dashboard", req.session.user);
+      res.render("dashboard", payloadObj);
 
       return;
     } else {

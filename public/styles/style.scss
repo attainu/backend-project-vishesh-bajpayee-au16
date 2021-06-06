@@ -8,6 +8,18 @@
 $primary: rgb(51, 214, 214);
 $buttonColor01: #ff165d;
 
+@keyframes hoverAnimation {
+  from {
+    transform: scale(0.5);
+    color: $primary;
+  }
+
+  to {
+    transform: scale(0.8);
+    color: white;
+  }
+}
+
 body {
   background-image: url("../images/banner.png");
   background-attachment: fixed;
@@ -318,7 +330,7 @@ body {
 
 // DASHBOARD PAGE
 .dashboard {
-  section {
+  #section {
     width: 25vw;
     height: 100vh;
     background-color: black;
@@ -334,7 +346,20 @@ body {
       position: absolute;
       top: 22vh;
       left: 4vw;
-
+      #githubBtn {
+        color: $primary;
+        font-size: 50px;
+        position: absolute;
+        margin: 10px;
+        right: -16.5vh;
+        top: -10px;
+        cursor: pointer;
+        &:hover {
+          animation: hoverAnimation 0.5s infinite;
+          animation-timing-function: infinite;
+          animation-direction: alternate;
+        }
+      }
       #profile-btn {
         position: absolute;
         left: 6vw;
@@ -600,6 +625,48 @@ body {
             left: -6px;
           }
         }
+      }
+    }
+
+    .recentActivity {
+      position: absolute;
+      top: 20vh;
+      left: 690px;
+      width: 30vw;
+      height: 10vh;
+      background-color: rgba($color: #000000, $alpha: 0.9);
+      border-radius: 30px;
+    }
+    .quoteWrapper {
+      position: absolute;
+      top: 35vh;
+      left: 690px;
+      width: 30vw;
+      height: auto;
+      background-color: rgba($color: #000000, $alpha: 0.9);
+      border-radius: 30px;
+
+      display: flex;
+      justify-content: left;
+      flex-direction: column;
+
+      h1 {
+        color: $primary;
+        font-size: 50px;
+        padding: 30px 0px 20px 30px;
+      }
+      #quote {
+        text-align: left;
+        top: 8vh;
+        color: white;
+        padding: 0px 20px 10px 29px;
+      }
+      #author {
+        top: 6vh;
+        left: 20vh;
+        color: $primary;
+        padding: 20px;
+        margin-left: 10px;
       }
     }
   }
