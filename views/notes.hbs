@@ -1,0 +1,100 @@
+<div class="notes">
+  <h1 id="heading">Notes</h1>
+  <div class="container">
+
+    <i id="addBtn" class="dynamic-color fas fa-plus"></i>
+
+    <input
+      class="dynamic-color"
+      placeholder="Title"
+      type="text"
+      name="title"
+      id="title-input"
+    />
+    <textarea
+      placeholder="write a note"
+      type="text"
+      name="note"
+      id="note-input"
+    ></textarea>
+  </div>
+
+  <div class="wrapper">
+    <div class="note-wrapper">
+      {{#each notes}}
+        <div id="{{this.title}}" class="note">
+          <h1 class="dynamic-color" contenteditable>{{this.title}}</h1>
+          <p contenteditable>{{this.content}}</p>
+          <div class="button-wrapper">
+            <i id="highlight" class="fas fa-star"></i>
+            <i
+              onclick="deleteFunc()"
+              id="delete"
+              class="far dynamic-color fa-trash-alt"
+            ></i>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+
+  </div>
+
+  <form action="/dashboard" method="GET">
+    <button id="gobackBtn" type="submit">Go back</button>
+  </form>
+  <form action="/logout" method="POST">
+    <button id="signout" type="submit">Log out</button>
+  </form>
+
+  <button id="clear-all" type="submit">clear all</button>
+
+</div>
+
+<script>
+
+  const container = document.getElementsByClassName("container")[0]; const
+  titleInput = document.getElementById("title-input"); const noteInput =
+  document.getElementById("note-input"); const body =
+  document.getElementsByClassName("notes")[0]; const addBtn =
+  document.getElementById("addBtn"); const noteWrapper =
+  document.getElementsByClassName("note-wrapper")[0]; const clearAllBtn =
+  document.getElementById("clear-all"); let count = 0;
+  noteInput.addEventListener("click", function () { container.style.height =
+  "150px"; titleInput.style.display = "inline"; noteInput.style.top = "5vh"; });
+  addBtn.addEventListener("click", async function () { count += 1; let title =
+  titleInput.value; let para = noteInput.value; noteWrapper.innerHTML += `<div
+  id=${title} class="note"> <h1 class="dynamic-color"
+  contenteditable>${title}</h1> <p contenteditable>${para}</p> <div
+  class="button-wrapper"> <i id="highlight" class="fas fa-star"></i> <i
+  id="delete" class="far dynamic-color fa-trash-alt"></i> </div> </div>`; const
+  notes = document.querySelectorAll(".note"); const deleteBtns =
+  document.querySelectorAll("#delete"); for (let index = 0; index <
+  deleteBtns.length; index++) { const deletebtn = deleteBtns[index]; const
+  notesDiv = notes[index]; deletebtn.addEventListener("click", async function ()
+  { console.log("clicked"); const notesHeading =
+  notesDiv.children[0].textContent; const notesPara =
+  notesDiv.children[1].textContent; const deletePayload = { notesHeading:
+  notesHeading, notesPara: notesPara, }; console.log(deletePayload);
+  notesDiv.remove(); await axios.delete("/dashboard/notes/delete", { data: {
+  deletePayload: deletePayload, }, }); }); } const putReqObj = { putReq: 0 };
+  await axios.post("/dashboard/recentactivity", putReqObj); const payloadObj = {
+  title: title, content: para, count: count }; const axiousReq = await
+  axios.post("/dashboard/notes/", payloadObj); }); let notes =
+  document.querySelectorAll(".note"); clearAllBtn.addEventListener("click",
+  async function () { noteWrapper.innerHTML = ""; let payloadArray = []; for
+  (let index = 0; index < notes.length; index++) { const note = notes[index];
+  payloadArray.push(note.children[0].textContent); } await
+  axios.delete("/dashboard/notes/deleteall", { data: { deleteAllPayload:
+  payloadArray }, }); }); const deleteFunc = function () { const notes =
+  document.querySelectorAll(".note"); const deleteBtns =
+  document.querySelectorAll("#delete"); for (let index = 0; index <
+  deleteBtns.length; index++) { const deletebtn = deleteBtns[index]; const
+  notesDiv = notes[index]; deletebtn.addEventListener("click", async function ()
+  { console.log("clicked"); const notesHeading =
+  notesDiv.children[0].textContent; const notesPara =
+  notesDiv.children[1].textContent; const deletePayload = { notesHeading:
+  notesHeading, notesPara: notesPara, }; console.log(deletePayload);
+  notesDiv.remove(); await axios.delete("/dashboard/notes/delete", { data: {
+  deletePayload: deletePayload, }, }); }); } };
+
+</script>

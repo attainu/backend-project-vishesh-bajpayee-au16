@@ -1,0 +1,112 @@
+<div class="profile">
+  <div class="container">
+
+    <div class="btn-container">
+      <a href="/dashboard"><button>Go back</button></a>
+    </div>
+    <div class="text-wrapper">
+
+      <h1 class="dynamic-color">Hi! <span>{{userDetails.username}}</span></h1>
+
+    </div>
+
+    <div  class="dynamic-background info-container">
+      <h1 id="heading">Your Activity</h1>
+      <div class="main-wrapper">
+        <div class="profile-wrapper">
+          <i class="fas fa-palette"></i>
+          <h1>Total colors</h1>
+          <h2 class="dynamic-color">{{colorpalletteCount}}</h2>
+        </div>
+
+        <div class="profile-wrapper">
+          <i class="far fa-list-alt"></i>
+          <h1>Total todo</h1>
+          <h2 class="dynamic-color">{{todoCount}}</h2>
+        </div>
+
+        <div class="profile-wrapper">
+          <i class="far fa-sticky-note"></i>
+          <h1>Total notes</h1>
+          <h2 class="dynamic-color">{{notesCount}}</h2>
+        </div>
+
+        <div class="profile-wrapper">
+          <i class="far fa-clock"></i>
+          <h1>Total pomodoro</h1>
+          <h2 class="dynamic-color">{{pomodoroCount}}</h2>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="user-container">
+      <h1 id="info-heading">Your Details</h1>
+      <h3  class="dynamic-color">Level {{level}}</h3>
+      <div class="info-wrapper">
+
+        <h1>Name: <span class="dynamic-color">{{userDetails.username}}</span></h1>
+        <h1>Activity score: <span class="dynamic-color">{{totalCount}}</span></h1>
+        <h1>Email: <span class="dynamic-color">{{userDetails.email}}</span></h1>
+
+      </div>
+
+      <div class="change-wrapper">
+        <div class="sub-change-wrapper">
+          <div class="change-info-wrapper">
+          
+             <div class="next-level-wrapper">
+                  <h3>Points required</h3>
+                  <h2 class="dynamic-color">{{levelCount}}</h2>
+                </div>  
+                <div class="next-level-wrapper">
+                  <h3 >Total progress</h3>
+                  <h2 class="dynamic-color">{{totalCount}}%</h2>
+                </div>  
+                    
+            
+           
+        </div>
+        </div>
+      </div>
+
+      <div class="side-wrapper">
+        <div class="side-sub-wrapper">
+          <div class="four-btn-wrapper">
+            <a href="/dashboard/colorpallette">
+              <div id="github" class="profile-side-btn">
+                <i class="fas fa-palette"></i>
+              </div>
+            </a>
+            <a href="/dashboard/todo">
+              <div id="notes" class="profile-side-btn">
+                <i class="far fa-list-alt"></i>
+              </div>
+            </a>
+            <a href="/dashboard/notes">
+              <div id="todo" class="profile-side-btn">
+                <i class="far fa-sticky-note"></i>
+              </div>
+            </a>
+            <a href="/dashboard/pomodoro">
+            <div id="pomodoro" class="profile-side-btn">
+
+               <i class="far fa-clock"></i>
+            </div>
+            </a>
+    
+          
+
+        </div>
+      </div>
+     <a href="/dashboard/profile/levelchart">
+      <div class="table-btn-wrapper">
+            <h3>Level Chart</h3>
+          </div>
+     </a>
+
+    </div>
+
+  </div>
+</div>
+

@@ -1,0 +1,186 @@
+<div class="todo">
+  <h1 id="heading">Todo List</h1>
+
+  <button id="clear-all">Clear all</button>
+  <form action="/dashboard" method="GET">
+    <button type="submit" id="gobackBtn">Go back</button>
+  </form>
+
+  <form action="/logout" method="POST">
+    <button type="submit" id="signout">Log out</button>
+  </form>
+  <div class="todo-wrapper">
+    <div class="create-todo">
+      <input
+        class="dynamic-color"
+        placeholder="Add Item"
+        type="text"
+        name="item"
+        id="item"
+      />
+      <i id="add-btn" class="dynamic-color fas fa-plus"></i>
+
+    </div>
+    <div class="todo-items-list">
+      {{#each todo}}
+        <div class="todo-item">
+        <h1 class="dynamic-color" id="item-value">{{this.item}}</h1>
+
+        <div class="icon">
+
+          <div id="add">
+
+            <i id="check" class="fas fa-check-circle"></i>
+          </div>
+
+          <div class="icon-feature">
+            <i onclick="deleteFunc()" id="delete" class="far fa-trash-alt"></i>
+            <i id="copy" class="far fa-copy"></i>
+            <i id="strike" class="fas fa-strikethrough"></i>
+            <i id="edit" id="edit" class="far fa-edit"></i>
+
+          </div>
+        </div>
+
+      </div>
+      {{/each}}
+
+    </div>
+
+  </div>
+
+
+<script>
+
+const createItem = document.querySelector("#item");
+const addBtn = document.querySelector("#add-btn");
+const todoWrapper = document.querySelector(".todo-items-list");
+const clearAllBtn = document.querySelector("#clear-all");
+let count = 0;
+addBtn.addEventListener("click", async function () {
+  count += 1;
+  let value = createItem.value;
+  createItem.value = "";
+  todoWrapper.innerHTML += ` <div class="todo-item">
+        <h1 class="dynamic-color" id="item-value">${value}</h1>
+
+        <div class="icon">
+
+          <div id="add">
+
+            <i id="check" class="fas fa-check-circle"></i>
+          </div>
+
+          <div class="icon-feature">
+            <i id="delete" class="far fa-trash-alt"></i>
+            <i id="copy" class="far fa-copy"></i>
+            <i id="strike" class="fas fa-strikethrough"></i>
+            <i id="edit" id="edit" class="far fa-edit"></i>
+
+          </div>
+        </div>
+
+      </div>
+    </div>`;
+  const todoItems = document.querySelectorAll(".todo-item");
+  const deleteBtns = document.querySelectorAll("#delete");
+  const checkBtns = document.querySelectorAll("#check");
+  const strikeBtns = document.querySelectorAll("#strike");
+  const editBtns = document.querySelectorAll("#edit");
+  const itemValues = document.querySelectorAll("#item-value");
+  for (let index = 0; index < todoItems.length; index++) {
+    const todoItem = todoItems[index];
+    const deleteBtn = deleteBtns[index];
+    const checkBtn = checkBtns[index];
+    const strikeBtn = strikeBtns[index];
+    const itemValue = itemValues[index];
+    const editBtn = editBtns[index];
+    deleteBtn.addEventListener("click", async function () {
+      todoItem.remove();
+      let item = itemValue.textContent;
+
+      const deletePayload = {
+        item: item,
+        count: count,
+      };
+
+      console.log(deletePayload);
+      await axios.delete("/dashboard/todo/delete", {
+        data: { deletePayload: deletePayload },
+      });
+    });
+    checkBtn.addEventListener("click", function () {
+      todoItem.style.background = "white";
+      todoItem.style.boxShadow = "0px 0px 5px 1px #81b214"; // createItem.color = "black";
+      checkBtn.style.color = "teal";
+    });
+    strikeBtn.addEventListener("click", function () {
+      itemValue.style.textDecoration = "line-through";
+    });
+    editBtn.addEventListener("click", function () {
+      itemValue.toggleAttribute("contenteditable", true);
+    });
+  }
+  const putReqObj = {
+  putReq: 1,
+  };
+  await axios.post("/dashboard/recentactivity", putReqObj);
+  const valObj = {
+    count: count,
+    item: value,
+  };
+  const axiosSend = await axios.post("/dashboard/todo", valObj);
+
+ 
+  // console.log(axiosSend);
+});
+
+let payloadArray = [];
+clearAllBtn.addEventListener("click", async () => {
+  const todoItems = document.querySelectorAll(".todo-item");
+  for (let index = 0; index < todoItems.length; index++) {
+    const todoContent = todoItems[index].children;
+    payloadArray.push(todoContent[0].textContent);
+  }
+  // console.log(todoItems);
+
+  console.log(payloadArray);
+  todoWrapper.innerHTML = "";
+  await axios.delete("/dashboard/todo/deleteall", {
+    data: { deleteAllPayload: payloadArray },
+  });
+});
+
+
+const deleteFunc = function(){
+  const todoItems = document.querySelectorAll(".todo-item");
+  const deleteBtns = document.querySelectorAll("#delete");
+   const checkBtns = document.querySelectorAll("#check");
+  const strikeBtns = document.querySelectorAll("#strike");
+  const editBtns = document.querySelectorAll("#edit");
+  const itemValues = document.querySelectorAll("#item-value");
+  for (let index = 0; index < todoItems.length; index++) {
+    const todoItem = todoItems[index];
+    const deleteBtn = deleteBtns[index];
+    const checkBtn = checkBtns[index];
+    const strikeBtn = strikeBtns[index];
+    const itemValue = itemValues[index];
+    const editBtn = editBtns[index];
+    deleteBtn.addEventListener("click", async function () {
+      todoItem.remove();
+      let item = itemValue.textContent;const todoItems = document.querySelectorAll(".todo-item");
+  const deleteBtns = document.querySelectorAll("#delete");
+
+      const deletePayload = {
+        item: item,
+        count: count,
+      };
+
+      console.log(deletePayload);
+      await axios.delete("/dashboard/todo/delete", {
+        data: { deletePayload: deletePayload },
+      });
+    });
+  }
+}
+</script>
