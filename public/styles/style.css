@@ -1905,6 +1905,15 @@ body {
   margin-top: 20px;
 }
 
+.colorPalette .color-save-wrapper-position .saved-colors-wrapper .saved-colors-container .deletePallette {
+  position: absolute;
+  color: crimson;
+  font-size: 20px;
+  right: 30px;
+  margin: 20px;
+  cursor: pointer;
+}
+
 .colorPalette .color-save-wrapper-position .saved-colors-wrapper .saved-colors-container .color-saved {
   width: 6vh;
   height: 10vh;

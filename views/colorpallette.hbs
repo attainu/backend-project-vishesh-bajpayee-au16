@@ -38,7 +38,9 @@
     <div class="saved-colors-wrapper">
 
       {{#each pallette}}
+
         <div class="saved-colors-container">
+          <i class="deletePallette far fa-trash-alt"></i>
           <div
             style="background-color: {{this.colors.color01}};"
             id="color-s-01"
@@ -72,7 +74,7 @@
   </div>
 </div>
 
-<script>
+{{! <script>
   const generateRandomBtn = document.getElementById("generate-colors"); const
   saveBtn = document.getElementById("save-colors"); const color01 =
   document.getElementById("container01"); const color02 =
@@ -104,4 +106,4 @@
   container.addEventListener("click", function (event) {
   copyToClipboard(textArea.textContent); }); }
 
-</script>
+</script> }}

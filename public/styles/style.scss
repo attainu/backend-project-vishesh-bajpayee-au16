@@ -1692,6 +1692,7 @@ body {
       flex-wrap: wrap;
 
       margin-left: 45px;
+
       .saved-colors-container {
         width: 20vw;
         height: 15vh;
@@ -1701,6 +1702,14 @@ body {
         justify-content: center;
         margin-top: 20px;
 
+        .deletePallette {
+          position: absolute;
+          color: crimson;
+          font-size: 20px;
+          right: 30px;
+          margin: 20px;
+          cursor: pointer;
+        }
         .color-saved {
           width: 6vh;
           height: 10vh;
