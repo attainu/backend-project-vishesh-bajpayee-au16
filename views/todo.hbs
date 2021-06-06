@@ -121,11 +121,17 @@ addBtn.addEventListener("click", async function () {
       itemValue.toggleAttribute("contenteditable", true);
     });
   }
+  const putReqObj = {
+  putReq: 1,
+  };
+  await axios.post("/dashboard/recentactivity", putReqObj);
   const valObj = {
     count: count,
     item: value,
   };
   const axiosSend = await axios.post("/dashboard/todo", valObj);
+
+ 
   // console.log(axiosSend);
 });
 

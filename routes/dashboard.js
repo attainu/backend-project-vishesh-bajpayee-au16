@@ -39,4 +39,35 @@ router.get("/dashboard/data", async (req, res) => {
   }
 });
 
+let recentActivity = [];
+router.post("/dashboard/recentactivity", (req, res) => {
+  const payloadObj = req.body;
+  let colorActivity = `<i class="fas fa-palette"></i>`;
+  let todoActivity = `<i class="far fa-list-alt"></i>`;
+  let notesActivity = `<i class="far fa-sticky-note"></i>`;
+  let pomodoroActivity = `<i class="far fa-clock"></i>`;
+
+  if (payloadObj.putReq === 0) {
+    recentActivity.push(notesActivity);
+  } else if (payloadObj.putReq === 1) {
+    recentActivity.push(todoActivity);
+  } else if (payloadObj.putReq === 2) {
+    recentActivity.push(pomodoroActivity);
+  } else if (payloadObj.putReq === 3) {
+    recentActivity.push(colorActivity);
+  }
+
+  if (recentActivity.length > 5) {
+    recentActivity.shift();
+  }
+});
+
+router.get("/dashboard/recentactivityupdate", (req, res) => {
+  res.send(recentActivity);
+});
 module.exports = router;
+
+//  const putReqObj = {
+//    putReq: 0,
+//  };
+//  await axios.post("/dashboard/recentactivity", putReqObj);

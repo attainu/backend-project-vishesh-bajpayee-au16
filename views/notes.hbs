@@ -51,6 +51,7 @@
 </div>
 
 <script>
+
   const container = document.getElementsByClassName("container")[0]; const
   titleInput = document.getElementById("title-input"); const noteInput =
   document.getElementById("note-input"); const body =
@@ -75,8 +76,9 @@
   notesDiv.children[1].textContent; const deletePayload = { notesHeading:
   notesHeading, notesPara: notesPara, }; console.log(deletePayload);
   notesDiv.remove(); await axios.delete("/dashboard/notes/delete", { data: {
-  deletePayload: deletePayload, }, }); }); } const payloadObj = { title: title,
-  content: para, count: count }; const axiousReq = await
+  deletePayload: deletePayload, }, }); }); } const putReqObj = { putReq: 0 };
+  await axios.post("/dashboard/recentactivity", putReqObj); const payloadObj = {
+  title: title, content: para, count: count }; const axiousReq = await
   axios.post("/dashboard/notes/", payloadObj); }); let notes =
   document.querySelectorAll(".note"); clearAllBtn.addEventListener("click",
   async function () { noteWrapper.innerHTML = ""; let payloadArray = []; for

@@ -83,7 +83,6 @@
   </div>
 
 </div>
-
 <script>
   const createBtn = document.getElementById("create-btn"); const
   customDefaultBtn = document.querySelector(".hidden-btn-position-wrapper");
@@ -107,7 +106,7 @@
   displayDiv) { clickBtn.addEventListener("click", function () { if
   (displayDiv.style.display === "none") { displayDiv.style.display = "block";
   displayDiv.style.animation = "opacityup .2s ease-in "; } else {
-  displayDiv.style.animation = "opacityup .2s linear" } });
+  displayDiv.style.animation = "opacityup .2s linear"; } });
   displayDiv.style.display = "none"; }; const disableDisplay = function (button)
   { button.addEventListener("click", function () {
   customDefaultBtn.style.display = "none"; hiddenDefaultTimer.style.display =
@@ -128,18 +127,20 @@
   "block"; }, delay); }; enableDisplay(createBtn, customDefaultBtn);
   enableDisplay(customTimerBtn, hiddenSetTimer); enableDisplay(defaultTimerBtn,
   hiddenDefaultTimer); disableDisplay(beginDefaultBtn);
-  disableDisplay(beginSetBtn); beginDefaultBtn.addEventListener("click",
-  function () { timerWrapper.style.display = "block"; breakWrapper.style.display
-  = "block"; timerContainer[0].setAttribute("class", "animation-class");
+  disableDisplay(beginSetBtn); //_______________________________________________
+  beginDefaultBtn.addEventListener("click", async function () {
+  timerWrapper.style.display = "block"; breakWrapper.style.display = "block";
+  timerContainer[0].setAttribute("class", "animation-class");
   createBtn.setAttribute("disabled", true); createBtn.style.background = "gray";
   let timeValue = 10; const initialIntervel = setInterval(() => { timeValue -=
   1; timeIndicator[0].textContent = `${timeValue}`; if (timeValue == 0) {
   timerContainer[0].style.background = "teal"; clearInterval(initialIntervel); }
   }, 1000); setBreakFunc(5, 10000, 0); setTimerFunc(10, 15000, 1);
   setBreakFunc(5, 25000, 1); setTimerFunc(10, 30000, 2); setBreakFunc(5, 45000,
-  2); setTimerFunc(10, 50000, 3); finishFunc(75000); });
-  beginSetBtn.addEventListener("click", function () { const timerInfoList = [];
-  timerInfoList.push(setTimerInput.value);
+  2); setTimerFunc(10, 50000, 3); finishFunc(75000); const putReqObj = { putReq:
+  2 }; await axios.post("/dashboard/recentactivity", putReqObj); });
+  beginSetBtn.addEventListener("click", async function () { const timerInfoList
+  = []; timerInfoList.push(setTimerInput.value);
   timerInfoList.push(setBreakInput.value); console.log(timerInfoList);
   timerWrapper.style.display = "block"; breakWrapper.style.display = "block";
   timerContainer[0].setAttribute("class", "animation-class");
@@ -155,8 +156,10 @@
   setTimerFunc(timerInfoList[0], timeDynamicVal * 2 + breakDynamicVal * 2, 2);
   setBreakFunc(timerInfoList[1], timeDynamicVal * 3 + breakDynamicVal * 2, 2);
   setTimerFunc(timerInfoList[0], timeDynamicVal * 3 + breakDynamicVal * 3, 3);
-  finishFunc(timeDynamicVal * 4 + breakDynamicVal * 3); });
+  finishFunc(timeDynamicVal * 4 + breakDynamicVal * 3); const putReqObj = {
+  putReq: 2 }; await axios.post("/dashboard/recentactivity", putReqObj); });
   resetBtn.addEventListener("click", function () { console.log("Clicked");
   createBtn.removeAttribute("disabled"); createBtn.style.background = "crimson";
   finishWrapper.style.display = "none"; });
+
 </script>

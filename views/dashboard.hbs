@@ -116,7 +116,13 @@
     </div>
 
     <div class="recentActivity">
-      
+      <h2>Recent Activity</h2>
+      <div class="activity-wrapper-position">
+        <div class="activity-wrapper-display">
+        
+        </div>
+        
+      </div>
     </div>
 
     <div class="quoteWrapper">
@@ -135,6 +141,7 @@
   const btnClick = document.getElementById("add-repository");
 const inputField = document.getElementsByClassName("input-field")[0];
 const quote = document.getElementById("qoute");
+const activityWrapper = document.querySelector(".activity-wrapper-display");
 btnClick.addEventListener("click", () => {
   if (inputField.style.display === "none") {
     inputField.style.display = "block";
@@ -143,5 +150,13 @@ btnClick.addEventListener("click", () => {
   }
 });
 
+const updateRecentActivity = async function () {
+  const response = await fetch("/dashboard/recentactivityupdate");
+  const data = await response.json();
+  activityWrapper.innerHTML += [...data];
+  console.log(data);
+};
+
+updateRecentActivity();
 
 </script>
