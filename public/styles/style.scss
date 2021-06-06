@@ -20,8 +20,27 @@ $buttonColor01: #ff165d;
   }
 }
 
+@keyframes colorChange {
+  0% {
+    color: #2f5d62;
+  }
+  25% {
+    color: #ffb037;
+  }
+  50% {
+    color: #2f5d62;
+  }
+
+  75% {
+    color: #ffe268;
+  }
+  100% {
+    color: #28b5b5;
+  }
+}
+
 body {
-  background-image: url("../images/banner-main.png");
+  background-image: url("../images/banner-02.png");
   background-attachment: fixed;
   background-position: center;
 }
@@ -161,10 +180,12 @@ body {
 
     h1 {
       font-size: 100px;
-      margin-top: 25vh;
+      margin-top: 17vh;
       span {
         color: $primary;
         font-size: 150px;
+        animation: colorChange 10s infinite;
+        animation-direction: alternate;
       }
     }
 
@@ -333,15 +354,18 @@ body {
 .dashboard {
   #section {
     width: 25vw;
-    height: 100vh;
-    background-color: rgba($color: #000000, $alpha: 1);
+    height: 97vh;
+    background-color: rgba($color: #000000, $alpha: 0.9);
+    margin: 2vh 0px 0px 10px;
+    border-radius: 30px;
 
     #logo {
-      width: 400px;
-      position: absolute;
-      top: -80px;
-      left: 4vh;
-      cursor: pointer;
+      color: $primary;
+      font-size: 50px;
+      text-align: center;
+      padding-top: 7vh;
+      animation: colorChange infinite 5s;
+      animation-direction: alternate;
     }
 
     .dashboard-btns {

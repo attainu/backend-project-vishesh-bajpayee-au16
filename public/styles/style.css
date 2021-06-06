@@ -32,8 +32,44 @@
   }
 }
 
+@-webkit-keyframes colorChange {
+  0% {
+    color: #2f5d62;
+  }
+  25% {
+    color: #ffb037;
+  }
+  50% {
+    color: #2f5d62;
+  }
+  75% {
+    color: #ffe268;
+  }
+  100% {
+    color: #28b5b5;
+  }
+}
+
+@keyframes colorChange {
+  0% {
+    color: #2f5d62;
+  }
+  25% {
+    color: #ffb037;
+  }
+  50% {
+    color: #2f5d62;
+  }
+  75% {
+    color: #ffe268;
+  }
+  100% {
+    color: #28b5b5;
+  }
+}
+
 body {
-  background-image: url("../images/banner-main.png");
+  background-image: url("../images/banner-02.png");
   background-attachment: fixed;
   background-position: center;
 }
@@ -180,12 +216,16 @@ body {
 
 .landingPage aside h1 {
   font-size: 100px;
-  margin-top: 25vh;
+  margin-top: 17vh;
 }
 
 .landingPage aside h1 span {
   color: #33d6d6;
   font-size: 150px;
+  -webkit-animation: colorChange 10s infinite;
+          animation: colorChange 10s infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
 }
 
 .landingPage aside p {
@@ -347,16 +387,21 @@ body {
 
 .dashboard #section {
   width: 25vw;
-  height: 100vh;
-  background-color: black;
+  height: 97vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  margin: 2vh 0px 0px 10px;
+  border-radius: 30px;
 }
 
 .dashboard #section #logo {
-  width: 400px;
-  position: absolute;
-  top: -80px;
-  left: 4vh;
-  cursor: pointer;
+  color: #33d6d6;
+  font-size: 50px;
+  text-align: center;
+  padding-top: 7vh;
+  -webkit-animation: colorChange infinite 5s;
+          animation: colorChange infinite 5s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
 }
 
 .dashboard #section .dashboard-btns {
