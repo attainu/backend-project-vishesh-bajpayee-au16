@@ -32,7 +32,7 @@
     "prettify": "^0.1.7"
   },
   "devDependencies": {
-    "handlebars": "^4.5.0"
+    "handlebars": "^4.7.7"
   },
   "engines": {
     "node": ">=10.0.0"
